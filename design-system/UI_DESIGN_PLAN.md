@@ -66,7 +66,7 @@
 ## 3 · 用户体验提升点（Experience Upgrades）
 
 ### 3.1 视觉一致性（Visual Consistency）
-- **5 教材色 → 语义化 token**：`--c-orb-1..5` 全局唯一来源；新增组件不再"凭感觉选色"
+- **5 教材色 → 语义化 token**：`--c-const-1..5` 全局唯一来源；新增组件不再"凭感觉选色"
 - **圆角 / 阴影 / 间距 → 阶梯化**：杜绝"5 个科学家 5 套样式"
 - **玻璃面板统一**：所有浮层用 `--glass-bg` + `--glass-blur` + `--glass-border` 三件套
 
@@ -259,7 +259,7 @@
 | CSS 5081 行重构引入回归 | 中 | 双轨 token（v2 与 v1 并行）；逐阶段 Playwright 截图回归 |
 | 新动效导致投屏眩晕 | 低 | 严守时长表（≤ 360ms 整屏）；`prefers-reduced-motion` 降级 |
 | 移动端触摸交互缺失 | 中 | 补 `:active` + 长按手势；tooltip 改底部抽屉 |
-| 与现有 token 同名冲突 | 低 | 新 token 加前缀（`--c-orb-` / `--text-hi`），不覆盖旧名 |
+| 与现有 token 同名冲突 | 低 | 新 token 加前缀（`--c-const-` / `--text-hi`），不覆盖旧名 |
 | 用户对风格"再调整"诉求 | 中 | 每阶段交付截图，邀请评审；及时回退 |
 | 资源提供延迟影响 P3 进度 | 中 | 关键资源 C1 设硬截止 +14 天；非关键 A1/B1 可推迟 |
 | 性能（动画多了导致掉帧） | 低 | 仅 transform / opacity；will-change 克制 |

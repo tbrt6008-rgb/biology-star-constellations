@@ -1,7 +1,7 @@
 {
   "total": 78,
   "generated_at": "2026-05-20",
-  "orbit_labels": {
+  "constellation_labels": {
     "1": "必修一 · 分子与细胞",
     "2": "必修二 · 遗传与进化",
     "3": "选必一 · 稳态与调节",
@@ -13,7 +13,7 @@
       "id": "卡尔文",
       "name": "卡尔文 (Melvin Calvin)",
       "magnitude": 5,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -48,7 +48,7 @@
       "id": "巴斯德",
       "name": "巴斯德 (Louis Pasteur)",
       "magnitude": 5,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一",
         "选必三"
@@ -86,7 +86,7 @@
       "id": "鲁宾和卡门",
       "name": "鲁宾和卡门 (Ruben & Kamen)",
       "magnitude": 5,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -120,7 +120,7 @@
       "id": "米歇尔",
       "name": "彼得·米歇尔 (Peter Mitchell)",
       "magnitude": 4,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -155,7 +155,7 @@
       "id": "辛格和尼科尔森",
       "name": "辛格和尼科尔森 (Singer & Nicolson)",
       "magnitude": 4,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -190,7 +190,7 @@
       "id": "克劳德",
       "name": "阿尔伯特·克劳德 (Albert Claude)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -225,7 +225,7 @@
       "id": "列文虎克",
       "name": "安东尼·范·列文虎克 (Antonie van Leeuwenhoek)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -259,7 +259,7 @@
       "id": "奥特曼",
       "name": "西德尼·奥特曼 (Sidney Altman)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -294,7 +294,7 @@
       "id": "弗雷和埃迪登",
       "name": "弗雷和埃迪登 (Frye & Edidin)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -329,7 +329,7 @@
       "id": "恩格尔曼",
       "name": "恩格尔曼 (Theodor Wilhelm Engelmann)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -366,7 +366,7 @@
       "id": "戈特和格伦德尔",
       "name": "戈特和格伦德尔 (Gorter & Grendel)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -400,7 +400,7 @@
       "id": "斯帕兰扎尼",
       "name": "斯帕兰扎尼 (Lazzaro Spallanzani)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -433,7 +433,7 @@
       "id": "施旺",
       "name": "泰奥多尔·施旺 (Theodor Schwann)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -468,7 +468,7 @@
       "id": "施莱登",
       "name": "詹姆斯·施莱登 (Matthias Schleiden)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -503,7 +503,7 @@
       "id": "欧文顿",
       "name": "欧文顿 (Ernest Overton)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -538,7 +538,7 @@
       "id": "比夏",
       "name": "比夏 (Marie François Xavier Bichat)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -567,7 +567,7 @@
       "id": "维萨里",
       "name": "安德烈·维萨里 (Andreas Vesalius)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -596,7 +596,7 @@
       "id": "罗伯特·胡克",
       "name": "罗伯特·胡克 (Robert Hooke)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -629,7 +629,7 @@
       "id": "罗伯特森",
       "name": "罗伯特森 (J. David Robertson)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -664,7 +664,7 @@
       "id": "苏姆纳",
       "name": "詹姆斯·苏姆纳 (James B. Sumner)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -699,7 +699,7 @@
       "id": "茨维特",
       "name": "米哈伊尔·茨维特 (Mikhail Tswett)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -733,7 +733,7 @@
       "id": "萨克斯",
       "name": "尤利乌斯·冯·萨克斯 (Julius von Sachs)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -771,7 +771,7 @@
       "id": "阿尔农",
       "name": "阿尔农 (Daniel Arnon)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -805,7 +805,7 @@
       "id": "魏尔肖",
       "name": "鲁道夫·魏尔肖 (Rudolf Virchow)",
       "magnitude": 3,
-      "orbit": 1,
+      "constellation": 1,
       "books": [
         "必修一"
       ],
@@ -839,7 +839,7 @@
       "id": "丹尼利和戴维森",
       "name": "丹尼利和戴维森 (Danielli & Davson)",
       "magnitude": 2,
-      "orbit": 1,
+      "constellation": 1,
       "books": [],
       "nationality": "英国",
       "era": "20世纪30年代（1935年）",
@@ -869,7 +869,7 @@
       "id": "哈伯兰特",
       "name": "哈伯兰特 (Gottlieb Haberlandt)",
       "magnitude": 2,
-      "orbit": 1,
+      "constellation": 1,
       "books": [],
       "nationality": "奥地利",
       "era": "20世纪初（1902年）",
@@ -898,7 +898,7 @@
       "id": "希尔",
       "name": "希尔 (Robert Hill)",
       "magnitude": 2,
-      "orbit": 1,
+      "constellation": 1,
       "books": [],
       "nationality": "英国",
       "era": "20世纪30年代（1937年）",
@@ -928,7 +928,7 @@
       "id": "克里克",
       "name": "弗朗西斯·克里克 (Francis Crick)",
       "magnitude": 5,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -967,7 +967,7 @@
       "id": "孟德尔",
       "name": "孟德尔 (Gregor Mendel)",
       "magnitude": 5,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1006,7 +1006,7 @@
       "id": "摩尔根",
       "name": "摩尔根 (Thomas Hunt Morgan)",
       "magnitude": 5,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1042,7 +1042,7 @@
       "id": "梅塞尔森和斯塔尔",
       "name": "梅塞尔森和斯塔尔 (Meselson & Stahl)",
       "magnitude": 5,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1077,7 +1077,7 @@
       "id": "沃森和克里克",
       "name": "沃森和克里克 (Watson & Crick)",
       "magnitude": 5,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1112,7 +1112,7 @@
       "id": "艾弗里",
       "name": "奥斯瓦尔德·艾弗里 (Oswald Avery)",
       "magnitude": 5,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1150,7 +1150,7 @@
       "id": "赫尔希和蔡斯",
       "name": "赫尔希和蔡斯 (Hershey & Chase)",
       "magnitude": 5,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1186,7 +1186,7 @@
       "id": "达尔文",
       "name": "达尔文 (Charles Darwin)",
       "magnitude": 5,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二",
         "选必一"
@@ -1224,7 +1224,7 @@
       "id": "富兰克林",
       "name": "罗莎琳德·富兰克林 (Rosalind Franklin)",
       "magnitude": 4,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1259,7 +1259,7 @@
       "id": "德尔布吕克",
       "name": "马克斯·德尔布吕克 (Max Delbrück)",
       "magnitude": 4,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1295,7 +1295,7 @@
       "id": "查哥夫",
       "name": "埃尔文·查哥夫 (Erwin Chargaff)",
       "magnitude": 4,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1330,7 +1330,7 @@
       "id": "格里菲思",
       "name": "弗雷德里克·格里菲思 (Frederick Griffith)",
       "magnitude": 4,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1363,7 +1363,7 @@
       "id": "约翰逊",
       "name": "威廉·约翰逊 (Wilhelm Johannsen)",
       "magnitude": 4,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1394,7 +1394,7 @@
       "id": "萨顿",
       "name": "萨顿 (Walter Sutton)",
       "magnitude": 4,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1428,7 +1428,7 @@
       "id": "薛定谔",
       "name": "埃尔温·薛定谔 (Erwin Schrödinger)",
       "magnitude": 4,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1463,7 +1463,7 @@
       "id": "鲍林",
       "name": "莱纳斯·鲍林 (Linus Pauling)",
       "magnitude": 4,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1498,7 +1498,7 @@
       "id": "卢里亚",
       "name": "萨尔瓦多·卢里亚 (Salvador Luria)",
       "magnitude": 3,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1534,7 +1534,7 @@
       "id": "德弗里斯",
       "name": "雨果·德弗里斯 (Hugo de Vries)",
       "magnitude": 3,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1569,7 +1569,7 @@
       "id": "拉马克",
       "name": "让-巴蒂斯特·拉马克 (Jean-Baptiste Lamarck)",
       "magnitude": 3,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1604,7 +1604,7 @@
       "id": "科伦斯",
       "name": "卡尔·科伦斯 (Carl Correns)",
       "magnitude": 3,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1638,7 +1638,7 @@
       "id": "耐格里",
       "name": "耐格里 (Karl Wilhelm von Nägeli)",
       "magnitude": 2,
-      "orbit": 2,
+      "constellation": 2,
       "books": [
         "必修二"
       ],
@@ -1669,7 +1669,7 @@
       "id": "切尔马克",
       "name": "切尔马克 (Erich von Tschermak)",
       "magnitude": 2,
-      "orbit": 2,
+      "constellation": 2,
       "books": [],
       "nationality": "奥地利",
       "era": "19世纪末20世纪初（1900年）",
@@ -1699,7 +1699,7 @@
       "id": "切赫",
       "name": "切赫 (Thomas Cech)",
       "magnitude": 2,
-      "orbit": 2,
+      "constellation": 2,
       "books": [],
       "nationality": "美国",
       "era": "20世纪80年代",
@@ -1729,7 +1729,7 @@
       "id": "华莱士",
       "name": "华莱士 (Alfred Russel Wallace)",
       "magnitude": 2,
-      "orbit": 2,
+      "constellation": 2,
       "books": [],
       "nationality": "英国",
       "era": "19世纪中叶（1858年）",
@@ -1759,7 +1759,7 @@
       "id": "威尔金斯",
       "name": "威尔金斯 (Maurice Wilkins)",
       "magnitude": 2,
-      "orbit": 2,
+      "constellation": 2,
       "books": [],
       "nationality": "英国/新西兰",
       "era": "20世纪50年代",
@@ -1788,7 +1788,7 @@
       "id": "尼伦伯格和马太",
       "name": "尼伦伯格和马太 (Nirenberg & Matthaei)",
       "magnitude": 2,
-      "orbit": 2,
+      "constellation": 2,
       "books": [],
       "nationality": "美国",
       "era": "20世纪60年代（1961年）",
@@ -1818,7 +1818,7 @@
       "id": "康拉特",
       "name": "康拉特 (Fraenkel-Conrat)",
       "magnitude": 2,
-      "orbit": 2,
+      "constellation": 2,
       "books": [],
       "nationality": "德国/美国",
       "era": "20世纪50年代（1956年）",
@@ -1848,7 +1848,7 @@
       "id": "温特",
       "name": "弗里茨·温特 (Frits Warmolt Went)",
       "magnitude": 5,
-      "orbit": 3,
+      "constellation": 3,
       "books": [
         "选必一"
       ],
@@ -1883,7 +1883,7 @@
       "id": "坎农",
       "name": "沃尔特·坎农 (Walter Cannon)",
       "magnitude": 4,
-      "orbit": 3,
+      "constellation": 3,
       "books": [
         "选必一"
       ],
@@ -1918,7 +1918,7 @@
       "id": "巴甫洛夫",
       "name": "巴甫洛夫 (Ivan Pavlov)",
       "magnitude": 4,
-      "orbit": 3,
+      "constellation": 3,
       "books": [
         "选必一"
       ],
@@ -1953,7 +1953,7 @@
       "id": "沃泰默",
       "name": "沃泰默 (E. Wertheimer)",
       "magnitude": 4,
-      "orbit": 3,
+      "constellation": 3,
       "books": [
         "选择性必修一"
       ],
@@ -1984,7 +1984,7 @@
       "id": "洛伊",
       "name": "奥托·洛伊 (Otto Loewi)",
       "magnitude": 4,
-      "orbit": 3,
+      "constellation": 3,
       "books": [
         "选必一"
       ],
@@ -2019,7 +2019,7 @@
       "id": "班廷",
       "name": "弗雷德里克·班廷 (Frederick Banting)",
       "magnitude": 4,
-      "orbit": 3,
+      "constellation": 3,
       "books": [
         "选必一"
       ],
@@ -2055,7 +2055,7 @@
       "id": "贝利斯和斯他林",
       "name": "贝利斯和斯他林 (Bayliss & Starling)",
       "magnitude": 4,
-      "orbit": 3,
+      "constellation": 3,
       "books": [
         "选必一"
       ],
@@ -2092,7 +2092,7 @@
       "id": "贝尔纳",
       "name": "贝尔纳 (Claude Bernard)",
       "magnitude": 4,
-      "orbit": 3,
+      "constellation": 3,
       "books": [
         "选必一"
       ],
@@ -2125,7 +2125,7 @@
       "id": "拜尔",
       "name": "阿尔帕德·拜尔 (Árpád Paál)",
       "magnitude": 3,
-      "orbit": 3,
+      "constellation": 3,
       "books": [
         "选必一"
       ],
@@ -2159,7 +2159,7 @@
       "id": "詹纳",
       "name": "詹纳 (Edward Jenner)",
       "magnitude": 3,
-      "orbit": 3,
+      "constellation": 3,
       "books": [
         "选必一"
       ],
@@ -2193,7 +2193,7 @@
       "id": "鲍森·詹森",
       "name": "彼得·鲍森·詹森 (Peter Boysen-Jensen)",
       "magnitude": 3,
-      "orbit": 3,
+      "constellation": 3,
       "books": [
         "选必一"
       ],
@@ -2226,7 +2226,7 @@
       "id": "林德曼",
       "name": "林德曼 (Raymond Lindeman)",
       "magnitude": 5,
-      "orbit": 4,
+      "constellation": 4,
       "books": [
         "选必二"
       ],
@@ -2262,7 +2262,7 @@
       "id": "奥德姆",
       "name": "奥德姆 (Eugene Odum)",
       "magnitude": 4,
-      "orbit": 4,
+      "constellation": 4,
       "books": [
         "选必二"
       ],
@@ -2296,7 +2296,7 @@
       "id": "高斯",
       "name": "高斯 (G. F. Gause)",
       "magnitude": 4,
-      "orbit": 4,
+      "constellation": 4,
       "books": [
         "选必二"
       ],
@@ -2330,7 +2330,7 @@
       "id": "坦斯利",
       "name": "坦斯利 (Arthur Tansley)",
       "magnitude": 2,
-      "orbit": 4,
+      "constellation": 4,
       "books": [],
       "nationality": "英国",
       "era": "20世纪30年代（1935年）",
@@ -2360,7 +2360,7 @@
       "id": "科赫",
       "name": "罗伯特·科赫 (Robert Koch)",
       "magnitude": 5,
-      "orbit": 5,
+      "constellation": 5,
       "books": [
         "选必三"
       ],
@@ -2397,7 +2397,7 @@
       "id": "穆利斯",
       "name": "凯利·穆利斯 (Kary Mullis)",
       "magnitude": 5,
-      "orbit": 5,
+      "constellation": 5,
       "books": [
         "选必三"
       ],
@@ -2433,7 +2433,7 @@
       "id": "米尔斯坦和柯勒",
       "name": "米尔斯坦和柯勒 (Milstein & Köhler)",
       "magnitude": 5,
-      "orbit": 5,
+      "constellation": 5,
       "books": [
         "选必三"
       ],
@@ -2468,7 +2468,7 @@
       "id": "桑格",
       "name": "桑格 (Frederick Sanger)",
       "magnitude": 4,
-      "orbit": 5,
+      "constellation": 5,
       "books": [
         "选必三"
       ],
@@ -2501,7 +2501,7 @@
       "id": "科恩",
       "name": "斯坦利·科恩 (Stanley Cohen)",
       "magnitude": 4,
-      "orbit": 5,
+      "constellation": 5,
       "books": [
         "选必三"
       ],
@@ -2537,7 +2537,7 @@
       "id": "弗莱明",
       "name": "亚历山大·弗莱明 (Alexander Fleming)",
       "magnitude": 3,
-      "orbit": 5,
+      "constellation": 5,
       "books": [
         "选必三"
       ],
@@ -2572,7 +2572,7 @@
       "id": "斯图尔特",
       "name": "弗雷德里克·斯图尔特 (F.C. Steward)",
       "magnitude": 3,
-      "orbit": 5,
+      "constellation": 5,
       "books": [
         "选必三"
       ],
@@ -2607,7 +2607,7 @@
       "id": "博耶",
       "name": "博耶 (Herbert Boyer)",
       "magnitude": 2,
-      "orbit": 5,
+      "constellation": 5,
       "books": [],
       "nationality": "美国",
       "era": "20世纪70年代",
@@ -2637,7 +2637,7 @@
       "id": "威尔穆特",
       "name": "威尔穆特 (Ian Wilmut)",
       "magnitude": 2,
-      "orbit": 5,
+      "constellation": 5,
       "books": [],
       "nationality": "英国",
       "era": "20世纪90年代（1996年）",

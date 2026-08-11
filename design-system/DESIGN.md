@@ -50,11 +50,11 @@
 
 | Token | HSL | 含义 | 主用场景 |
 |-------|-----|------|---------|
-| `--c-orb-1` | `hsl(185 75% 58%)` `#2dd4e8` | 必修一 · 分子与细胞 · 青 | 轨道1节点、选中态、扫描线 |
-| `--c-orb-2` | `hsl(42 88% 58%)` `#f0b030` | 必修二 · 遗传与进化 · 金 | 品牌强调、标题、CTA |
-| `--c-orb-3` | `hsl(280 65% 68%)` `#c070f0` | 选必一 · 稳态与调节 · 紫 | 轨道3、神经网络 |
-| `--c-orb-4` | `hsl(130 62% 55%)` `#50d080` | 选必二 · 生物与环境 · 绿 | 轨道4、生态 |
-| `--c-orb-5` | `hsl(210 78% 62%)` `#4090ff` | 选必三 · 生物技术与工程 · 蓝 | 轨道5、技术流 |
+| `--c-const-1` | `hsl(185 75% 58%)` `#2dd4e8` | 必修一 · 分子与细胞 · 青 | 轨道1节点、选中态、扫描线 |
+| `--c-const-2` | `hsl(42 88% 58%)` `#f0b030` | 必修二 · 遗传与进化 · 金 | 品牌强调、标题、CTA |
+| `--c-const-3` | `hsl(280 65% 68%)` `#c070f0` | 选必一 · 稳态与调节 · 紫 | 轨道3、神经网络 |
+| `--c-const-4` | `hsl(130 62% 55%)` `#50d080` | 选必二 · 生物与环境 · 绿 | 轨道4、生态 |
+| `--c-const-5` | `hsl(210 78% 62%)` `#4090ff` | 选必三 · 生物技术与工程 · 蓝 | 轨道5、技术流 |
 
 > **规则**：同一时间一个区域最多 1 个主强调 + 1 个辅助强调；金色适合"标题/重点/课堂引导"，青色适合"交互/扫描/选中"。
 
@@ -220,7 +220,7 @@
 ### 6.1 按钮
 | 状态 | 主按钮（CTA） | 次按钮（ghost） | 危险 |
 |------|------------|--------------|------|
-| **default** | bg `--c-orb-2`，文字 #0c0720，圆角 pill，shadow `--shadow-glow` | 透明 + border `--border-hi`，文字 `--text-md` | 透明 + border danger 40%，文字 danger |
+| **default** | bg `--c-const-2`，文字 #0c0720，圆角 pill，shadow `--shadow-glow` | 透明 + border `--border-hi`，文字 `--text-md` | 透明 + border danger 40%，文字 danger |
 | **hover** | translateY(-1px) + glow 增强 | bg 8% 白 | 同 left + bg danger 8% |
 | **active** | translateY(0) scale(.98) | translateY(0) scale(.98) | translateY(0) scale(.98) |
 | **disabled** | opacity .4, cursor not-allowed | opacity .3 | opacity .3 |
@@ -232,17 +232,17 @@
 - placeholder：`--text-dim`
 - 图标：左侧绝对定位，`--text-dim`
 
-### 6.3 筛选胶囊（.orb-btn[data-orbit]）
+### 6.3 筛选胶囊（.const-btn[data-constellation]）
 - 默认：bg 4% 白 + border 12% 白，文字 `--text-md`，圆角 pill
 - hover：bg 8% 白，translateY(-1px)
 - active（选中态）：bg 15% 主题色 + border 50% 主题色 + 10px 主题色 glow + 文字 #fff + 600w
-- 五轨道使用各自 `--c-orb-N`，"全部"按钮使用 `--text-md` + 白光
+- 五轨道使用各自 `--c-const-N`，"全部"按钮使用 `--text-md` + 白光
 
 ### 6.4 海报卡片（#poster-card）
 - 玻璃拟态：`--glass-bg` + `--glass-blur` + `--glass-border`
 - 圆角 16；外发光 `--shadow-card`
-- L 形角标：4 个 18×18 SVG 边框，`--c-orb-2` 描边
-- 顶部扫描线：1px 高，linear-gradient `--c-orb-2` 30%→0%，**自上而下循环** 6s
+- L 形角标：4 个 18×18 SVG 边框，`--c-const-2` 描边
+- 顶部扫描线：1px 高，linear-gradient `--c-const-2` 30%→0%，**自上而下循环** 6s
 
 ### 6.5 表格（retro-table）
 - 3 列 / 6 行 / 双色行（4% 白 / 透明交替）
@@ -251,7 +251,7 @@
 
 ### 6.6 HUD 遥测面板（#hud-telemetry）
 - 玻璃面板，360×auto，右上 24px 偏移
-- header：12px Space Grotesk 600，大写，字距 .12em，色 `--c-orb-2`
+- header：12px Space Grotesk 600，大写，字距 .12em，色 `--c-const-2`
 - 行：label 11px dim / value 13px hi，gap 12
 - 扫描进度条：4px 高，bg 12% 白 + fill 金色 4s 循环
 
@@ -259,7 +259,7 @@
 - 跟随鼠标，offset 14,14
 - 玻璃面板 240×auto，padding 12
 - 头部双列：SECTOR / COORD（11px dim）
-- 名称：18px Space Grotesk 600，色 `--c-orb-N`（按轨道）
+- 名称：18px Space Grotesk 600，色 `--c-const-N`（按轨道）
 - 底部双列：STATUS · SYS_TELEMETRY
 
 ### 6.8 顶部控制栏（#topbar）

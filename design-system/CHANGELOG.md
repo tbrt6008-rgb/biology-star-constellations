@@ -27,7 +27,7 @@
 - `--bg-deep` `#060814` · `--bg-base` `#0c0720` · `--bg-veil` `#071526`
 
 **5 教材主题色**
-- `--c-orb-1` 青 `hsl(185 75% 58%)` · `--c-orb-2` 金 `hsl(42 88% 58%)` · `--c-orb-3` 紫 `hsl(280 65% 68%)` · `--c-orb-4` 绿 `hsl(130 62% 55%)` · `--c-orb-5` 蓝 `hsl(210 78% 62%)`
+- `--c-const-1` 青 `hsl(185 75% 58%)` · `--c-const-2` 金 `hsl(42 88% 58%)` · `--c-const-3` 紫 `hsl(280 65% 68%)` · `--c-const-4` 绿 `hsl(130 62% 55%)` · `--c-const-5` 蓝 `hsl(210 78% 62%)`
 
 **文字 / 边框 / 状态**
 - `--text-hi` 92% · `--text-md` 78% · `--text-lo` 56% · `--text-dim` 38%
@@ -54,7 +54,7 @@
 ### 🔄 别名兼容（过渡期双轨）
 旧变量桥接到新 token（`styles.css` 第 132-141 行）：
 ```css
---c1 → --c-orb-1   --c2 → --c-orb-2   --c3..5 同模式
+--c1 → --c-const-1   --c2 → --c-const-2   --c3..5 同模式
 --glass → --glass-bg   --border → --border-hi
 --text → --text-hi   --dim → --text-dim
 ```
@@ -65,8 +65,8 @@
 | 组件 | 改动 |
 |------|------|
 | `#topbar` | `background: var(--glass-bg)` + `var(--glass-blur)` + `--border-md` |
-| `#app-title` | `var(--fs-md)` + `var(--c-orb-2)` |
-| `.orb-btn` / `#core-btn` / `#sound-toggle` | 统一 32px + `var(--r-pill)` + 180ms `var(--ease-premium)` |
+| `#app-title` | `var(--fs-md)` + `var(--c-const-2)` |
+| `.const-btn` / `#core-btn` / `#sound-toggle` | 统一 32px + `var(--r-pill)` + 180ms `var(--ease-premium)` |
 | `#search` | `var(--r-pill)` + 220ms `var(--ease-premium)` |
 | `#hud-telemetry` | 360px + `var(--glass-bg-strong)` + `var(--r-md)` + `var(--shadow-card)` |
 | `.hud-row` / `.hud-label` / `.hud-val` | 字号字距 token 化 |

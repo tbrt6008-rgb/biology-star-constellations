@@ -30,11 +30,11 @@
   --bg-veil:  #071526;
 
   /* ── 5 教材主题色（语义化别名）── */
-  --c-orb-1: hsl(185 75% 58%);  /* 必修一 · 青 · #2dd4e8 */
-  --c-orb-2: hsl(42 88% 58%);   /* 必修二 · 金 · #f0b030 */
-  --c-orb-3: hsl(280 65% 68%);  /* 选必一 · 紫 · #c070f0 */
-  --c-orb-4: hsl(130 62% 55%);  /* 选必二 · 绿 · #50d080 */
-  --c-orb-5: hsl(210 78% 62%);  /* 选必三 · 蓝 · #4090ff */
+  --c-const-1: hsl(185 75% 58%);  /* 必修一 · 青 · #2dd4e8 */
+  --c-const-2: hsl(42 88% 58%);   /* 必修二 · 金 · #f0b030 */
+  --c-const-3: hsl(280 65% 68%);  /* 选必一 · 紫 · #c070f0 */
+  --c-const-4: hsl(130 62% 55%);  /* 选必二 · 绿 · #50d080 */
+  --c-const-5: hsl(210 78% 62%);  /* 选必三 · 蓝 · #4090ff */
 
   /* ── 文字 / 边框 / 状态 ── */
   --text-hi:  rgba(255 255 255 / .92);
@@ -93,11 +93,11 @@
 
 ```css
 :root {
-  --c1: var(--c-orb-1);
-  --c2: var(--c-orb-2);
-  --c3: var(--c-orb-3);
-  --c4: var(--c-orb-4);
-  --c5: var(--c-orb-5);
+  --c1: var(--c-const-1);
+  --c2: var(--c-const-2);
+  --c3: var(--c-const-3);
+  --c4: var(--c-const-4);
+  --c5: var(--c-const-5);
   --glass: var(--glass-bg);
   --border: var(--border-hi);
   --text: var(--text-hi);
@@ -124,7 +124,7 @@
 }
 
 /* ── 顶部按钮统一样式 ── */
-.orb-btn, #core-btn, #sound-toggle {
+.const-btn, #core-btn, #sound-toggle {
   height: 32px;
   padding: 0 14px;
   border-radius: var(--r-pill);
@@ -137,26 +137,26 @@
   transition: all 180ms var(--ease-premium);
 }
 
-.orb-btn:hover, #core-btn:hover, #sound-toggle:hover {
+.const-btn:hover, #core-btn:hover, #sound-toggle:hover {
   background: rgba(255 255 255 / .08);
   color: var(--text-hi);
   transform: translateY(-1px);
 }
 
-.orb-btn:active, #core-btn:active, #sound-toggle:active {
+.const-btn:active, #core-btn:active, #sound-toggle:active {
   transform: translateY(0) scale(.98);
   transition-duration: 80ms;
 }
 
 /* ── 筛选按钮选中态（按主题色）── */
-.orb-btn[data-orbit="1"].active {
-  background: color-mix(in oklch, var(--c-orb-1) 15%, transparent);
-  border-color: color-mix(in oklch, var(--c-orb-1) 50%, transparent);
+.const-btn[data-constellation="1"].active {
+  background: color-mix(in oklch, var(--c-const-1) 15%, transparent);
+  border-color: color-mix(in oklch, var(--c-const-1) 50%, transparent);
   color: #fff;
   font-weight: 600;
-  box-shadow: 0 0 12px color-mix(in oklch, var(--c-orb-1) 20%, transparent);
+  box-shadow: 0 0 12px color-mix(in oklch, var(--c-const-1) 20%, transparent);
 }
-/* ... orb-2..5 同模式 */
+/* ... const-2..5 同模式 */
 
 /* ── HUD 遥测面板 ── */
 #hud-telemetry {
@@ -177,7 +177,7 @@
   font-size: var(--fs-xs);
   font-weight: 600;
   letter-spacing: .12em;
-  color: var(--c-orb-2);
+  color: var(--c-const-2);
   margin-bottom: 12px;
   text-transform: uppercase;
 }
@@ -210,7 +210,7 @@
 .hud-corner {
   position: absolute;
   width: 18px; height: 18px;
-  border: 2px solid var(--c-orb-2);
+  border: 2px solid var(--c-const-2);
   pointer-events: none;
   animation: cornerIn 240ms var(--ease-premium) both;
 }
@@ -231,7 +231,7 @@
   position: absolute;
   top: 0; left: 0; right: 0; height: 1px;
   background: linear-gradient(90deg,
-    transparent 0%, var(--c-orb-2) 50%, transparent 100%);
+    transparent 0%, var(--c-const-2) 50%, transparent 100%);
   animation: scanlineSweep 6s linear infinite;
 }
 
@@ -274,7 +274,7 @@
     gap: 6px;
   }
   #app-title { font-size: 13px; }
-  .orb-btn { padding: 0 10px; font-size: 11px; }
+  .const-btn { padding: 0 10px; font-size: 11px; }
 
   #poster-overlay.open #poster-card {
     width: 100vw;
@@ -327,7 +327,7 @@ for (const bp of breakpoints) {
     // HUD 存在
     await expect(page.locator('#hud-telemetry')).toBeAttached();
     // 5 个轨道按钮
-    await expect(page.locator('.orb-btn[data-orbit]')).toHaveCount(6);
+    await expect(page.locator('.const-btn[data-constellation]')).toHaveCount(6);
   });
 }
 

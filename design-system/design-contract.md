@@ -9,7 +9,7 @@
 | D1 | 视觉风格延续 | **深空生物档案馆 v1**（不切换风格） | 用户已投入大量设计资产；客户认可；切换成本高 |
 | D2 | 设计方法论 | **Open Design `reference-design-contract` 九段式** | 与工具一致；可审计；可复用 |
 | D3 | 设计系统参考 | **Open Design `cosmic`（太空主题）+ Linear/Stripe 工艺** | cosmic 主题契合；Linear/Stripe 工艺已存在 |
-| D4 | Token 命名 | **语义化（`--c-orb-1`..`-5` / `--text-hi`..`-dim`）** | 与现有变量命名风格一致；避免 Hex 直接引用 |
+| D4 | Token 命名 | **语义化（`--c-const-1`..`-5` / `--text-hi`..`-dim`）** | 与现有变量命名风格一致；避免 Hex 直接引用 |
 | D5 | 字号阶梯 | **Major Third 1.25 + clamp 拉伸** | 投屏 / 桌面双兼顾；避免 14 级复杂阶梯 |
 | D6 | 圆角阶梯 | **5 级（4/6/10/16/pill）** | 与现有约定一致；克制 HUD 严肃感 |
 | D7 | 落地页 | **沿用本次会话新建的 `voyager-landing.html`（黑白极简）** | 已交付，作为项目入口 |
@@ -34,7 +34,7 @@
 ## 3. 保留 / 改动 / 弃用 边界
 
 ### ✅ 保留（Keep）
-- DOM 结构、id/class 命名（`#topbar` / `#hud-telemetry` / `#poster-card` / `.orb-btn[data-orbit]` …）
+- DOM 结构、id/class 命名（`#topbar` / `#hud-telemetry` / `#poster-card` / `.const-btn[data-constellation]` …）
 - 业务逻辑：`loadData()` / `bootSystemSequence()` / `showPoster()` / `requestAnimationFrame` 主循环
 - Three.js 星球渲染流程、Canvas 2D 轨道绘制
 - 90 张纹理 + `images.json` 映射
@@ -61,7 +61,7 @@
 | CSS 5081 行重构引入回归 | 中 | 双轨 token；逐阶段 Playwright 截图回归；保留旧类名 |
 | 新动效导致投屏眩晕 | 低 | 严守时长表（≤ 360ms 整屏）；运动曲线统一 |
 | 移动端触摸交互缺失（hover态失效） | 中 | 补充 `:active` / 长按手势；tooltip 改底部抽屉 |
-| 与现有 token 同名冲突 | 低 | 新 token 加前缀（`--c-orb-` / `--text-hi`），不覆盖 `--c1..5` |
+| 与现有 token 同名冲突 | 低 | 新 token 加前缀（`--c-const-` / `--text-hi`），不覆盖 `--c1..5` |
 | 用户对风格的"再调整"诉求 | 中 | 每阶段交付截图，邀请评审；及时回退 |
 | 性能（动画多了导致掉帧） | 低 | 仅 transform / opacity；will-change 克制 |
 | Open Design daemon 长时间运行影响 | 低 | 已确认 v0.11.0 @ 127.0.0.1:7456 健康 |

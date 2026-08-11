@@ -41,11 +41,11 @@
   --bg-veil: #071526;
 
   /* ── 5 教材主题色（语义化别名，DESIGN.md §2.2）── */
-  --c-orb-1: hsl(185 75% 58%);  /* 必修一 · 青 #2dd4e8 */
-  --c-orb-2: hsl(42 88% 58%);   /* 必修二 · 金 #f0b030 */
-  --c-orb-3: hsl(280 65% 68%);  /* 选必一 · 紫 #c070f0 */
-  --c-orb-4: hsl(130 62% 55%);  /* 选必二 · 绿 #50d080 */
-  --c-orb-5: hsl(210 78% 62%);  /* 选必三 · 蓝 #4090ff */
+  --c-const-1: hsl(185 75% 58%);  /* 必修一 · 青 #2dd4e8 */
+  --c-const-2: hsl(42 88% 58%);   /* 必修二 · 金 #f0b030 */
+  --c-const-3: hsl(280 65% 68%);  /* 选必一 · 紫 #c070f0 */
+  --c-const-4: hsl(130 62% 55%);  /* 选必二 · 绿 #50d080 */
+  --c-const-5: hsl(210 78% 62%);  /* 选必三 · 蓝 #4090ff */
 
   /* ── 文字 / 边框 / 状态 ── */
   --text-hi:  rgba(255 255 255 / .92);
@@ -100,11 +100,11 @@
 
 /* ── 旧变量别名（过渡期兼容，逐步替换为 v2 token）── */
 :root {
-  --c1: var(--c-orb-1);
-  --c2: var(--c-orb-2);
-  --c3: var(--c-orb-3);
-  --c4: var(--c-orb-4);
-  --c5: var(--c-orb-5);
+  --c1: var(--c-const-1);
+  --c2: var(--c-const-2);
+  --c3: var(--c-const-3);
+  --c4: var(--c-const-4);
+  --c5: var(--c-const-5);
   --glass: var(--glass-bg);
   --border: var(--border-hi);
   --text: var(--text-hi);
@@ -134,7 +134,7 @@
 }
 
 button:focus-visible,
-.orb-btn:focus-visible,
+.const-btn:focus-visible,
 #core-btn:focus-visible,
 #sound-toggle:focus-visible,
 #back-btn:focus-visible,
@@ -231,7 +231,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 
 .filter-group{display:flex;gap:5px;flex-shrink:0;}
 
-.orb-btn{
+.const-btn{
 
   border:1px solid transparent;background:transparent;
 
@@ -243,23 +243,23 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 
 }
 
-.orb-btn:hover{background:rgba(255,255,255,0.08);color:var(--text);transform:translateY(-1px);}
+.const-btn:hover{background:rgba(255,255,255,0.08);color:var(--text);transform:translateY(-1px);}
 
-.orb-btn:active{transform:translateY(0) scale(0.98);transition-duration:.08s;}
+.const-btn:active{transform:translateY(0) scale(0.98);transition-duration:.08s;}
 
-.orb-btn.active{color:#fff !important;font-weight:600;}
+.const-btn.active{color:#fff !important;font-weight:600;}
 
-.orb-btn[data-orbit="0"].active{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.25);box-shadow:0 0 10px rgba(255,255,255,0.15);}
+.const-btn[data-constellation="0"].active{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.25);box-shadow:0 0 10px rgba(255,255,255,0.15);}
 
-.orb-btn[data-orbit="1"].active{background:rgba(45,212,232,0.15);border-color:rgba(45,212,232,0.5);box-shadow:0 0 10px rgba(45,212,232,0.2);}
+.const-btn[data-constellation="1"].active{background:rgba(45,212,232,0.15);border-color:rgba(45,212,232,0.5);box-shadow:0 0 10px rgba(45,212,232,0.2);}
 
-.orb-btn[data-orbit="2"].active{background:rgba(240,176,48,0.15);border-color:rgba(240,176,48,0.5);box-shadow:0 0 10px rgba(240,176,48,0.2);}
+.const-btn[data-constellation="2"].active{background:rgba(240,176,48,0.15);border-color:rgba(240,176,48,0.5);box-shadow:0 0 10px rgba(240,176,48,0.2);}
 
-.orb-btn[data-orbit="3"].active{background:rgba(192,112,240,0.15);border-color:rgba(192,112,240,0.5);box-shadow:0 0 10px rgba(192,112,240,0.2);}
+.const-btn[data-constellation="3"].active{background:rgba(192,112,240,0.15);border-color:rgba(192,112,240,0.5);box-shadow:0 0 10px rgba(192,112,240,0.2);}
 
-.orb-btn[data-orbit="4"].active{background:rgba(80,208,128,0.15);border-color:rgba(80,208,128,0.5);box-shadow:0 0 10px rgba(80,208,128,0.2);}
+.const-btn[data-constellation="4"].active{background:rgba(80,208,128,0.15);border-color:rgba(80,208,128,0.5);box-shadow:0 0 10px rgba(80,208,128,0.2);}
 
-.orb-btn[data-orbit="5"].active{background:rgba(64,144,255,0.15);border-color:rgba(64,144,255,0.5);box-shadow:0 0 10px rgba(64,144,255,0.2);}
+.const-btn[data-constellation="5"].active{background:rgba(64,144,255,0.15);border-color:rgba(64,144,255,0.5);box-shadow:0 0 10px rgba(64,144,255,0.2);}
 
 .sep{width:1px;height:20px;background:rgba(255,255,255,0.06);margin:0 6px;flex-shrink:0;}
 
@@ -2099,7 +2099,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 .poster-sidebar-header {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 9px;
-  color: var(--orbit-color, var(--c2));
+  color: var(--constellation-color, var(--c2));
   letter-spacing: 0.15em;
   font-weight: 700;
   margin-bottom: 24px;
@@ -2218,7 +2218,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 .poster-hdr-brand {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 9px;
-  color: var(--orbit-color, var(--c2));
+  color: var(--constellation-color, var(--c2));
   letter-spacing: 0.25em;
   margin-bottom: 8px;
   font-weight: 700;
@@ -2247,7 +2247,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 }
 .poster-divider-top {
   height: 1px;
-  background: linear-gradient(90deg, var(--orbit-color, var(--c2)) 0%, rgba(255,255,255,0.06) 100%);
+  background: linear-gradient(90deg, var(--constellation-color, var(--c2)) 0%, rgba(255,255,255,0.06) 100%);
   margin-top: 6px;
 }
 
@@ -2422,7 +2422,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   text-shadow: 0 0 8px rgba(240, 176, 48, 0.25);
 }
 .retro-table .td-icon {
-  color: var(--orbit-color, var(--c2));
+  color: var(--constellation-color, var(--c2));
   font-size: 11px;
   width: 3%;
   text-align: center;
@@ -2445,7 +2445,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 }
 
 /* ── 同心轨道环：CSS 绘制的 3 圈虚线轨道 + 旋转 ── */
-.orbit-ring {
+.constellation-ring {
   position: absolute;
   top: 50%; left: 50%;
   border-radius: 50%;
@@ -2454,31 +2454,31 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   z-index: 1;
   transform-origin: center center;
 }
-.orbit-ring-1 {
+.constellation-ring-1 {
   width: 110%; height: 110%;
   margin: -55% 0 0 -55%;
   border: 1px dashed rgba(240, 176, 48, 0.22);
-  animation: orbitRotate 28s linear infinite;
+  animation: constellationRotate 28s linear infinite;
 }
-.orbit-ring-2 {
+.constellation-ring-2 {
   width: 128%; height: 128%;
   margin: -64% 0 0 -64%;
   border: 1px dashed rgba(45, 212, 232, 0.18);
-  animation: orbitRotate 42s linear infinite reverse;
+  animation: constellationRotate 42s linear infinite reverse;
 }
-.orbit-ring-3 {
+.constellation-ring-3 {
   width: 146%; height: 146%;
   margin: -73% 0 0 -73%;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  animation: orbitRotate 60s linear infinite;
+  animation: constellationRotate 60s linear infinite;
 }
-@keyframes orbitRotate {
+@keyframes constellationRotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
 /* ── 轨道卫星点：3 个微小发光点沿轨道运行 ── */
-.orbit-satellite {
+.constellation-satellite {
   position: absolute;
   top: 50%; left: 50%;
   width: 6px; height: 6px;
@@ -2490,28 +2490,28 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 .sat-1 {
   background: var(--c2, #f0b030);
   box-shadow: 0 0 8px var(--c2, #f0b030), 0 0 16px rgba(240, 176, 48, 0.5);
-  animation: satOrbit1 28s linear infinite;
+  animation: satConstellation1 28s linear infinite;
 }
 .sat-2 {
   background: var(--c1, #2dd4e8);
   box-shadow: 0 0 8px var(--c1, #2dd4e8), 0 0 16px rgba(45, 212, 232, 0.5);
-  animation: satOrbit2 42s linear infinite reverse;
+  animation: satConstellation2 42s linear infinite reverse;
 }
 .sat-3 {
   background: #fff;
   box-shadow: 0 0 6px #fff, 0 0 12px rgba(255, 255, 255, 0.4);
   width: 4px; height: 4px;
-  animation: satOrbit3 60s linear infinite;
+  animation: satConstellation3 60s linear infinite;
 }
-@keyframes satOrbit1 {
+@keyframes satConstellation1 {
   from { transform: rotate(0deg) translateX(calc(50% + 0px)) rotate(0deg); }
   to { transform: rotate(360deg) translateX(calc(50% + 0px)) rotate(-360deg); }
 }
-@keyframes satOrbit2 {
+@keyframes satConstellation2 {
   from { transform: rotate(0deg) translateX(calc(60% + 0px)) rotate(0deg); }
   to { transform: rotate(360deg) translateX(calc(60% + 0px)) rotate(-360deg); }
 }
-@keyframes satOrbit3 {
+@keyframes satConstellation3 {
   from { transform: rotate(0deg) translateX(calc(70% + 0px)) rotate(0deg); }
   to { transform: rotate(360deg) translateX(calc(70% + 0px)) rotate(-360deg); }
 }
@@ -2546,14 +2546,14 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   position: absolute;
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--orbit-color, var(--c2, #f0b030));
-  box-shadow: 0 0 8px var(--orbit-color, var(--c2, #f0b030)), 0 0 14px rgba(240, 176, 48, 0.5);
+  background: var(--constellation-color, var(--c2, #f0b030));
+  box-shadow: 0 0 8px var(--constellation-color, var(--c2, #f0b030)), 0 0 14px rgba(240, 176, 48, 0.5);
   z-index: 2;
 }
 .poster-meta-item::after {
   content: '';
   position: absolute;
-  background: linear-gradient(90deg, var(--orbit-color, rgba(240, 176, 48, 0.5)), transparent);
+  background: linear-gradient(90deg, var(--constellation-color, rgba(240, 176, 48, 0.5)), transparent);
   height: 1px;
   z-index: 1;
   opacity: 0.6;
@@ -2608,8 +2608,8 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 .poster-meta-item.br::before { top: -3px; left: 14px; }
 .poster-meta-item.br::after { top: 0; left: 16px; width: 24px; transform: translateX(-100%); }
 
-/* Concentric Mini Orbit system rules */
-.mini-orbit-wrap {
+/* Concentric Mini Constellation system rules */
+.mini-constellation-wrap {
   position: absolute;
   bottom: 24px;
   right: 24px;
@@ -2622,7 +2622,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   padding: 8px;
   pointer-events: none;
 }
-.mini-orbit-wrap canvas {
+.mini-constellation-wrap canvas {
   width: 80px;
   height: 80px;
   display: block;
@@ -2744,7 +2744,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   color: var(--dim);
 }
 .git-sha {
-  color: var(--orbit-color);
+  color: var(--constellation-color);
   font-weight: 700;
 }
 .git-author {
@@ -2769,7 +2769,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   padding: 1px 0;
 }
 .git-file-more {
-  color: var(--orbit-color);
+  color: var(--constellation-color);
   opacity: 0.8;
   padding-top: 2px;
 }
@@ -2837,7 +2837,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
     display: none;
   }
 
-  .orb-btn,
+  .const-btn,
   #core-btn {
     min-height: 32px;
     padding: 6px 12px;
@@ -3126,7 +3126,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 /* Cinematic home entrance: astronaut video + interactive constellation layer only. */
 #topbar,
 #mission-brief,
-#orbit-dossier,
+#constellation-dossier,
 #hud-telemetry,
 #back-btn,
 #tooltip,
@@ -3287,7 +3287,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
     gap: 8px;
   }
 
-  .orb-btn,
+  .const-btn,
   #core-btn {
     min-height: 34px;
     padding: 7px 14px;
@@ -3298,14 +3298,14 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
     font-size: 12px;
   }
 
-  .orb-btn:hover,
+  .const-btn:hover,
   #core-btn:hover {
     background: rgba(255, 255, 255, 0.07);
     color: var(--obs-text);
   }
 
-  .orb-btn.active,
-  .orb-btn[data-orbit].active {
+  .const-btn.active,
+  .const-btn[data-constellation].active {
     background: rgba(238, 246, 255, 0.12);
     border-color: rgba(238, 246, 255, 0.55);
     box-shadow: 0 0 0 1px rgba(238, 246, 255, 0.12), 0 0 28px rgba(190, 220, 255, 0.12);
@@ -3377,13 +3377,13 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   }
 
   #mission-brief,
-  #orbit-dossier,
+  #constellation-dossier,
   .hud-panel {
     z-index: 12;
   }
 
   #mission-brief,
-  #orbit-dossier {
+  #constellation-dossier {
     position: absolute;
     pointer-events: none;
     color: var(--obs-text);
@@ -3403,7 +3403,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   }
 
   .mission-kicker,
-  #orbit-dossier .dossier-copy span {
+  #constellation-dossier .dossier-copy span {
     color: var(--obs-gold);
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
@@ -3480,7 +3480,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
     border-radius: 50%;
   }
 
-  #orbit-dossier {
+  #constellation-dossier {
     right: 44px;
     top: 120px;
     width: 310px;
@@ -3519,22 +3519,22 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
     line-height: 1.65;
   }
 
-  #orbit-dossier.previewing {
+  #constellation-dossier.previewing {
     border-color: rgba(238, 246, 255, 0.36);
     box-shadow: 0 34px 110px rgba(0, 0, 0, 0.34), 0 0 46px rgba(238, 246, 255, 0.06);
   }
 
-  #orbit-dossier.locked {
+  #constellation-dossier.locked {
     border-color: rgba(246, 198, 106, 0.42);
     box-shadow: 0 34px 110px rgba(0, 0, 0, 0.36), 0 0 52px rgba(246, 198, 106, 0.08);
   }
 
-  #orbit-dossier.previewing .dossier-ring,
-  #orbit-dossier.locked .dossier-ring {
+  #constellation-dossier.previewing .dossier-ring,
+  #constellation-dossier.locked .dossier-ring {
     filter: grayscale(1) contrast(1.22) brightness(1.08);
   }
 
-  #orbit-dossier.locked .dossier-copy span {
+  #constellation-dossier.locked .dossier-copy span {
     color: var(--obs-gold);
   }
 
@@ -3883,7 +3883,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 }
 
 .p-recall-hero {
-  border-left: 1px solid var(--orbit-color, #f6c66a);
+  border-left: 1px solid var(--constellation-color, #f6c66a);
   padding: 10px 0 10px 16px;
   color: rgba(255, 255, 255, 0.92);
   font-size: 16px;
@@ -4036,7 +4036,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   display: none;
 }
 
-.orb-btn,
+.const-btn,
 #core-btn {
   display: inline-flex !important;
   align-items: center;
@@ -4052,46 +4052,46 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   box-shadow: none !important;
 }
 
-.orb-btn:hover,
+.const-btn:hover,
 #core-btn:hover {
   border-color: rgba(45, 212, 232, 0.42) !important;
   background: rgba(45, 212, 232, 0.085) !important;
   color: #fff !important;
 }
 
-.orb-btn.active,
-.orb-btn[data-orbit].active {
+.const-btn.active,
+.const-btn[data-constellation].active {
   color: #fff !important;
   font-weight: 600;
 }
 
 /* 激活态语言：统一渐变 0.18→0.07、边框透明度 0.62、辉光 0 0 22px，每条星宿保留各自主色 */
-.orb-btn[data-orbit="0"].active {
+.const-btn[data-constellation="0"].active {
   border-color: rgba(255, 255, 255, 0.50) !important;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.06)) !important;
   box-shadow: 0 0 22px rgba(255, 255, 255, 0.14) !important;
 }
-.orb-btn[data-orbit="1"].active {
+.const-btn[data-constellation="1"].active {
   border-color: rgba(45, 212, 232, 0.62) !important;
   background: linear-gradient(180deg, rgba(45, 212, 232, 0.18), rgba(45, 212, 232, 0.07)) !important;
   box-shadow: 0 0 22px rgba(45, 212, 232, 0.18) !important;
 }
-.orb-btn[data-orbit="2"].active {
+.const-btn[data-constellation="2"].active {
   border-color: rgba(240, 176, 48, 0.62) !important;
   background: linear-gradient(180deg, rgba(240, 176, 48, 0.18), rgba(240, 176, 48, 0.07)) !important;
   box-shadow: 0 0 22px rgba(240, 176, 48, 0.18) !important;
 }
-.orb-btn[data-orbit="3"].active {
+.const-btn[data-constellation="3"].active {
   border-color: rgba(192, 112, 240, 0.62) !important;
   background: linear-gradient(180deg, rgba(192, 112, 240, 0.18), rgba(192, 112, 240, 0.07)) !important;
   box-shadow: 0 0 22px rgba(192, 112, 240, 0.18) !important;
 }
-.orb-btn[data-orbit="4"].active {
+.const-btn[data-constellation="4"].active {
   border-color: rgba(80, 208, 128, 0.62) !important;
   background: linear-gradient(180deg, rgba(80, 208, 128, 0.18), rgba(80, 208, 128, 0.07)) !important;
   box-shadow: 0 0 22px rgba(80, 208, 128, 0.18) !important;
 }
-.orb-btn[data-orbit="5"].active {
+.const-btn[data-constellation="5"].active {
   border-color: rgba(64, 144, 255, 0.62) !important;
   background: linear-gradient(180deg, rgba(64, 144, 255, 0.18), rgba(64, 144, 255, 0.07)) !important;
   box-shadow: 0 0 22px rgba(64, 144, 255, 0.18) !important;
@@ -4230,7 +4230,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 }
 
 #mission-brief,
-#orbit-dossier,
+#constellation-dossier,
 #hud-telemetry {
   display: block !important;
 }
@@ -4270,7 +4270,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   background: rgba(255, 255, 255, 0.04) !important;
 }
 
-#orbit-dossier {
+#constellation-dossier {
   top: auto !important;
   right: 34px !important;
   bottom: 42px !important;
@@ -4320,7 +4320,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
     width: calc(100vw - 32px) !important;
   }
 
-  #orbit-dossier {
+  #constellation-dossier {
     display: none !important;
   }
 }
@@ -4427,7 +4427,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 
 @media (max-height: 720px) and (min-width: 761px) {
   #mission-brief,
-  #orbit-dossier,
+  #constellation-dossier,
   #hud-telemetry {
     display: none !important;
   }
@@ -4440,7 +4440,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   justify-content: center !important;
   padding: clamp(18px, 4vw, 54px) !important;
   background:
-    radial-gradient(circle at 68% 44%, var(--orbit-glow, rgba(45, 212, 232, 0.18)), transparent 22%),
+    radial-gradient(circle at 68% 44%, var(--constellation-glow, rgba(45, 212, 232, 0.18)), transparent 22%),
     linear-gradient(180deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.88)) !important;
   backdrop-filter: blur(18px) saturate(124%) !important;
   -webkit-backdrop-filter: blur(18px) saturate(124%) !important;
@@ -4454,7 +4454,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   border: 1px solid rgba(201, 229, 255, 0.16) !important;
   background:
     linear-gradient(90deg, rgba(1, 4, 12, 0.98) 0 41%, rgba(3, 9, 22, 0.94) 41% 100%),
-    radial-gradient(circle at 78% 48%, var(--orbit-glow, rgba(45, 212, 232, 0.16)), transparent 30%),
+    radial-gradient(circle at 78% 48%, var(--constellation-glow, rgba(45, 212, 232, 0.16)), transparent 30%),
     url('/design-assets/galaxy-field.jfif') center center / cover no-repeat !important;
   box-shadow:
     0 42px 160px rgba(0, 0, 0, 0.72),
@@ -4471,7 +4471,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   border: 1px solid rgba(201, 229, 255, 0.08);
   border-radius: 7px;
   background:
-    linear-gradient(color-mix(in srgb, var(--orbit-color, #2dd4e8) 58%, transparent), color-mix(in srgb, var(--orbit-color, #2dd4e8) 58%, transparent)) left 42% top 0 / 1px 100% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--constellation-color, #2dd4e8) 58%, transparent), color-mix(in srgb, var(--constellation-color, #2dd4e8) 58%, transparent)) left 42% top 0 / 1px 100% no-repeat,
     linear-gradient(rgba(201, 229, 255, 0.06), rgba(201, 229, 255, 0.06)) right 76px top 0 / 1px 100% no-repeat;
 }
 
@@ -4572,9 +4572,9 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 
 .sidebar-node:hover,
 .sidebar-node.active {
-  border-color: var(--orbit-color, #2dd4e8) !important;
+  border-color: var(--constellation-color, #2dd4e8) !important;
   background: rgba(255, 255, 255, 0.065) !important;
-  box-shadow: 0 0 24px var(--orbit-glow, rgba(45, 212, 232, 0.16)) !important;
+  box-shadow: 0 0 24px var(--constellation-glow, rgba(45, 212, 232, 0.16)) !important;
 }
 
 .poster-main-content {
@@ -4615,8 +4615,8 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--orbit-color, #2dd4e8);
-  box-shadow: 0 0 18px var(--orbit-color, #2dd4e8);
+  background: var(--constellation-color, #2dd4e8);
+  box-shadow: 0 0 18px var(--constellation-color, #2dd4e8);
 }
 
 #poster-name-en {
@@ -4685,10 +4685,10 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   margin: 2px 0;
   padding: 18px 18px 18px 20px !important;
   border: 1px solid rgba(201, 229, 255, 0.12) !important;
-  border-left: 2px solid var(--orbit-color, #2dd4e8) !important;
+  border-left: 2px solid var(--constellation-color, #2dd4e8) !important;
   border-radius: 8px;
   background:
-    linear-gradient(90deg, var(--orbit-glow, rgba(45, 212, 232, 0.14)), transparent 72%),
+    linear-gradient(90deg, var(--constellation-glow, rgba(45, 212, 232, 0.14)), transparent 72%),
     rgba(255, 255, 255, 0.035);
   color: rgba(255, 255, 255, 0.94) !important;
   font-size: 17px !important;
@@ -4747,7 +4747,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
     inset -22px -28px 34px rgba(0, 0, 0, 0.36),
     0 0 0 20px rgba(255, 255, 255, 0.012),
     0 0 0 42px rgba(255, 255, 255, 0.008),
-    0 0 90px var(--orbit-glow, rgba(45, 212, 232, 0.18)) !important;
+    0 0 90px var(--constellation-glow, rgba(45, 212, 232, 0.18)) !important;
 }
 
 .poster-planet-wrapper::before,
@@ -4846,7 +4846,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
 .poster-meta-item.bl { bottom: 52px !important; left: 4px !important; }
 .poster-meta-item.br { bottom: 52px !important; right: 4px !important; }
 
-.mini-orbit-wrap {
+.mini-constellation-wrap {
   display: none !important;
 }
 
@@ -4958,7 +4958,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   .poster-meta-item.bl { bottom: 6px !important; left: 0 !important; }
   .poster-meta-item.br { bottom: 6px !important; right: 0 !important; }
 
-  .mini-orbit-wrap {
+  .mini-constellation-wrap {
     display: none !important;
   }
 
@@ -5068,7 +5068,7 @@ body {
   transition: color 0.2s var(--ease-premium), border-color 0.2s var(--ease-premium), text-shadow 0.2s var(--ease-premium);
 }
 
-/* 科学家链接：青色调（呼应 orbit-color 冷色系） */
+/* 科学家链接：青色调（呼应 constellation-color 冷色系） */
 .wiki-scientist-link {
   color: rgba(45, 212, 232, 0.92);
   cursor: pointer;
@@ -5182,11 +5182,11 @@ body {
   font-size: var(--fs-md);
   font-weight: 700;
   letter-spacing: .04em;
-  color: var(--c-orb-2);
+  color: var(--c-const-2);
 }
 
 /* ── 顶部按钮统一（DESIGN.md §6.1）── */
-.orb-btn,
+.const-btn,
 #core-btn,
 #sound-toggle {
   height: 32px;
@@ -5201,7 +5201,7 @@ body {
   transition: all 180ms var(--ease-premium);
 }
 
-.orb-btn:hover,
+.const-btn:hover,
 #core-btn:hover,
 #sound-toggle:hover {
   background: rgba(255 255 255 / .08);
@@ -5209,7 +5209,7 @@ body {
   transform: translateY(-1px);
 }
 
-.orb-btn:active,
+.const-btn:active,
 #core-btn:active,
 #sound-toggle:active {
   transform: translateY(0) scale(.98);
@@ -5250,7 +5250,7 @@ body {
   font-size: var(--fs-xs);
   font-weight: 600;
   letter-spacing: .12em;
-  color: var(--c-orb-2);
+  color: var(--c-const-2);
   border-bottom: 1px solid var(--border-md);
   padding-bottom: var(--sp-2);
   margin-bottom: var(--sp-2);
@@ -5286,7 +5286,7 @@ body {
 .hud-scanner-progress {
   width: 35%;
   height: 100%;
-  background: var(--c-orb-2);
+  background: var(--c-const-2);
   animation: hudScan 4s infinite linear;
 }
 

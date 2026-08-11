@@ -26,7 +26,7 @@ let ceremonyFadeOpacity = 1.0;
 let isCardOpening = false;
 let scrollCinematicParallaxCleanup = null;
 
-const ORBIT_COLORS = {
+const CONSTIT_COLORS = {
 
   1: {h:185, s:75, l:58, hex:'#2dd4e8'},
 
@@ -40,7 +40,7 @@ const ORBIT_COLORS = {
 
 };
 
-const ORBIT_LABELS = {
+const CONSTIT_LABELS = {
 
   1:'白羊座 · 分子与细胞',
 
@@ -91,7 +91,7 @@ const RELATION_CONSTELLATION_TEMPLATES = [
   [[-0.58,0.02],[-0.34,-0.34],[-0.08,-0.02],[0.18,-0.40],[0.46,-0.08],[0.66,0.34]],
 ];
 
-const ORBIT_SPEEDS = [0, 0.0005, 0.00038, 0.00028, 0.00018, 0.00012];
+const CONSTIT_SPEEDS = [0, 0.0005, 0.00038, 0.00028, 0.00018, 0.00012];
 
 const PY = 0.35, TL = 0.055;
 
@@ -109,7 +109,7 @@ let stories = [], storyMap = {};
 
 let W, H, CX, CY, SC;
 
-let filterOrbit = 0, coreOnly = false, searchQuery = '';
+let filterConstellation = 0, coreOnly = false, searchQuery = '';
 
 let hoveredId = null, selectedId = null;
 
@@ -240,7 +240,7 @@ function toXY(angle, r) {
 
 }
 
-function orbitR(orbit) { return 0; } // 废弃老轨道半径函数
+function constellationR(constellation) { return 0; } // 废弃老轨道半径函数
 
 // ═══════════════════════════════════════════════════════════════
 
@@ -357,7 +357,7 @@ function applyRelationshipConstellationLayout() {
   const fallbackCells = RELATION_CONSTELLATION_CENTERS;
   const fallbackStars = scientists
     .filter(s => !assigned.has(s.id))
-    .sort((a, b) => a.orbit - b.orbit || (b.magnitude || 0) - (a.magnitude || 0) || a.id.localeCompare(b.id));
+    .sort((a, b) => a.constellation - b.constellation || (b.magnitude || 0) - (a.magnitude || 0) || a.id.localeCompare(b.id));
 
   fallbackStars.forEach((s, index) => {
     const cell = fallbackCells[index % fallbackCells.length];
@@ -587,13 +587,13 @@ async function loadData() {
 
   const groups = {1:[], 2:[], 3:[], 4:[], 5:[]};
 
-  for (const s of scientists) groups[s.orbit].push(s);
+  for (const s of scientists) groups[s.constellation].push(s);
 
   skeletalLinks = []; // 重置全局星座骨架连线数组
 
-  for (let orbit = 1; orbit <= 5; orbit++) {
+  for (let constellation = 1; constellation <= 5; constellation++) {
 
-    const grp = groups[orbit];
+    const grp = groups[constellation];
 
     // 4.1 建立当前星轨/星座内的科学家关联邻接表，以关系连通性进行宽度优先搜索（BFS）重排序，
     // 确保有学术联系的科学家在几何空间上被相邻放置，使得星座连线优雅非交叉
@@ -605,7 +605,7 @@ async function loadData() {
       const ints = s._cleanedInts || [];
       for (const target of ints) {
         const t = scientistMap[target];
-        if (t && t.orbit === orbit && t.id !== s.id) {
+        if (t && t.constellation === constellation && t.id !== s.id) {
           if (!adj[s.id].includes(t.id)) adj[s.id].push(t.id);
           if (!adj[t.id].includes(s.id)) adj[t.id].push(s.id);
         }
@@ -656,7 +656,7 @@ async function loadData() {
 
       let rx = 0, ry = 0;
 
-      if (orbit === 1) {
+      if (constellation === 1) {
 
         // 🌌 白羊座 (Aries)：一条优美延伸的折线/弧线
 
@@ -664,7 +664,7 @@ async function loadData() {
 
         ry = (t - 0.25) * 60 - Math.cos(t * Math.PI) * 45;
 
-      } else if (orbit === 2) {
+      } else if (constellation === 2) {
 
         // 🧬 巨蟹座 (Cancer)：倒Y字形分叉骨架
 
@@ -706,7 +706,7 @@ async function loadData() {
 
         }
 
-      } else if (orbit === 3) {
+      } else if (constellation === 3) {
 
         // 🌿 金牛座 (Taurus)：V字形牛头 + 两条长延伸角
 
@@ -762,7 +762,7 @@ async function loadData() {
 
         }
 
-      } else if (orbit === 4) {
+      } else if (constellation === 4) {
 
         // 🦊 双子座 (Gemini)：两条平行的双子线
 
@@ -886,7 +886,7 @@ async function loadData() {
           const key = [s.id, t.id].sort().join('-');
           if (!seenLinks.has(key)) {
             seenLinks.add(key);
-            skeletalLinks.push({ from: s, to: t, type: 'direct', orbit: s.orbit });
+            skeletalLinks.push({ from: s, to: t, type: 'direct', constellation: s.constellation });
           }
         }
       }
@@ -917,7 +917,7 @@ async function loadData() {
         const key = [s1.id, s2.id].sort().join('-');
         if (!seenLinks.has(key)) {
           seenLinks.add(key);
-          skeletalLinks.push({ from: s1, to: s2, type: 'topic', orbit: s1.orbit });
+          skeletalLinks.push({ from: s1, to: s2, type: 'topic', constellation: s1.constellation });
         }
       }
     }
@@ -1023,7 +1023,7 @@ function bootSystemSequence() {
 
 function isVisible(s) {
 
-  if (filterOrbit > 0 && s.orbit !== filterOrbit) return false;
+  if (filterConstellation > 0 && s.constellation !== filterConstellation) return false;
 
   if (coreOnly && s.priority_level < 3) return false;
 
@@ -1066,18 +1066,18 @@ function updateMissionDossier(s, state = 'idle') {
   const stateEl = document.getElementById('mission-focus-state');
   const nameEl = document.getElementById('mission-focus');
   const copyEl = document.getElementById('mission-focus-copy');
-  const orbitEl = document.getElementById('mission-focus-orbit');
+  const constellationEl = document.getElementById('mission-focus-constellation');
   const coreEl = document.getElementById('mission-focus-core');
-  const panel = document.getElementById('orbit-dossier');
+  const panel = document.getElementById('constellation-dossier');
 
-  if (!stateEl || !nameEl || !copyEl || !orbitEl || !coreEl || !panel) return;
+  if (!stateEl || !nameEl || !copyEl || !constellationEl || !coreEl || !panel) return;
 
   if (!s) {
     panel.classList.remove('previewing', 'locked');
     stateEl.textContent = 'SELECTED NODE';
     nameEl.textContent = '点击任意星点';
     copyEl.textContent = '右侧档案将呈现人物、教材位置、实验方法与考法提醒。';
-    orbitEl.textContent = '--';
+    constellationEl.textContent = '--';
     coreEl.textContent = '--';
     return;
   }
@@ -1087,7 +1087,7 @@ function updateMissionDossier(s, state = 'idle') {
   stateEl.textContent = state === 'locked' ? 'LOCKED DOSSIER' : 'NODE PREVIEW';
   nameEl.textContent = s._cnName || s.id;
   copyEl.textContent = s.quick_recall || s.identity || '打开档案查看教材位置、实验方法与考法提醒。';
-  orbitEl.textContent = ORBIT_LABELS[s.orbit]?.split(' · ')[0] || `Orbit ${s.orbit}`;
+  constellationEl.textContent = CONSTIT_LABELS[s.constellation]?.split(' · ')[0] || `Constellation ${s.constellation}`;
   coreEl.textContent = (s.priority_level === 3 || s.magnitude >= 5) ? 'HIGH' : `${s.magnitude || 3}/5`;
 }
 
@@ -1101,24 +1101,24 @@ function planetRadius(s) {
 
   // 外轨行星放大，magnitude大的也更大，并乘以个性化随机大小变异系数
 
-  const orbitBoost = (s.orbit >= 4) ? 1.3 : 1.0;
+  const constellationBoost = (s.constellation >= 4) ? 1.3 : 1.0;
 
   const baseSize = [0, 5, 8, 12, 17, 22][s.magnitude] || 8;
 
-  return baseSize * SC * orbitBoost * (s._sizeScale || 1.0);
+  return baseSize * SC * constellationBoost * (s._sizeScale || 1.0);
 
 }
 
-function orbitColor(orbit, alpha=1) {
+function constellationColor(constellation, alpha=1) {
 
-  const c = ORBIT_COLORS[orbit];
+  const c = CONSTIT_COLORS[constellation];
 
   return `hsla(${c.h},${c.s}%,${c.l}%,${alpha})`;
 
 }
 
 function getScientistVisual(s) {
-  const c = ORBIT_COLORS[s.orbit] || ORBIT_COLORS[2];
+  const c = CONSTIT_COLORS[s.constellation] || CONSTIT_COLORS[2];
   const textureUrl = (s._textureImg && s._textureLoaded && s._textureImg.src) ? s._textureImg.src : '';
 
   return {
@@ -1183,7 +1183,7 @@ function makeFallbackPlanetTexture(s, size = 512) {
 
   gctx.globalCompositeOperation = 'screen';
   for (let i = 0; i < 42; i++) {
-    const px = Math.abs((Math.sin(i * 21.77 + s.orbit) * 10937.31) % 1) * size;
+    const px = Math.abs((Math.sin(i * 21.77 + s.constellation) * 10937.31) % 1) * size;
     const py = Math.abs((Math.sin(i * 9.41 + s.id.length) * 30111.91) % 1) * size;
     gctx.strokeStyle = `rgba(255,255,255,${0.026 + (i % 4) * 0.008})`;
     gctx.lineWidth = 1 + (i % 3);
@@ -1230,7 +1230,7 @@ function drawWrappedTextureOnSphere(targetCtx, textureImage, cx, cy, r, rotation
   }
 }
 
-function drawPlanetVolumeLighting(targetCtx, cx, cy, r, orbitColor, opacity = 1) {
+function drawPlanetVolumeLighting(targetCtx, cx, cy, r, constellationColor, opacity = 1) {
   targetCtx.save();
   targetCtx.globalAlpha *= opacity;
 
@@ -1261,7 +1261,7 @@ function drawPlanetVolumeLighting(targetCtx, cx, cy, r, orbitColor, opacity = 1)
   targetCtx.fillRect(cx - r, cy - r, r * 2, r * 2);
 
   targetCtx.globalCompositeOperation = 'source-over';
-  targetCtx.strokeStyle = `hsla(${orbitColor.h}, ${orbitColor.s}%, ${Math.min(92, orbitColor.l + 24)}%, 0.32)`;
+  targetCtx.strokeStyle = `hsla(${constellationColor.h}, ${constellationColor.s}%, ${Math.min(92, constellationColor.l + 24)}%, 0.32)`;
   targetCtx.lineWidth = Math.max(0.7, r * 0.035);
   targetCtx.beginPath();
   targetCtx.arc(cx, cy, r - targetCtx.lineWidth * 0.5, 0, Math.PI * 2);
@@ -1273,7 +1273,7 @@ function drawPlanetVolumeLighting(targetCtx, cx, cy, r, orbitColor, opacity = 1)
 function drawSphericalPlanet2D(targetCtx, s, cx, cy, r, frameValue, options = {}) {
   if (r <= 0) return;
 
-  const c = ORBIT_COLORS[s.orbit] || ORBIT_COLORS[2];
+  const c = CONSTIT_COLORS[s.constellation] || CONSTIT_COLORS[2];
   const textureSource = getPlanetTextureSource(s, options.textureSize || 512);
   const textureImage = textureSource.source;
   const rotation = positiveModulo(frameValue * (s._rotSpeed || 0.0032) * (options.rotationScale || 0.28), 1);
@@ -1501,7 +1501,7 @@ function drawGalaxyCore() {
 
 function drawPlanet(s, x, y, dimmed) {
 
-  const c = ORBIT_COLORS[s.orbit];
+  const c = CONSTIT_COLORS[s.constellation];
 
   const isHovered   = (s.id === hoveredId);
 
@@ -1592,7 +1592,7 @@ function drawPlanet(s, x, y, dimmed) {
 
   if (!dimmed && (isHovered || isSelected || (isCore && camera.zoom < 1.12))) {
 
-    drawStarSpike(x, y, r, ORBIT_COLORS[s.orbit], isHovered || isSelected);
+    drawStarSpike(x, y, r, CONSTIT_COLORS[s.constellation], isHovered || isSelected);
 
   }
 
@@ -1698,9 +1698,9 @@ function drawSkeletalLinks() {
 
   ctx.save();
 
-  const activeOrbit = camera.activeConstellation;
+  const activeConstellation = camera.activeConstellation;
 
-  const isAnyActive = (activeOrbit !== null);
+  const isAnyActive = (activeConstellation !== null);
 
   for (const link of skeletalLinks) {
 
@@ -1710,7 +1710,7 @@ function drawSkeletalLinks() {
 
     if (isAnyActive) {
 
-      if (link.from.orbit === activeOrbit || link.to.orbit === activeOrbit) {
+      if (link.from.constellation === activeConstellation || link.to.constellation === activeConstellation) {
 
         isLinkActive = true;
 
@@ -1844,7 +1844,7 @@ function drawHUDScanningRing(s, x, y) {
   if (camera.zoom < 1.3 || r <= 0) return;
 
   ctx.save();
-  const c = ORBIT_COLORS[s.orbit];
+  const c = CONSTIT_COLORS[s.constellation];
   const themeColor = `hsla(${c.h}, ${c.s}%, ${c.l}%, 0.85)`;
   const hudR = r * 1.85;
 
@@ -1956,9 +1956,9 @@ function drawConstellationLabels() {
 
   constellationLabelBounds = {};
 
-  for (let orbit = 1; orbit <= 5; orbit++) {
+  for (let constellation = 1; constellation <= 5; constellation++) {
 
-    const center = CONSTELLATION_CENTERS[orbit];
+    const center = CONSTELLATION_CENTERS[constellation];
 
     // 标题放置在星座中心略偏下方，避免压住核心恒星
 
@@ -1970,11 +1970,11 @@ function drawConstellationLabels() {
 
     const y = CY + (targetY - camera.y) * camera.zoom;
 
-    const info = CONSTELLATION_NAMES[orbit];
+    const info = CONSTELLATION_NAMES[constellation];
 
-    const color = ORBIT_COLORS[orbit];
+    const color = CONSTIT_COLORS[constellation];
 
-    const isHovered = (hoveredConstellation === orbit);
+    const isHovered = (hoveredConstellation === constellation);
 
     ctx.save();
 
@@ -2034,7 +2034,7 @@ function drawConstellationLabels() {
 
     // 缓存标签包围盒以进行碰撞检测
 
-    constellationLabelBounds[orbit] = { x: rx, y: ry, w: rectW, h: rectH };
+    constellationLabelBounds[constellation] = { x: rx, y: ry, w: rectW, h: rectH };
 
   }
 
@@ -2044,7 +2044,7 @@ function drawConstellationLabels() {
 
 function drawConnections() {}
 
-function drawOrbits() {}
+function drawConstellations() {}
 
 // ── 平滑相机插值：更快、更稳的聚焦/复原 ──
 function smoothCameraLerp() {
@@ -2106,7 +2106,7 @@ function render() {
 
   const toRender = scientists.map(s => {
 
-    const center = s._layoutCenter || CONSTELLATION_CENTERS[s.orbit] || { x: 0, y: 0 };
+    const center = s._layoutCenter || CONSTELLATION_CENTERS[s.constellation] || { x: 0, y: 0 };
 
     // 在场景空间：将教材星座分布在星空四角及中央
 
@@ -2168,7 +2168,7 @@ function render() {
 
       // 聚焦模式下，只显示当前教材对应的星座，其他星座星体逐渐淡出隐匿
 
-      if (s.orbit === camera.activeConstellation) {
+      if (s.constellation === camera.activeConstellation) {
 
         if (activeId) {
 
@@ -2242,7 +2242,7 @@ function render() {
 
     if (vis) {
 
-      const isSelectable = (camera.activeConstellation === null || s.orbit === camera.activeConstellation);
+      const isSelectable = (camera.activeConstellation === null || s.constellation === camera.activeConstellation);
 
       if (isSelectable) {
 
@@ -2309,7 +2309,7 @@ function render() {
     if (coordsEl) {
       if (hoveredId || selectedId) {
         const activeSci = scientistMap[hoveredId || selectedId];
-        const center = CONSTELLATION_CENTERS[activeSci.orbit] || { x: 0, y: 0 };
+        const center = CONSTELLATION_CENTERS[activeSci.constellation] || { x: 0, y: 0 };
         const activeCenter = activeSci._layoutCenter || center;
         const sceneX = activeCenter.x * W * 0.45 + activeSci._relX * SC;
         const sceneY = activeCenter.y * H * 0.45 + activeSci._relY * SC;
@@ -2415,13 +2415,13 @@ cv.addEventListener('mousemove', e => {
 
   if (camera.zoom < 1.3) {
 
-    for (let orbit = 1; orbit <= 5; orbit++) {
+    for (let constellation = 1; constellation <= 5; constellation++) {
 
-      const bounds = constellationLabelBounds[orbit];
+      const bounds = constellationLabelBounds[constellation];
 
       if (bounds && mx >= bounds.x && mx <= bounds.x + bounds.w && my >= bounds.y && my <= bounds.y + bounds.h) {
 
-        hoveredConstellation = orbit;
+        hoveredConstellation = constellation;
 
         cv.style.cursor = 'pointer';
 
@@ -2457,11 +2457,11 @@ cv.addEventListener('mousemove', e => {
 
       lastHoveredId = hit.id;
 
-      // Play sound ping based on orbit harmonic chord
+      // Play sound ping based on constellation harmonic chord
 
       const freqMap = { 1: 329.63, 2: 392.00, 3: 440.00, 4: 523.25, 5: 587.33 };
 
-      const baseFreq = freqMap[hit.orbit] || 440;
+      const baseFreq = freqMap[hit.constellation] || 440;
 
       const isCore = (hit.priority_level === 3 || hit.magnitude === 5);
 
@@ -2495,7 +2495,7 @@ cv.addEventListener('mousemove', e => {
 
       // Update custom telemetry values
 
-      const center = CONSTELLATION_CENTERS[hit.orbit] || { x: 0, y: 0 };
+      const center = CONSTELLATION_CENTERS[hit.constellation] || { x: 0, y: 0 };
 
       const hitCenter = hit._layoutCenter || center;
       const sceneX = hitCenter.x * W * 0.45 + hit._relX * SC;
@@ -2506,19 +2506,19 @@ cv.addEventListener('mousemove', e => {
 
       const dec = (sceneY * 0.01).toFixed(2);
 
-      document.getElementById('tt-sector').textContent = `SECTOR: 0${hit.orbit}`;
+      document.getElementById('tt-sector').textContent = `SECTOR: 0${hit.constellation}`;
 
       document.getElementById('tt-coords').textContent = `RA:${ra}h / DEC:${dec}°`;
 
       // Dynamically set CSS variable for theme borders
 
-      const orbitColor = ORBIT_COLORS[hit.orbit];
+      const constellationColor = CONSTIT_COLORS[hit.constellation];
 
-      tooltip.style.setProperty('--hover-color', orbitColor.hex);
+      tooltip.style.setProperty('--hover-color', constellationColor.hex);
 
-      tooltip.style.borderColor = orbitColor.hex;
+      tooltip.style.borderColor = constellationColor.hex;
 
-      tooltip.style.boxShadow = `0 0 15px hsla(${orbitColor.h}, ${orbitColor.s}%, ${orbitColor.l}%, 0.18)`;
+      tooltip.style.boxShadow = `0 0 15px hsla(${constellationColor.h}, ${constellationColor.s}%, ${constellationColor.l}%, 0.18)`;
 
     }
 
@@ -2650,7 +2650,7 @@ function startZoomCeremony(s, origin = null) {
   isCardOpening = true;
 
   // 场景中心位置映射
-  const center = s._layoutCenter || CONSTELLATION_CENTERS[s.orbit] || { x: 0, y: 0 };
+  const center = s._layoutCenter || CONSTELLATION_CENTERS[s.constellation] || { x: 0, y: 0 };
   const sceneX = center.x * W * 0.45 + s._relX * SC;
   const sceneY = center.y * H * 0.45 + s._relY * SC;
 
@@ -2673,7 +2673,7 @@ function startZoomCeremony(s, origin = null) {
 
 function instantSelectScientist(s) {
   // 直接聚焦并弹出卡片：关闭所有动画，瞬间定位相机并显示海报
-  const center = s._layoutCenter || CONSTELLATION_CENTERS[s.orbit] || { x: 0, y: 0 };
+  const center = s._layoutCenter || CONSTELLATION_CENTERS[s.constellation] || { x: 0, y: 0 };
   const sceneX = center.x * W * 0.45 + s._relX * SC;
   const sceneY = center.y * H * 0.45 + s._relY * SC;
 
@@ -2683,11 +2683,11 @@ function instantSelectScientist(s) {
   camera.targetX = sceneX;
   camera.targetY = sceneY;
   camera.targetZoom = 2.85;
-  camera.activeConstellation = s.orbit;
+  camera.activeConstellation = s.constellation;
 
-  filterOrbit = s.orbit;
-  document.querySelectorAll('.orb-btn').forEach(b => {
-    b.classList.toggle('active', parseInt(b.dataset.orbit) === s.orbit);
+  filterConstellation = s.constellation;
+  document.querySelectorAll('.const-btn').forEach(b => {
+    b.classList.toggle('active', parseInt(b.dataset.constellation) === s.constellation);
   });
   const backBtn = document.getElementById('back-btn');
   if (backBtn) backBtn.classList.add('show');
@@ -2898,7 +2898,7 @@ function drawHUDOverlay(hudcv, s) {
   pctx.save();
   
   // 1. 轨道专属主题色柔和大气的边缘晕光 (Atmospheric Aura)
-  const c = ORBIT_COLORS[s.orbit];
+  const c = CONSTIT_COLORS[s.constellation];
   const auraG = pctx.createRadialGradient(cx, cy, r - 6, cx, cy, r + 26);
   auraG.addColorStop(0, `hsla(${c.h},${c.s}%,${c.l}%,0.42)`);
   auraG.addColorStop(0.25, `hsla(${c.h},${c.s}%,${c.l}%,0.18)`);
@@ -2911,7 +2911,7 @@ function drawHUDOverlay(hudcv, s) {
   
   pctx.restore();
   
-  // 2. 绘制行星外侧的圆轨道线 (Orbit line)
+  // 2. 绘制行星外侧的圆轨道线 (Constellation line)
   pctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
   pctx.lineWidth = 0.8;
   pctx.beginPath();
@@ -2999,7 +2999,7 @@ function renderPosterPlanet(s) {
   posterAnimationId = requestAnimationFrame(() => renderPosterPlanet(s));
 }
 
-const ORBIT_CENTER_ICONS = {
+const CONSTIT_CENTER_ICONS = {
 
   1: '🔬',
 
@@ -3013,9 +3013,9 @@ const ORBIT_CENTER_ICONS = {
 
 };
 
-function drawMiniOrbit(orbitNum) {
+function drawMiniConstellation(constellationNum) {
 
-  const ocv = document.getElementById('mini-orbit-canvas');
+  const ocv = document.getElementById('mini-constellation-canvas');
 
   if (!ocv) return;
 
@@ -3047,15 +3047,15 @@ function drawMiniOrbit(orbitNum) {
 
   // 2. Draw concentric rings
 
-  const themeColor = ORBIT_COLORS[orbitNum].hex;
+  const themeColor = CONSTIT_COLORS[constellationNum].hex;
 
   for (let i = 1; i <= 5; i++) {
 
     const radius = 10 + i * 7.5;
 
-    octx.strokeStyle = (i === orbitNum) ? themeColor : 'rgba(255,255,255,0.08)';
+    octx.strokeStyle = (i === constellationNum) ? themeColor : 'rgba(255,255,255,0.08)';
 
-    octx.lineWidth = (i === orbitNum) ? 1.2 : 0.6;
+    octx.lineWidth = (i === constellationNum) ? 1.2 : 0.6;
 
     octx.beginPath();
 
@@ -3069,7 +3069,7 @@ function drawMiniOrbit(orbitNum) {
 
     const dotY = cy + Math.sin(angle) * radius;
 
-    if (i === orbitNum) {
+    if (i === constellationNum) {
 
       octx.fillStyle = themeColor;
 
@@ -3187,17 +3187,17 @@ function showPoster(s, options = {}) {
 
   const body = document.getElementById('poster-info-body');
 
-  const c = ORBIT_COLORS[s.orbit];
+  const c = CONSTIT_COLORS[s.constellation];
 
-  const orbitColor = `hsl(${c.h},${c.s}%,${c.l}%)`;
+  const constellationColor = `hsl(${c.h},${c.s}%,${c.l}%)`;
 
-  const orbitColorGlow = `hsla(${c.h},${c.s}%,${c.l}%,0.3)`;
+  const constellationColorGlow = `hsla(${c.h},${c.s}%,${c.l}%,0.3)`;
 
   // 设置 CSS 变量，使卡片边框及发光与科学家对应轨道颜色一致
 
-  overlay.style.setProperty('--orbit-color', orbitColor);
+  overlay.style.setProperty('--constellation-color', constellationColor);
 
-  overlay.style.setProperty('--orbit-glow', orbitColorGlow);
+  overlay.style.setProperty('--constellation-glow', constellationColorGlow);
 
   // 提取英文名：优先匹配括号内，其次匹配任意连续英文片段，都没有则留空
 
@@ -3238,11 +3238,11 @@ function showPoster(s, options = {}) {
 
   document.getElementById('meta-priority').textContent = s.priority || "常规考点";
 
-  document.getElementById('meta-sector').textContent = ORBIT_LABELS[s.orbit];
+  document.getElementById('meta-sector').textContent = CONSTIT_LABELS[s.constellation];
 
   // 表格参数计算与填充
 
-  document.getElementById('table-center-icon').textContent = ORBIT_CENTER_ICONS[s.orbit] || '🧬';
+  document.getElementById('table-center-icon').textContent = CONSTIT_CENTER_ICONS[s.constellation] || '🧬';
 
   document.getElementById('val-magnitude').textContent = `${s.magnitude} / 5`;
 
@@ -3258,7 +3258,7 @@ function showPoster(s, options = {}) {
 
   document.getElementById('val-module').textContent = s.knowledge_module || "经典发现";
 
-  document.getElementById('val-books').textContent = ORBIT_LABELS[s.orbit].split(' · ')[0];
+  document.getElementById('val-books').textContent = CONSTIT_LABELS[s.constellation].split(' · ')[0];
 
   // 渲染主体文字描述：直接展示高考考点、快速记忆、核心方法
   body.innerHTML = `
@@ -3370,9 +3370,9 @@ function findScientist(nameOrId) {
 
 // ═══════════════════════════════════════════════════════════════
 
-function focusConstellation(orbitNum) {
+function focusConstellation(constellationNum) {
 
-  const center = CONSTELLATION_CENTERS[orbitNum];
+  const center = CONSTELLATION_CENTERS[constellationNum];
 
   if (!center) return;
 
@@ -3382,15 +3382,15 @@ function focusConstellation(orbitNum) {
 
   camera.targetZoom = 2.4;
 
-  camera.activeConstellation = orbitNum;
+  camera.activeConstellation = constellationNum;
 
-  document.querySelectorAll('.orb-btn').forEach(b => {
+  document.querySelectorAll('.const-btn').forEach(b => {
 
-    b.classList.toggle('active', parseInt(b.dataset.orbit) === orbitNum);
+    b.classList.toggle('active', parseInt(b.dataset.constellation) === constellationNum);
 
   });
 
-  filterOrbit = orbitNum;
+  filterConstellation = constellationNum;
 
   const backBtn = document.getElementById('back-btn');
 
@@ -3410,13 +3410,13 @@ function resetFocus() {
 
   camera.activeConstellation = null;
 
-  document.querySelectorAll('.orb-btn').forEach(b => {
+  document.querySelectorAll('.const-btn').forEach(b => {
 
-    b.classList.toggle('active', parseInt(b.dataset.orbit) === 0);
+    b.classList.toggle('active', parseInt(b.dataset.constellation) === 0);
 
   });
 
-  filterOrbit = 0;
+  filterConstellation = 0;
 
   const backBtn = document.getElementById('back-btn');
 
@@ -3434,21 +3434,21 @@ function resetFocus() {
 
 // ═══════════════════════════════════════════════════════════════
 
-const orbButtons = document.querySelectorAll('.orb-btn');
+const constButtons = document.querySelectorAll('.const-btn');
 
-orbButtons.forEach(btn => {
+constButtons.forEach(btn => {
 
   btn.addEventListener('click', () => {
 
-    const orbit = parseInt(btn.dataset.orbit);
+    const constellation = parseInt(btn.dataset.constellation);
 
-    if (orbit === 0) {
+    if (constellation === 0) {
 
       resetFocus();
 
     } else {
 
-      focusConstellation(orbit);
+      focusConstellation(constellation);
 
     }
 
@@ -3512,13 +3512,13 @@ document.getElementById('poster-overlay').addEventListener('click', e => {
 
 // ═══════════════════════════════════════════════════════════════
 
-function focusAndScroll(orbitNum) {
+function focusAndScroll(constellationNum) {
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
   setTimeout(() => {
 
-    focusConstellation(orbitNum);
+    focusConstellation(constellationNum);
 
   }, 380);
 
@@ -3740,7 +3740,7 @@ function drawWireframePlanet(canvas, t) {
 
   ctx.stroke();
 
-  // Draw an orbit ring tilted
+  // Draw an constellation ring tilted
 
   ctx.strokeStyle = 'rgba(255, 209, 59, 0.3)';
 
@@ -3768,7 +3768,7 @@ function drawWireframePlanet(canvas, t) {
 
   ctx.stroke();
 
-  // Draw tiny orbiting satellite
+  // Draw tiny circling satellite
 
   const satAng = t * 1.2;
 
@@ -5036,7 +5036,7 @@ function navigatePoster(direction) {
 
   // 获取同轨道的科学家列表
 
-  const list = scientists.filter(sci => sci.orbit === s.orbit);
+  const list = scientists.filter(sci => sci.constellation === s.constellation);
 
   if (list.length <= 1) return;
 
@@ -5072,7 +5072,7 @@ function navigatePoster(direction) {
 
     const freqMap = { 1: 329.63, 2: 392.00, 3: 440.00, 4: 523.25, 5: 587.33 };
 
-    const baseFreq = freqMap[nextSci.orbit] || 440;
+    const baseFreq = freqMap[nextSci.constellation] || 440;
 
     playPing(baseFreq, 'sine', 0.5, 0.08);
 
@@ -5626,7 +5626,7 @@ function updateSidebar(currentSci) {
 
         const freqMap = { 1: 329.63, 2: 392.00, 3: 440.00, 4: 523.25, 5: 587.33 };
 
-        const baseFreq = freqMap[targetSci.orbit] || 440;
+        const baseFreq = freqMap[targetSci.constellation] || 440;
 
         if (typeof playPing === 'function') {
 
@@ -5720,7 +5720,7 @@ function setupAudioEvents() {
 
     const isInteractive = e.target.closest('button') || 
 
-                          e.target.closest('.orb-btn') || 
+                          e.target.closest('.const-btn') || 
 
                           e.target.closest('.p-link') ||
 
