@@ -42,15 +42,15 @@ const CONSTIT_COLORS = {
 
 const CONSTIT_LABELS = {
 
-  1:'白羊座 · 分子与细胞',
+  1:'白羊 · 分子与细胞',
 
-  2:'巨蟹座 · 遗传与进化',
+  2:'巨蟹 · 遗传与进化',
 
-  3:'金牛座 · 稳态与调节',
+  3:'金牛 · 稳态与调节',
 
-  4:'双子座 · 生物与环境',
+  4:'双子 · 生物与环境',
 
-  5:'狮子座 · 生物技术与工程',
+  5:'狮子 · 生物技术与工程',
 
 };
 
@@ -145,15 +145,15 @@ const camera = {
 
 const CONSTELLATION_NAMES = {
 
-  1: { cn: "白羊座", en: "Aries", icon: "🌌 白羊座 · 分子与细胞" },
+  1: { cn: "白羊", en: "Aries", icon: "🌌 白羊 · 分子与细胞" },
 
-  2: { cn: "巨蟹座", en: "Cancer", icon: "🧬 巨蟹座 · 遗传与进化" },
+  2: { cn: "巨蟹", en: "Cancer", icon: "🧬 巨蟹 · 遗传与进化" },
 
-  3: { cn: "金牛座", en: "Taurus", icon: "🌿 金牛座 · 稳态与调节" },
+  3: { cn: "金牛", en: "Taurus", icon: "🌿 金牛 · 稳态与调节" },
 
-  4: { cn: "双子座", en: "Gemini", icon: "🦊 双子座 · 生物与环境" },
+  4: { cn: "双子", en: "Gemini", icon: "🦊 双子 · 生物与环境" },
 
-  5: { cn: "狮子座", en: "Leo",    icon: "🧪 狮子座 · 生物技术与工程" }
+  5: { cn: "狮子", en: "Leo",    icon: "🧪 狮子 · 生物技术与工程" }
 
 };
 
@@ -658,7 +658,7 @@ async function loadData() {
 
       if (constellation === 1) {
 
-        // 🌌 白羊座 (Aries)：一条优美延伸的折线/弧线
+        // 🌌 白羊 (Aries)：一条优美延伸的折线/弧线
 
         rx = (t - 0.5) * 260;
 
@@ -666,7 +666,7 @@ async function loadData() {
 
       } else if (constellation === 2) {
 
-        // 🧬 巨蟹座 (Cancer)：倒Y字形分叉骨架
+        // 🧬 巨蟹 (Cancer)：倒Y字形分叉骨架
 
         const N_stem = Math.floor(0.4 * (N - 1)) + 1;
 
@@ -708,7 +708,7 @@ async function loadData() {
 
       } else if (constellation === 3) {
 
-        // 🌿 金牛座 (Taurus)：V字形牛头 + 两条长延伸角
+        // 🌿 金牛 (Taurus)：V字形牛头 + 两条长延伸角
 
         const N_horn1 = Math.floor(0.28 * (N - 1)) + 1;
 
@@ -764,7 +764,7 @@ async function loadData() {
 
       } else if (constellation === 4) {
 
-        // 🦊 双子座 (Gemini)：两条平行的双子线
+        // 🦊 双子 (Gemini)：两条平行的双子线
 
         const idx_half = Math.floor(0.5 * N);
 
@@ -794,7 +794,7 @@ async function loadData() {
 
       } else {
 
-        // 🧪 狮子座 (Leo)：镰刀弯钩头部 + 三角形身躯 + 延伸的尾巴
+        // 🧪 狮子 (Leo)：镰刀弯钩头部 + 三角形身躯 + 延伸的尾巴
 
         const N_sickle = Math.floor(0.35 * (N - 1)) + 1;
 
