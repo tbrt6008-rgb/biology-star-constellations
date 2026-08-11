@@ -1,0 +1,2667 @@
+{
+  "total": 78,
+  "generated_at": "2026-05-20",
+  "orbit_labels": {
+    "1": "必修一 · 分子与细胞",
+    "2": "必修二 · 遗传与进化",
+    "3": "选必一 · 稳态与调节",
+    "4": "选必二 · 生物与环境",
+    "5": "选必三 · 生物技术与工程"
+  },
+  "scientists": [
+    {
+      "id": "卡尔文",
+      "name": "卡尔文 (Melvin Calvin)",
+      "magnitude": 5,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "美国",
+      "era": "20世纪50年代",
+      "identity": "用放射性碳-14追踪CO₂的每一步去向，绘制出暗反应的完整地图——卡尔文循环。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "用14C示踪追踪CO2去向，绘制暗反应完整地图。",
+      "common_trap": "混淆光反应产物与暗反应产物；记错卡尔文循环的物质转化顺序。",
+      "focus": [
+        "暗反应（卡尔文循环）过程",
+        "CO2固定",
+        "C3还原"
+      ],
+      "core_method": [
+        "放射性同位素标记法",
+        "层析法"
+      ],
+      "intersection": [
+        "光合作用：跨越百年的能量接力"
+      ],
+      "tags": [],
+      "cognitive_type": "示踪实验/生化路径分析",
+      "knowledge_module": "细胞代谢",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "巴斯德",
+      "name": "巴斯德 (Louis Pasteur)",
+      "magnitude": 5,
+      "orbit": 1,
+      "books": [
+        "必修一",
+        "选必三"
+      ],
+      "nationality": "法国",
+      "era": "19世纪",
+      "identity": "微生物学之父，他用一尊鹅颈瓶否定了“无中生有”，用疫苗和消毒法守卫了人类文明。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "微生物学之父，鹅颈瓶实验否定自然发生说，开创免疫学。",
+      "common_trap": "混淆“消毒”与“灭菌”；误以为鹅颈瓶实验证明生命不能产生。",
+      "focus": [
+        "生源论（否定自然发生说）",
+        "巴氏消毒法",
+        "疫苗研发"
+      ],
+      "core_method": [
+        "对比实验法",
+        "类比推理法"
+      ],
+      "intersection": [
+        "细胞学说的诞生：从植物到动物的共鸣",
+        "发酵工程诞生的前夕",
+        "围观微观世界：从命名到功能"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/变量控制",
+      "knowledge_module": "细胞学说",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "鲁宾和卡门",
+      "name": "鲁宾和卡门 (Ruben & Kamen)",
+      "magnitude": 5,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "美国",
+      "era": "20世纪40年代",
+      "identity": "用两种同位素氧，让水和CO₂\"认领\"了各自的氧原子，终结了光合作用O₂来源之争。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "用18O示踪证明光合作用释放的O2全部来自水。",
+      "common_trap": "误以为O2来自CO2；混淆鲁宾卡门与卡尔文实验的目的。",
+      "focus": [
+        "光合作用O2来源证明",
+        "18O示踪逻辑"
+      ],
+      "core_method": [
+        "同位素标记法"
+      ],
+      "intersection": [
+        "光合作用：跨越百年的能量接力"
+      ],
+      "tags": [],
+      "cognitive_type": "示踪实验/变量控制",
+      "knowledge_module": "细胞代谢（光合作用）",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "米歇尔",
+      "name": "彼得·米歇尔 (Peter Mitchell)",
+      "magnitude": 4,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "英国",
+      "era": "20世纪60-70年代（1920-1992年）",
+      "identity": "细胞内的“电厂架构师”，他提出的“化学渗透假说”揭开了生命如何利用跨膜质子浓度差制造能量货币（ATP）的奥秘。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "提出质子梯度跨膜电化学驱动ATP合成的“化学渗透假说”，获诺贝尔奖。",
+      "common_trap": "误以为线粒体中ATP是水解酶直接催化ADP脱水合成的，它是依靠质子梯度驱动ATP合酶旋转合成的。",
+      "focus": [
+        "化学渗透假说的主要内容",
+        "线粒体内膜的ATP合成机制"
+      ],
+      "core_method": [
+        "膜电位与梯度测量",
+        "假说构建法"
+      ],
+      "intersection": [
+        "光合作用：跨越百年的能量接力",
+        "内环境与稳态：生理学逻辑的闭环"
+      ],
+      "tags": [],
+      "cognitive_type": "假说建构/物理跨界",
+      "knowledge_module": "能量代谢（呼吸与光合）",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "辛格和尼科尔森",
+      "name": "辛格和尼科尔森 (Singer & Nicolson)",
+      "magnitude": 4,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "美国",
+      "era": "20世纪70年代（1972年）",
+      "identity": "细胞膜的“现代绘图师”。他们提出的“流动镶嵌模型”，让死板的细胞边界变成了灵动的、具有生命活力的“流体海洋”。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "提出细胞膜流动镶嵌模型，描述了生物膜的动态特征。",
+      "common_trap": "误以为所有的膜蛋白都可以移动，其实有部分蛋白是固定且不对称排布的。",
+      "focus": [
+        "流动镶嵌模型的主要内容",
+        "细胞膜结构的流动性与不对称性"
+      ],
+      "core_method": [
+        "模型构建法"
+      ],
+      "intersection": [
+        "细胞膜的发现史：从脂质猜想到流动镶嵌",
+        "罗伯特森",
+        "欧文顿"
+      ],
+      "tags": [],
+      "cognitive_type": "结构解析/假说建构",
+      "knowledge_module": "细胞膜的结构",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "克劳德",
+      "name": "阿尔伯特·克劳德 (Albert Claude)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "比利时/美国",
+      "era": "20世纪40-50年代",
+      "identity": "细胞内的“剥离大师”，他用离心机将细胞的零件逐一拆解，开启了现代细胞生物学的新纪元。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "发展差速离心技术，成功分离并观察线粒体、叶绿体等细胞器。",
+      "common_trap": "误以为他发明了电子显微镜，实际上他是将差速离心与电镜观察结合。",
+      "focus": [
+        "细胞器的分离方法（差速离心法）",
+        "线粒体与内质网的结构观察"
+      ],
+      "core_method": [
+        "差速离心法",
+        "电子显微镜观察法"
+      ],
+      "intersection": [
+        "差速离心法",
+        "显微观察与示踪技术"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/技术开发",
+      "knowledge_module": "细胞的结构",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "列文虎克",
+      "name": "安东尼·范·列文虎克 (Antonie van Leeuwenhoek)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "荷兰",
+      "era": "17世纪中叶（1632-1723年）",
+      "identity": "显微镜下的“第一人”，他用磨制的镜片叩开了微观世界的大门，让人类第一次看清了那群被称为“微小动物”的隐形居民。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "显微镜下的“第一人”，用自制镜片首次看清了细菌和活细胞。",
+      "common_trap": "误以为他命名了细胞，实际上他称之为“微小动物”，命名细胞的是罗伯特·胡克。",
+      "focus": [
+        "活细胞的首次观察",
+        "显微镜的发展与使用"
+      ],
+      "core_method": [
+        "显微观察法"
+      ],
+      "intersection": [
+        "围观微观世界：从命名到功能",
+        "罗伯特·胡克"
+      ],
+      "tags": [],
+      "cognitive_type": "直觉观察/归纳发现",
+      "knowledge_module": "细胞学说",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "奥特曼",
+      "name": "西德尼·奥特曼 (Sidney Altman)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "加拿大/美国",
+      "era": "20世纪70-80年代（1939-2022年）",
+      "identity": "核酶研究的并蒂莲。他与切赫共同揭开了RNA作为生物催化剂的真相，为我们理解早期生命的运作模式打开了新的视野。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "与切赫共同发现RNA具有催化功能，打破了酶都是蛋白质的传统认知。",
+      "common_trap": "误以为他参与了DNA双螺旋的构建，其实他的贡献是在RNA的催化活性发现上。",
+      "focus": [
+        "核酶的发现",
+        "酶本质概念的完善"
+      ],
+      "core_method": [
+        "核酸生物化学分析",
+        "层析与电泳法"
+      ],
+      "intersection": [
+        "酶的面具：从蛋白质到核酶的百年追寻",
+        "切赫"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/结构解析",
+      "knowledge_module": "细胞代谢",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "弗雷和埃迪登",
+      "name": "弗雷和埃迪登 (Frye & Edidin)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "美国",
+      "era": "1970年",
+      "identity": "细胞膜的“色彩见证者”，他们用一场跨物种的“红绿融合”，实证了细胞表面的灵动海洋。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "用红绿荧光标记人鼠细胞融合实验，直观证明了细胞膜的流动性。",
+      "common_trap": "误以为该实验是通过磷脂分子的运动证明流动性，其实是通过荧光标记的蛋白质运动证明的。",
+      "focus": [
+        "人鼠细胞融合实验设计",
+        "细胞膜结构的流动性"
+      ],
+      "core_method": [
+        "荧光标记法",
+        "细胞融合技术"
+      ],
+      "intersection": [
+        "显微观察与示踪技术",
+        "细胞膜的发现史：从脂质猜想到流动镶嵌"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/图像可视化",
+      "knowledge_module": "细胞膜的流动镶嵌模型",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "恩格尔曼",
+      "name": "恩格尔曼 (Theodor Wilhelm Engelmann)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "德国",
+      "era": "19世纪中叶",
+      "identity": "发现光合作用“光谱图”的实验大师，他用一条丝状绿藻和一群好氧细菌，精巧地勾画出了光合作用的能量地图。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "用水绵和好氧细菌实验精确证明叶绿体是光合作用场所，且红光蓝紫光最高效。",
+      "common_trap": "误以为好氧细菌是释放氧气的，其实好氧细菌是用作氧气分布的活体示踪器。",
+      "focus": [
+        "水绵与好氧细菌实验设计",
+        "光合作用的光谱选择与场所"
+      ],
+      "core_method": [
+        "极细光束微照法",
+        "好氧细菌示踪法",
+        "显微观察法"
+      ],
+      "intersection": [
+        "光合作用：跨越百年的能量接力",
+        "鲁宾和卡门"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/对照控制",
+      "knowledge_module": "细胞代谢（光合作用）",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "戈特和格伦德尔",
+      "name": "戈特和格伦德尔 (Gorter & Grendel)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "荷兰",
+      "era": "1925年",
+      "identity": "磷脂双层的“度量衡”，他们用最简单的数学计算，量出了生命屏障的厚度。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "提取红细胞脂质，测得单分子层面积为红细胞表面积两倍，证明细胞膜由脂双层构成。",
+      "common_trap": "误以为他们用的是红细胞核，哺乳动物成熟红细胞没有核及复杂的细胞器，排除了内膜系统的干扰。",
+      "focus": [
+        "红细胞单分子层面积测量",
+        "脂双层模型的建立"
+      ],
+      "core_method": [
+        "红细胞脂质提取法",
+        "单分子层面积测量法"
+      ],
+      "intersection": [
+        "['细胞膜的发现史：从脂质猜想到流动镶嵌']"
+      ],
+      "tags": [],
+      "cognitive_type": "结构解析/定量计算",
+      "knowledge_module": "细胞膜的结构",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "斯帕兰扎尼",
+      "name": "斯帕兰扎尼 (Lazzaro Spallanzani)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "意大利",
+      "era": "18世纪（1729-1799年）",
+      "identity": "鹰胃里的“化学探险者”，他用一尊小金属笼，证明了生命对食物的消解不靠蛮力。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "用小金属笼喂鹰实验证明胃液具有化学性消化作用。",
+      "common_trap": "误以为他纯化并提取了消化酶，他只是证明了胃部消化不全是胃壁的物理磨碎。",
+      "focus": [
+        "胃部化学性消化的设计",
+        "排除胃壁磨碎的实验控制"
+      ],
+      "core_method": [
+        "金属小笼动物吞食实验"
+      ],
+      "intersection": [
+        "['酶的面具：从蛋白质到核酶的百年追寻']"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/直觉推演",
+      "knowledge_module": "酶的发现史",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "施旺",
+      "name": "泰奥多尔·施旺 (Theodor Schwann)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "德国",
+      "era": "19世纪中叶（1810-1882年）",
+      "identity": "细胞学说的共同创始人。他跨越了动植物的边界，宣告了：无论飞鸟游鱼还是繁花茂草，在微观上都遵循同一套生命蓝图。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "细胞学说的共同创始人，确立了一切动物体也是由细胞构成的理念。",
+      "common_trap": "误以为他独自创立了细胞学说，实际上是与施莱登分别在植物与动物领域的研究共同构筑的。",
+      "focus": [
+        "动物组织细胞普查",
+        "细胞学说的基本内容"
+      ],
+      "core_method": [
+        "显微镜检法",
+        "解剖学比较法"
+      ],
+      "intersection": [
+        "细胞学说的诞生：从植物到动物的共鸣",
+        "施莱登",
+        "魏尔肖"
+      ],
+      "tags": [],
+      "cognitive_type": "跨界整合/归纳总结",
+      "knowledge_module": "细胞学说的建立",
+      "gaokao_dimension": [
+        "基础性"
+      ]
+    },
+    {
+      "id": "施莱登",
+      "name": "詹姆斯·施莱登 (Matthias Schleiden)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "德国",
+      "era": "19世纪中叶（1804-1881年）",
+      "identity": "细胞学说的共同创始人。他通过对植物组织的微观普查，大胆断言：植物的一生都是细胞的集合体。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "细胞学说的共同创始人，确立了植物都是由细胞构成的观点。",
+      "common_trap": "误以为他正确解释了新细胞产生的机制，他错误地以为新细胞是通过细胞核结晶而来的。",
+      "focus": [
+        "植物细胞形态分类",
+        "细胞学说的基本内容"
+      ],
+      "core_method": [
+        "显微观察法",
+        "解剖归纳法"
+      ],
+      "intersection": [
+        "细胞学说的诞生：从植物到动物的共鸣",
+        "施旺",
+        "魏尔肖"
+      ],
+      "tags": [],
+      "cognitive_type": "直觉归纳/理论建构",
+      "knowledge_module": "细胞学说的建立",
+      "gaokao_dimension": [
+        "基础性"
+      ]
+    },
+    {
+      "id": "欧文顿",
+      "name": "欧文顿 (Ernest Overton)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "英国",
+      "era": "19世纪末（1895-1899年）",
+      "identity": "细胞膜的“脂质发现者”，他通过五百多次跨膜实验，用化学的逻辑推断出了那层肉眼看不见的细胞边界究竟由何物构成。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "根据脂溶性物质更易跨膜透性实验，得出细胞膜是由脂质组成的化学推论。",
+      "common_trap": "误以为他使用显微注射直接提取了细胞膜，他是根据跨膜透性规律作出的间接化学推理。",
+      "focus": [
+        "物质跨膜透性对照实验",
+        "细胞膜主要成分（脂质）的推导"
+      ],
+      "core_method": [
+        "跨膜透性对比法"
+      ],
+      "intersection": [
+        "细胞膜的发现史：从脂质猜想到流动镶嵌",
+        "罗伯特森",
+        "辛格和尼科尔森"
+      ],
+      "tags": [],
+      "cognitive_type": "逻辑推演/假说假定",
+      "knowledge_module": "细胞膜的结构",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "比夏",
+      "name": "比夏 (Marie François Xavier Bichat)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "法国",
+      "era": "18世纪末",
+      "identity": "认知维度的降维打击：从肉眼可见的器官，深入到肉眼难分的组织。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "生命的织网者，在没有显微镜的时代，敏锐地察觉到‘组织’的存在。",
+      "common_trap": "混淆比夏（组织水平）与维萨里（器官水平）。",
+      "focus": [
+        "人体构造的组织水平认知"
+      ],
+      "core_method": [
+        "归纳法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "逻辑归纳",
+      "knowledge_module": "细胞学说的建立",
+      "gaokao_dimension": [
+        "基础性"
+      ]
+    },
+    {
+      "id": "维萨里",
+      "name": "安德烈·维萨里 (Andreas Vesalius)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "比利时",
+      "era": "16世纪",
+      "identity": "揭开皮肤的屏障：他是细胞学说漫长前奏中的第一位“拆解者”。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "解剖学之父，通过实地解剖，将人类对生命的认知从迷信带回器官水平。",
+      "common_trap": "混淆维萨里（器官水平）与比夏（组织水平）。",
+      "focus": [
+        "人体构造的器官水平认知"
+      ],
+      "core_method": [
+        "显微观察与示踪技术"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "观察实证",
+      "knowledge_module": "细胞学说建立的背景",
+      "gaokao_dimension": [
+        "基础性"
+      ]
+    },
+    {
+      "id": "罗伯特·胡克",
+      "name": "罗伯特·胡克 (Robert Hooke)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "英国",
+      "era": "17世纪中叶（1635-1703年）",
+      "identity": "细胞的“命名者”，他透过自制的显微镜，在一片薄薄的木栓中发现了生命的“蜂窝状结构”，并留下了“Cell”这个流传至今的伟大术语。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "用自制显微镜首次观察并命名细胞“Cell”。",
+      "common_trap": "误以为他观察到的是活体植物细胞，他其实观察到的是已木质化的木栓死细胞壁所包围的空腔。",
+      "focus": [
+        "细胞的发现与命名历史",
+        "显微镜在细胞发现中的应用"
+      ],
+      "core_method": [
+        "自制显微镜检法"
+      ],
+      "intersection": [
+        "围观微观世界：从命名到功能",
+        "列文虎克"
+      ],
+      "tags": [],
+      "cognitive_type": "实证观察/概念创立",
+      "knowledge_module": "细胞学说建立的背景",
+      "gaokao_dimension": [
+        "基础性"
+      ]
+    },
+    {
+      "id": "罗伯特森",
+      "name": "罗伯特森 (J. David Robertson)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "美国",
+      "era": "20世纪50年代（1924-1995年）",
+      "identity": "细胞膜的“三明治”架构师，他利用电子显微镜揭示了生物膜普遍存在的“单位膜”结构，为人类理解细胞边界提供了第一张高清蓝图。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "电镜下观察到“暗-明-暗”三层结构，提出静态单位膜模型。",
+      "common_trap": "误以为他认识到了细胞膜的流动性，他的三明治单位膜模型是死板和静态的。",
+      "focus": [
+        "电镜下暗-明-暗的三层结构",
+        "单位膜模型的静态局限性"
+      ],
+      "core_method": [
+        "超薄切片电镜观察法"
+      ],
+      "intersection": [
+        "细胞膜的发现史：从脂质猜想到流动镶嵌",
+        "辛格和尼科尔森",
+        "欧文顿"
+      ],
+      "tags": [],
+      "cognitive_type": "结构解析/假说局限",
+      "knowledge_module": "细胞膜的结构",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "苏姆纳",
+      "name": "詹姆斯·苏姆纳 (James B. Sumner)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "美国",
+      "era": "20世纪初（1887-1955年）",
+      "identity": "酶的“真身”发现者。他在所有人都认为酶是神秘物质的年代，用一罐结晶的刀豆脲酶证明了：酶，本质上就是蛋白质。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "结晶并证明了酶（脲酶）的本质是蛋白质，推翻了当时酶不是蛋白质的传统断言。",
+      "common_trap": "误以为他首创了酶是RNA的定义，他只证明了脲酶是蛋白质，酶是RNA由切赫等发现。",
+      "focus": [
+        "脲酶结晶的提纯与鉴定",
+        "酶本质概念的历史发展"
+      ],
+      "core_method": [
+        "蛋白质结晶纯化技术",
+        "化学本质鉴定法"
+      ],
+      "intersection": [
+        "酶的面具：从蛋白质到核酶的百年追寻",
+        "切赫"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/生化解析",
+      "knowledge_module": "酶的本质与功能",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "茨维特",
+      "name": "米哈伊尔·茨维特 (Mikhail Tswett)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "俄罗斯",
+      "era": "1900年代（1872-1919年）",
+      "identity": "色谱法的“调色师”，他用一根充满吸附剂的管柱，揭开了植物色素混合的秘密。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "发明柱色谱技术并用于植物叶绿素组分分离，是色谱学的奠基人。",
+      "common_trap": "误以为高中课本中的纸层析法是他发明的，课本方法是色谱吸附原理的滤纸版演变。",
+      "focus": [
+        "层析法的基本原理",
+        "叶绿素组分的分开历史"
+      ],
+      "core_method": [
+        "色谱层析分离法"
+      ],
+      "intersection": [
+        "纸层析技术",
+        "光合作用探究实验"
+      ],
+      "tags": [],
+      "cognitive_type": "技术开发/结构解析",
+      "knowledge_module": "细胞代谢（光合作用实验）",
+      "gaokao_dimension": [
+        "基础性",
+        "应用性"
+      ]
+    },
+    {
+      "id": "萨克斯",
+      "name": "尤利乌斯·冯·萨克斯 (Julius von Sachs)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "德国",
+      "era": "19世纪中叶（1832-1897年）",
+      "identity": "现代植物生理学之父，他用一片叶子和一瓶碘液，精巧地证明了光合作用的产物——淀粉，并揭示了叶绿体作为“生命工厂”的地位。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "半遮光半曝光的叶片碘蒸汽实验证实光合作用产物包括淀粉。",
+      "common_trap": "误以为实验可以直接进行，为了排除干扰，必须提前暗处理植物以消耗累积淀粉。",
+      "focus": [
+        "半遮光半曝光的实验设计",
+        "碘液检测淀粉产生的原理与前处理"
+      ],
+      "core_method": [
+        "自身对照法",
+        "暗处理消耗淀粉",
+        "酒精脱色与碘液检测"
+      ],
+      "intersection": [
+        "光合作用：跨越百年的能量接力",
+        "恩格尔曼",
+        "鲁宾和卡门"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/对照设计",
+      "knowledge_module": "细胞代谢（光合作用）",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "阿尔农",
+      "name": "阿尔农 (Daniel Arnon)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "美国",
+      "era": "1954年",
+      "identity": "叶绿体内的“能量捕获者”，他发现了光能是如何转化为生命通货 ATP 的。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "发现离体叶绿体在光照下能合成ATP并产生NADPH，证实光合磷酸化。",
+      "common_trap": "误以为阿尔农证明了碳同化路径，他主要揭示了光反应阶段的能量转换机制。",
+      "focus": [
+        "光合磷酸化的发现",
+        "光反应能量转换机制"
+      ],
+      "core_method": [
+        "体外叶绿体悬浮合成实验",
+        "放射性同位素追踪（32P）"
+      ],
+      "intersection": [
+        "['光合作用探究实验']"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/化学能量解析",
+      "knowledge_module": "细胞代谢（光合作用）",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "魏尔肖",
+      "name": "鲁道夫·魏尔肖 (Rudolf Virchow)",
+      "magnitude": 3,
+      "orbit": 1,
+      "books": [
+        "必修一"
+      ],
+      "nationality": "德国",
+      "era": "19世纪中叶（1821-1902年）",
+      "identity": "细胞学说的“完善者”，现代病理学之父。他用一句话终结了生命的起源之争，确立了生命延续的永恒逻辑。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "总结出“一切细胞都来源于现有的细胞”，最终完善了细胞学说。",
+      "common_trap": "误以为细胞学说的所有内容都是他一个人总结的，他只是补充了细胞的发生。",
+      "focus": [
+        "“新细胞产生自老细胞”的科学结论",
+        "细胞学说的完善历程"
+      ],
+      "core_method": [
+        "显微病理学观察法"
+      ],
+      "intersection": [
+        "细胞学说的诞生：从植物到动物的共鸣",
+        "施莱登",
+        "施旺"
+      ],
+      "tags": [],
+      "cognitive_type": "理论整合/医学应用",
+      "knowledge_module": "细胞学说",
+      "gaokao_dimension": [
+        "基础性"
+      ]
+    },
+    {
+      "id": "丹尼利和戴维森",
+      "name": "丹尼利和戴维森 (Danielli & Davson)",
+      "magnitude": 2,
+      "orbit": 1,
+      "books": [],
+      "nationality": "英国",
+      "era": "20世纪30年代（1935年）",
+      "identity": "膜表面的“张力测量师”，他们用物理的逻辑，推导出了包裹在脂质之外的蛋白质外衣。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "提出细胞膜的“蛋白质-脂质-蛋白质”三明治静态结构模型。",
+      "common_trap": "误以为三明治模型能够解释细胞膜的流动性或胞吞胞吐。",
+      "focus": [
+        "三明治静态模型",
+        "静态结构模型的局限性"
+      ],
+      "core_method": [
+        "显微观察法",
+        "推理解析法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "结构解析/假说推演",
+      "knowledge_module": "细胞的结构与功能（侧重细胞膜）",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "哈伯兰特",
+      "name": "哈伯兰特 (Gottlieb Haberlandt)",
+      "magnitude": 2,
+      "orbit": 1,
+      "books": [],
+      "nationality": "奥地利",
+      "era": "20世纪初（1902年）",
+      "identity": "植物细胞“全能性”的先知，他在显微镜下预见了一个细胞能长成整片森林的未来。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "首次提出植物细胞全能性假说，被誉为植物组织培养之父。",
+      "common_trap": "误以为他成功培养出了植物植株，其实因为缺乏植物激素，他的实验均以失败告终。",
+      "focus": [
+        "细胞全能性假说的提出",
+        "植物细胞培养概念"
+      ],
+      "core_method": [
+        "理论推演法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "假说直觉/理论奠基",
+      "knowledge_module": "植物细胞工程",
+      "gaokao_dimension": [
+        "基础性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "希尔",
+      "name": "希尔 (Robert Hill)",
+      "magnitude": 2,
+      "orbit": 1,
+      "books": [],
+      "nationality": "英国",
+      "era": "20世纪30年代（1937年）",
+      "identity": "离体叶绿体的“唤醒者”，他证明了水在光下的崩解不需要整个细胞的指挥。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "离体叶绿体光照释氧反应（希尔反应）的发现者，证实水的光解与碳同化独立发生。",
+      "common_trap": "误以为希尔反应中能合成糖类分子，其实它只进行了水的光解并释放氧气。",
+      "focus": [
+        "希尔反应的实验设计",
+        "光反应与暗反应的独立性"
+      ],
+      "core_method": [
+        "体外叶绿体悬浮实验",
+        "氧化还原指示剂法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "实验实证/化学分析",
+      "knowledge_module": "光合作用",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "克里克",
+      "name": "弗朗西斯·克里克 (Francis Crick)",
+      "magnitude": 5,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "英国",
+      "era": "20世纪中叶（1916-2004年）",
+      "identity": "分子生物学的“总设计师”，他不仅参与拼出了DNA的双螺旋，还为整个生命科学确立了“信息流”的顶层架构。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "分子生物学总设计师，提出中心法则确立生命信息流架构。",
+      "common_trap": "误认为他只发现了DNA结构，忽视了他在中心法则和密码子方面的理论贡献。",
+      "focus": [
+        "DNA双螺旋模型",
+        "中心法则",
+        "适配器假说",
+        "遗传密码破译"
+      ],
+      "core_method": [
+        "模型构建法",
+        "假说-演绎法",
+        "理论建模法"
+      ],
+      "intersection": [
+        "DNA双螺旋的四重奏：数据、偏见与双链",
+        "沃森和克里克",
+        "薛定谔的招募令：当物理学接管生命"
+      ],
+      "tags": [],
+      "cognitive_type": "理论建模/信息论思维",
+      "knowledge_module": "遗传的分子基础",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "孟德尔",
+      "name": "孟德尔 (Gregor Mendel)",
+      "magnitude": 5,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "奥地利",
+      "era": "19世纪中叶（1856-1866年）",
+      "identity": "遗传学之父，用豌豆和数学，在无人理解的时代独自点亮了遗传学的第一颗星。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "遗传学之父，用豌豆和数学逻辑独自点亮遗传学第一颗星。",
+      "common_trap": "误以为F2的3:1是每株植物都严格符合，忽略了大量统计的概率本质。",
+      "focus": [
+        "分离定律",
+        "自由组合定律",
+        "假说-演绎法步骤"
+      ],
+      "core_method": [
+        "假说-演绎法",
+        "统计学分析法",
+        "模型构建法"
+      ],
+      "intersection": [
+        "遗传学的三级火箭：从因子到染色体",
+        "被唤醒的尘埃：孟德尔规律的1900年大复活",
+        "耐格里"
+      ],
+      "tags": [],
+      "cognitive_type": "逻辑推演/数学建模",
+      "knowledge_module": "遗传规律",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "摩尔根",
+      "name": "摩尔根 (Thomas Hunt Morgan)",
+      "magnitude": 5,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "美国",
+      "era": "20世纪初（1908-1920年代）",
+      "identity": "从嘲笑孟德尔到亲手证明基因在染色体上——科学史上最华丽的\"打脸\"转身。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "用果蝇白眼实验证明基因在染色体上，完成遗传学华丽转身。",
+      "common_trap": "混淆萨顿的“类比推理（假说）”与摩尔根的“假说-演绎（证明）”。",
+      "focus": [
+        "基因在染色体上（实验证明）",
+        "伴性遗传",
+        "基因连锁互换"
+      ],
+      "core_method": [
+        "假说-演绎法",
+        "类比推理法"
+      ],
+      "intersection": [
+        "遗传学的三级火箭：从因子到染色体"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/逻辑推演",
+      "knowledge_module": "遗传规律（伴性遗传）",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "梅塞尔森和斯塔尔",
+      "name": "梅塞尔森和斯塔尔 (Meselson & Stahl)",
+      "magnitude": 5,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "美国",
+      "era": "20世纪50年代",
+      "identity": "被誉为\"生物学史上最美丽的实验\"——用密度梯度离心，让DNA亲眼\"展示\"了自己的复制方式。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "用15N重氮标记证明DNA复制方式为半保留复制。",
+      "common_trap": "不理解为何需要两代培养（排除全保留复制）；混淆离心带的中/轻/重位置。",
+      "focus": [
+        "DNA半保留复制实验证据",
+        "密度梯度离心技术"
+      ],
+      "core_method": [
+        "同位素标记法",
+        "密度梯度离心技术"
+      ],
+      "intersection": [
+        "最美丽的实验：DNA半保留复制的假说与实证"
+      ],
+      "tags": [],
+      "cognitive_type": "示踪实验/物理分离",
+      "knowledge_module": "DNA的复制",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "沃森和克里克",
+      "name": "沃森和克里克 (Watson & Crick)",
+      "magnitude": 5,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "美国/英国",
+      "era": "20世纪50年代",
+      "identity": "1953年，他们用别人的数据、查哥夫的规则和一堆金属模型，拼出了生命的密码。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "提出DNA双螺旋结构模型，开启分子生物学时代。",
+      "common_trap": "忘记两条链反向平行；记错氢键数量（A-T:2, G-C:3）。",
+      "focus": [
+        "DNA双螺旋结构要点",
+        "碱基互补配对原则"
+      ],
+      "core_method": [
+        "模型构建法",
+        "物理与数学建模"
+      ],
+      "intersection": [
+        "DNA双螺旋的四重奏：数据、偏见与双链"
+      ],
+      "tags": [],
+      "cognitive_type": "模型构建/跨界整合",
+      "knowledge_module": "DNA的结构与复制",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "艾弗里",
+      "name": "奥斯瓦尔德·艾弗里 (Oswald Avery)",
+      "magnitude": 5,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "美国",
+      "era": "20世纪40年代（1877-1955年）",
+      "identity": "遗传物质真相的“揭幕者”。他用严谨的生化提纯实验，在蛋白质统治的时代，顶住压力宣告了DNA才是生命的“指挥官”。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "用严谨生化提纯实验证明DNA是遗传物质，遗传物质真相揭幕者。",
+      "common_trap": "混淆格里菲斯（体内）与艾弗里（体外）；误以为他证明了DNA是主要遗传物质。",
+      "focus": [
+        "体外转化实验逻辑",
+        "减法原理应用",
+        "证明DNA是遗传物质"
+      ],
+      "core_method": [
+        "加法与减法原理",
+        "对比实验法"
+      ],
+      "intersection": [
+        "肺炎链球菌转化实验",
+        "格里菲思",
+        "查哥夫"
+      ],
+      "tags": [],
+      "cognitive_type": "逻辑推演/生化提纯",
+      "knowledge_module": "遗传物质的探究",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "赫尔希和蔡斯",
+      "name": "赫尔希和蔡斯 (Hershey & Chase)",
+      "magnitude": 5,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "美国",
+      "era": "20世纪50年代",
+      "identity": "用两种放射性同位素标记噬菌体，让DNA和蛋白质\"各回各家\"，彻底终结了遗传物质之争。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "用放射性同位素标记噬菌体证明DNA是遗传物质，终结遗传物质之争。",
+      "common_trap": "记混标记元素（S标记蛋白, P标记DNA）；不理解搅拌和离心的目的。",
+      "focus": [
+        "噬菌体侵染实验",
+        "35S与32P标记对象",
+        "离心结果分析"
+      ],
+      "core_method": [
+        "放射性同位素标记法",
+        "加法与减法原理"
+      ],
+      "intersection": [
+        "噬菌体小组：追寻物质本质的猎人"
+      ],
+      "tags": [],
+      "cognitive_type": "物理分离/示踪实验",
+      "knowledge_module": "遗传物质的探究",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "达尔文",
+      "name": "达尔文 (Charles Darwin)",
+      "magnitude": 5,
+      "orbit": 2,
+      "books": [
+        "必修二",
+        "选必一"
+      ],
+      "nationality": "英国",
+      "era": "19世纪（1831-1882年）",
+      "identity": "用20年时间把一个危险的想法打磨成铁证，同时还在晚年敏锐地捕捉到了植物“向阳而生”的秘密。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "提出自然选择学说解释物种进化，并开启生长素接力第一棒。",
+      "common_trap": "混淆自然选择与用进废退；误以为“进化”等于“进步”。",
+      "focus": [
+        "自然选择学说",
+        "植物向光性实验（感光部位）",
+        "进化论要点"
+      ],
+      "core_method": [
+        "类比推理法",
+        "假说-演绎法"
+      ],
+      "intersection": [
+        "进化双星：达尔文与华莱士的绅士之约",
+        "生长素：从光向性到物质的百年接力"
+      ],
+      "tags": [],
+      "cognitive_type": "归纳演绎/长期观察",
+      "knowledge_module": "生物进化与生长素发现",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "富兰克林",
+      "name": "罗莎琳德·富兰克林 (Rosalind Franklin)",
+      "magnitude": 4,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "英国",
+      "era": "20世纪50年代",
+      "identity": "DNA双螺旋结构背后的“暗物质”，她拍摄的“照片51号”是揭开生命密码最关键的物理证据，却在生前未获得应有的荣耀。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "拍摄了最关键的DNA晶体衍射“照片51号”，为双螺旋的确立提供了决定性物理事实。",
+      "common_trap": "误以为她是沃森和克里克的助手，其实她是杰出的女物理化学家，对衍射数据的定量分析极其精密。",
+      "focus": [
+        "照片51号在DNA结构构建中的作用",
+        "X射线晶体学方法"
+      ],
+      "core_method": [
+        "X射线衍射分析法"
+      ],
+      "intersection": [
+        "DNA双螺旋的四重奏：数据、偏见与双链",
+        "沃森和克里克",
+        "威尔金斯"
+      ],
+      "tags": [],
+      "cognitive_type": "结构解析/精密实验",
+      "knowledge_module": "遗传规律",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "德尔布吕克",
+      "name": "马克斯·德尔布吕克 (Max Delbrück)",
+      "magnitude": 4,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "德国/美国",
+      "era": "20世纪中叶（1906-1981年）",
+      "identity": "跨界而来的物理学家，分子生物学的精神领袖，他用噬菌体作为“生命的基本逻辑单元”，确立了生物学的定量分析范式。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "物理学家跨界推动分子生物学，倡导噬菌体小组的定量分析研究。",
+      "common_trap": "误以为他亲手做出了DNA双螺旋，他主要是在方法论上指引了噬菌体与分子生物学小组。",
+      "focus": [
+        "噬菌体小组的科学贡献",
+        "物理学对生物学发展的推动"
+      ],
+      "core_method": [
+        "定量计算与模型法",
+        "噬菌体侵染法"
+      ],
+      "intersection": [
+        "薛定谔的招募令：当物理学接管生命",
+        "噬菌体小组：追寻物质本质的猎人",
+        "赫尔希和蔡斯"
+      ],
+      "tags": [],
+      "cognitive_type": "跨界整合/数学定量",
+      "knowledge_module": "分子生物学史",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "查哥夫",
+      "name": "埃尔文·查哥夫 (Erwin Chargaff)",
+      "magnitude": 4,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "奥地利/美国",
+      "era": "20世纪中叶（1905-2002年）",
+      "identity": "发现DNA碱基比例规律的化学家，他为双螺旋模型提供了最关键的化学证据，却成了分子生物学史上最失意的旁观者。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "测定多种生物碱基比例得出A=T，G=C的查哥夫法则，为双螺旋提供化学约束。",
+      "common_trap": "误以为他知道了碱基氢键配对，他只提出了碱基比例相等的事实，空间配对由沃森克里克构建。",
+      "focus": [
+        "查哥夫法则的主要内容",
+        "碱基配对机制的确定依据"
+      ],
+      "core_method": [
+        "纸层析定量分析法",
+        "紫外吸收光谱法"
+      ],
+      "intersection": [
+        "查哥夫与双螺旋：一场被羞辱引发的革命",
+        "沃森和克里克"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/定量分析",
+      "knowledge_module": "DNA的结构",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "格里菲思",
+      "name": "弗雷德里克·格里菲思 (Frederick Griffith)",
+      "magnitude": 4,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "英国",
+      "era": "1928年",
+      "identity": "转化因子的“猎人”，他用四组小鼠实验，撞开了遗传物质本质探索的大门。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "肺炎链球菌体内转化实验发现了让R型转化为S型活菌的“转化因子”。",
+      "common_trap": "误以为格里菲思实验得出了DNA是遗传物质的结论，其仅推断存在“转化因子”。",
+      "focus": [
+        "体内转化实验四组对照的设计",
+        "“转化因子”假说的得出"
+      ],
+      "core_method": [
+        "小鼠体内注射实验"
+      ],
+      "intersection": [
+        "['肺炎链球菌转化实验']"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/假说提出",
+      "knowledge_module": "遗传物质的探究",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "约翰逊",
+      "name": "威廉·约翰逊 (Wilhelm Johannsen)",
+      "magnitude": 4,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "丹麦",
+      "era": "20世纪初 (1909年)",
+      "identity": "遗传学的“命名人”，他用一个词终结了模糊的描述，开启了现代遗传学的词典。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "给孟德尔的‘遗传因子’穿上了‘基因’的外衣，并划清了遗传与表现的界限。",
+      "common_trap": "误以为孟德尔提出了‘基因’一词；混淆基因型与表型的因果关系。",
+      "focus": [
+        "‘基因’概念的命名",
+        "基因型与表型的区分"
+      ],
+      "core_method": [
+        "归纳法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "概念定义/逻辑区分",
+      "knowledge_module": "遗传学基本概念",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "萨顿",
+      "name": "萨顿 (Walter Sutton)",
+      "magnitude": 4,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "美国",
+      "era": "20世纪初（1902年）",
+      "identity": "一个观察蝗虫减数分裂的年轻人，用一次直觉的飞跃，把孟德尔的因子\"放\"到了染色体上。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "通过蝗虫减数分裂观察平行行为，用类比推理提出“基因在染色体上”假说。",
+      "common_trap": "误以为萨顿实验完成了基因在染色体上的实证，其实他只提出了类比推理假说。",
+      "focus": [
+        "基因与染色体行为的平行关系",
+        "类比推理法在科学假说中的作用"
+      ],
+      "core_method": [
+        "类比推理法",
+        "显微镜检减数分裂"
+      ],
+      "intersection": [
+        "遗传学的三级火箭：从因子到染色体"
+      ],
+      "tags": [],
+      "cognitive_type": "类比联想/逻辑推演",
+      "knowledge_module": "遗传规律（萨顿假说）",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "薛定谔",
+      "name": "埃尔温·薛定谔 (Erwin Schrödinger)",
+      "magnitude": 4,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "奥地利",
+      "era": "20世纪中叶（1887-1961年）",
+      "identity": "物理学界的“特使”。他用一本名为《生命是什么？》的小书，在物理学与生物学之间架起了一座桥梁，点燃了分子生物学革命的圣火。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "理论物理学家，发表《生命是什么》提出“负熵”与“非周期性晶体”感召科学家跨界。",
+      "common_trap": "误以为他发现了DNA碱基配对，他只是提出了遗传密码必须是稳定且非周期性晶体的假说。",
+      "focus": [
+        "非周期性晶体假说与遗传密码预测",
+        "“负熵”与生命本质理论"
+      ],
+      "core_method": [
+        "理论物理交叉推理"
+      ],
+      "intersection": [
+        "薛定谔的招募令：当物理学接管生命",
+        "克里克",
+        "沃森和克里克"
+      ],
+      "tags": [],
+      "cognitive_type": "跨界整合/理论构建",
+      "knowledge_module": "分子生物学史",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "鲍林",
+      "name": "莱纳斯·鲍林 (Linus Pauling)",
+      "magnitude": 4,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "美国",
+      "era": "20世纪50年代（1901-1994年）",
+      "identity": "化学键的大师，蛋白质二级结构的揭秘者。他是科学史上唯一一位两次独立获得诺贝尔奖的奇才。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "提出蛋白质α-螺旋二级结构模型，启发了DNA双螺旋的物理建模方法。",
+      "common_trap": "误以为他发现了双螺旋，他在DNA竞争中因模型碱基向外、磷酸在内（错误极性）而失败。",
+      "focus": [
+        "蛋白质空间结构模型",
+        "物理分子模型构建法"
+      ],
+      "core_method": [
+        "分子结构模型构建法"
+      ],
+      "intersection": [
+        "DNA双螺旋的四重奏：数据、偏见与双链",
+        "沃森和克里克",
+        "富兰克林"
+      ],
+      "tags": [],
+      "cognitive_type": "结构解析/物理建模",
+      "knowledge_module": "蛋白质的结构",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "卢里亚",
+      "name": "萨尔瓦多·卢里亚 (Salvador Luria)",
+      "magnitude": 3,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "意大利/美国",
+      "era": "20世纪中叶（1912-1991年）",
+      "identity": "细菌遗传学的拓荒者，噬菌体小组的“三巨头”之一。他用数学的严谨证明了生命的变异并非环境的奴隶，而是随机演化的杰作。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "细菌遗传学拓荒者，波动测试实验证明细菌突变是随机发生的。",
+      "common_trap": "误以为突变是由环境（如噬菌体）定向诱导产生的，其实突变是随机、不定向的。",
+      "focus": [
+        "细菌突变的选择学说",
+        "波动测试实验设计"
+      ],
+      "core_method": [
+        "波动测试实验",
+        "统计检验法"
+      ],
+      "intersection": [
+        "噬菌体小组：追寻物质本质的猎人",
+        "德尔布吕克",
+        "赫尔希和蔡斯"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/逻辑推演",
+      "knowledge_module": "遗传规律",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "德弗里斯",
+      "name": "雨果·德弗里斯 (Hugo de Vries)",
+      "magnitude": 3,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "荷兰",
+      "era": "19世纪末20世纪初",
+      "identity": "突变学说的提出者，孟德尔规律的“三大复活者”之首，他将进化论的关注点从渐变转向了跳跃式的突变。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "孟德尔遗传规律的“三大复活者”之首，提出进化突变论。",
+      "common_trap": "误以为他观察到的是基因点突变，其实主要是大月见草的染色体变异及多倍体化。",
+      "focus": [
+        "孟德尔定律的重新发现",
+        "突变学说的提出"
+      ],
+      "core_method": [
+        "观察杂交实验",
+        "变异归纳法"
+      ],
+      "intersection": [
+        "被唤醒的尘埃：孟德尔规律的1900年大复活",
+        "科伦斯"
+      ],
+      "tags": [],
+      "cognitive_type": "理论推演/现象归纳",
+      "knowledge_module": "遗传与进化",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "拉马克",
+      "name": "让-巴蒂斯特·拉马克 (Jean-Baptiste Lamarck)",
+      "magnitude": 3,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "法国",
+      "era": "18世纪末19世纪初（1744-1829年）",
+      "identity": "生物进化学说的先驱，他首次将“进化”作为科学命题提出。尽管他的机制被证明是错误的，但他为生物学从固定论转向演化论踢出了第一脚。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "首次系统提出进化论，倡导“用进废退” and “获得性遗传”。",
+      "common_trap": "误以为拉马克的进化假说对现代科学毫无贡献，其实他是把进化引入科学的伟大先驱。",
+      "focus": [
+        "用进废退与获得性遗传内容",
+        "在进化论史上的先驱地位"
+      ],
+      "core_method": [
+        "比较解剖学法",
+        "演化假说推演"
+      ],
+      "intersection": [
+        "进化双星：达尔文与华莱士的绅士之约",
+        "达尔文"
+      ],
+      "tags": [],
+      "cognitive_type": "假说直觉/现象归纳",
+      "knowledge_module": "生物进化",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "科伦斯",
+      "name": "卡尔·科伦斯 (Carl Correns)",
+      "magnitude": 3,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "德国",
+      "era": "19世纪末20世纪初",
+      "identity": "孟德尔规律的“复活者”与“超越者”，他不仅重新发现了遗传定律，还揭示了隐藏在细胞质中的生命蓝图。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "重新发现孟德尔定律，并发现紫茉莉等细胞质非典型遗传现象。",
+      "common_trap": "误以为他仅从事孟德尔常染色体遗传研究，其实他是首个发现细胞质遗传规律的先驱。",
+      "focus": [
+        "孟德尔定律的重新发现",
+        "细胞质遗传现象"
+      ],
+      "core_method": [
+        "杂交育种观察法"
+      ],
+      "intersection": [
+        "被唤醒的尘埃：孟德尔规律的1900年大复活",
+        "德弗里斯"
+      ],
+      "tags": [],
+      "cognitive_type": "实验验证/范式超越",
+      "knowledge_module": "遗传与变异",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "耐格里",
+      "name": "耐格里 (Karl Wilhelm von Nägeli)",
+      "magnitude": 2,
+      "orbit": 2,
+      "books": [
+        "必修二"
+      ],
+      "nationality": "瑞士",
+      "era": "19世纪中叶",
+      "identity": "站在真理门槛外的权威，他与孟德尔的通信，既是科学交流的佳话，也是因傲慢与误导导致的悲剧。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "与孟德尔频繁通信的权威植物学家，因墨守成规忽视了孟德尔定律。",
+      "common_trap": "误以为他支持孟德尔的杂交定律，实际上他极力推荐孟德尔去研究不适合的山柳菊。",
+      "focus": [
+        "遗传学史上的科学争论",
+        "山柳菊杂交实验的局限"
+      ],
+      "core_method": [
+        "观察实验法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "经验归纳/传统范式",
+      "knowledge_module": "遗传规律",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "切尔马克",
+      "name": "切尔马克 (Erich von Tschermak)",
+      "magnitude": 2,
+      "orbit": 2,
+      "books": [],
+      "nationality": "奥地利",
+      "era": "19世纪末20世纪初（1900年）",
+      "identity": "孟德尔定律的“三大复活者”之一，他在豌豆实验的土壤中，与历史的真相不期而遇。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "1900年独立重新发现孟德尔遗传规律的三大科学家之一。",
+      "common_trap": "误以为他是发现分离定律的第一人，实际上他是通过独立杂交实验重新验证了它。",
+      "focus": [
+        "孟德尔定律的重新发现",
+        "杂交实验验证"
+      ],
+      "core_method": [
+        "杂交实验法",
+        "统计分析法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "实验验证/归纳总结",
+      "knowledge_module": "遗传规律",
+      "gaokao_dimension": [
+        "综合性",
+        "应用性"
+      ]
+    },
+    {
+      "id": "切赫",
+      "name": "切赫 (Thomas Cech)",
+      "magnitude": 2,
+      "orbit": 2,
+      "books": [],
+      "nationality": "美国",
+      "era": "20世纪80年代",
+      "identity": "酶学界的“叛逆者”，他发现了具有催化功能的RNA——核酶，打破了“所有酶都是蛋白质”的百年铁律，揭示了生命起源的另一种可能。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "发现某些RNA具有催化功能，打破了“酶都是蛋白质”的传统观念。",
+      "common_trap": "误以为所有的酶都是RNA，或误以为酶的本质只有RNA。",
+      "focus": [
+        "核酶的发现",
+        "酶本质概念的完善"
+      ],
+      "core_method": [
+        "生化分析法",
+        "体外转录与催化法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "实验实证/颠覆认知",
+      "knowledge_module": "酶的本质",
+      "gaokao_dimension": [
+        "基础性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "华莱士",
+      "name": "华莱士 (Alfred Russel Wallace)",
+      "magnitude": 2,
+      "orbit": 2,
+      "books": [],
+      "nationality": "英国",
+      "era": "19世纪中叶（1858年）",
+      "identity": "自然选择学说的共同发现者，生物地理学之父。他在马来群岛的丛林中独立点燃了进化的火种，并以“绅士之约”促成了科学史上最伟大的理论发表。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "独立提出以自然选择为基础的进化论，与达尔文共同发表论文。",
+      "common_trap": "误以为他与达尔文是竞争敌对关系，实际上两人保持着高尚的学术绅士风度。",
+      "focus": [
+        "自然选择学说的独立发现",
+        "物种起源假说"
+      ],
+      "core_method": [
+        "野外考察法",
+        "比较解剖学法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "经验归纳/假说推演",
+      "knowledge_module": "进化理论",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "威尔金斯",
+      "name": "威尔金斯 (Maurice Wilkins)",
+      "magnitude": 2,
+      "orbit": 2,
+      "books": [],
+      "nationality": "英国/新西兰",
+      "era": "20世纪50年代",
+      "identity": "DNA双螺旋的“助产士”，他是物理学向生物学跨界的先驱之一。他在实验室中最早开启了DNA衍射的研究，并以一种争议性的方式促成了双螺旋的诞生。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "用X射线衍射技术研究DNA晶体结构，为双螺旋模型的建立奠定了物理基础。",
+      "common_trap": "误以为他只在旁边打下手，其实他是DNA晶体衍射研究的独立开拓者。",
+      "focus": [
+        "DNA衍射图谱分析",
+        "DNA物理结构解析"
+      ],
+      "core_method": [
+        "X射线衍射分析法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "结构解析/实验实证",
+      "knowledge_module": "遗传的分子基础",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "尼伦伯格和马太",
+      "name": "尼伦伯格和马太 (Nirenberg & Matthaei)",
+      "magnitude": 2,
+      "orbit": 2,
+      "books": [],
+      "nationality": "美国",
+      "era": "20世纪60年代（1961年）",
+      "identity": "生命密码的“破译员”，他们用一段纯 U 的信息，钓出了遗传学史上第一个氨基酸。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "用人工合成的Poly-U及体外翻译系统成功破译了第一个遗传密码子UUU。",
+      "common_trap": "误以为他们是在活细胞内破译遗传密码，其实是构建了无细胞的蛋白质体外合成系统。",
+      "focus": [
+        "遗传密码的破译方法",
+        "无细胞合成系统与密码子对照"
+      ],
+      "core_method": [
+        "体外翻译实验法",
+        "同位素示踪技术"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "实验实证/逻辑推演",
+      "knowledge_module": "基因的表达",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "康拉特",
+      "name": "康拉特 (Fraenkel-Conrat)",
+      "magnitude": 2,
+      "orbit": 2,
+      "books": [],
+      "nationality": "德国/美国",
+      "era": "20世纪50年代（1956年）",
+      "identity": "病毒的“重组师”，他证明了在没有 DNA 的世界里，RNA 依然可以主宰生命。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "通过烟草花叶病毒（TMV）重建实验，证明RNA是TMV的遗传物质。",
+      "common_trap": "误以为他证明了所有的非细胞生物的遗传物质都是RNA，其实仅证明了RNA病毒以RNA为遗传物质。",
+      "focus": [
+        "病毒重组实验设计",
+        "RNA是遗传物质的实验证据"
+      ],
+      "core_method": [
+        "病毒重组与感染实验",
+        "对照分析法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "结构解析/假说实证",
+      "knowledge_module": "遗传物质",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "温特",
+      "name": "弗里茨·温特 (Frits Warmolt Went)",
+      "magnitude": 5,
+      "orbit": 3,
+      "books": [
+        "选必一"
+      ],
+      "nationality": "荷兰",
+      "era": "1928年代",
+      "identity": "生长素的正式命名者与提取者，他用一块空白琼脂创造了完美的对照。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "证明胚芽鞘尖端产生的是化学物质并命名为生长素。",
+      "common_trap": "混淆温特实验与拜尔实验；误以为温特已经提纯了生长素。",
+      "focus": [
+        "生长素的正式命名",
+        "琼脂块转移实验",
+        "空白对照意义"
+      ],
+      "core_method": [
+        "对比实验法"
+      ],
+      "intersection": [
+        "['植物向光性与生长素发现实验']"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/物质提取",
+      "knowledge_module": "植物生长素的发现与作用",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "坎农",
+      "name": "沃尔特·坎农 (Walter Cannon)",
+      "magnitude": 4,
+      "orbit": 3,
+      "books": [
+        "选必一"
+      ],
+      "nationality": "美国",
+      "era": "20世纪初（1871-1945年）",
+      "identity": "稳态学说的命名者，他用“稳态”一词概括了生命的智慧，并揭示了身体在恐惧与愤怒下的应急本能。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "稳态学说的命名者，阐明了身体在应急状态下的调节机制。",
+      "common_trap": "误以为他发现了内环境的概念，内环境由贝尔纳提出，坎农命名了“稳态”。",
+      "focus": [
+        "稳态概念的界定与发展",
+        "交感-肾上腺素系统的应急调节机制"
+      ],
+      "core_method": [
+        "动物实验生理学",
+        "系统分析法"
+      ],
+      "intersection": [
+        "内环境与稳态：生理学逻辑的闭环",
+        "贝尔纳"
+      ],
+      "tags": [],
+      "cognitive_type": "系统思维/理论建构",
+      "knowledge_module": "稳态调节",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "巴甫洛夫",
+      "name": "巴甫洛夫 (Ivan Pavlov)",
+      "magnitude": 4,
+      "orbit": 3,
+      "books": [
+        "选必一"
+      ],
+      "nationality": "俄国",
+      "era": "19世纪末至20世纪初",
+      "identity": "一只狗、一个铃铛、一滴唾液——他用最简单的材料，揭示了大脑最深处的学习逻辑。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "发现条件反射，建立了高级神经活动生理学体系。",
+      "common_trap": "误以为条件反射是一旦建立就永久不灭的，其实条件反射如果得不到非条件刺激强化，会逐渐消退。",
+      "focus": [
+        "条件反射与非条件反射的比较",
+        "条件反射的建立与消退机制"
+      ],
+      "core_method": [
+        "慢性实验法",
+        "生理反射测量法"
+      ],
+      "intersection": [
+        "稳态与内环境：医学与生理学的碰撞"
+      ],
+      "tags": [],
+      "cognitive_type": "行为分析/实验实证",
+      "knowledge_module": "稳态调节",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "应用性"
+      ]
+    },
+    {
+      "id": "沃泰默",
+      "name": "沃泰默 (E. Wertheimer)",
+      "magnitude": 4,
+      "orbit": 3,
+      "books": [
+        "选择性必修一"
+      ],
+      "nationality": "法国",
+      "era": "19世纪末",
+      "identity": "站在真理门槛外的守望者，他的“固执”证明了科学范式对思维的禁锢。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "他在真理的门前停下了脚步，坚信神经调节是唯一路径，却留下了最完美的反面教材。",
+      "common_trap": "误以为沃泰默证明了体液调节（恰恰相反，他坚持神经调节）。",
+      "focus": [
+        "促胰液素发现的‘固执错误’",
+        "实验对照组设计"
+      ],
+      "core_method": [
+        "对比实验法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "反面实证/逻辑局限",
+      "knowledge_module": "激素调节的发现",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "洛伊",
+      "name": "奥托·洛伊 (Otto Loewi)",
+      "magnitude": 4,
+      "orbit": 3,
+      "books": [
+        "选必一"
+      ],
+      "nationality": "德国/美国",
+      "era": "1921年",
+      "identity": "梦中的实验家，他用两颗跳动的青蛙心脏，捕捉到了神经之间无形的化学信使。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "通过双蛙心灌流实验证明了突变传递是通过乙酰胆碱等化学递质完成的。",
+      "common_trap": "误以为化学递质可以在突触间双向传输，其因递质只能由前膜释放作用于后膜而只能单向传递。",
+      "focus": [
+        "双蛙心灌流实验的设计",
+        "突触传递中化学递质（乙酰胆碱）的实证"
+      ],
+      "core_method": [
+        "蛙心体外灌流对照实验",
+        "生化成分提取分析法"
+      ],
+      "intersection": [
+        "['从电火花到化学递质：神经冲动的本质之争']"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/假说推导",
+      "knowledge_module": "神经调节",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "班廷",
+      "name": "弗雷德里克·班廷 (Frederick Banting)",
+      "magnitude": 4,
+      "orbit": 3,
+      "books": [
+        "选必一"
+      ],
+      "nationality": "加拿大",
+      "era": "20世纪20年代",
+      "identity": "胰岛素的发现者，他从枯燥的临床观察中捕捉到了生命的“糖分密码”，将糖尿病从绝症名单中永久划去。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "通过胰管结扎让胰腺外分泌部萎缩，成功提取活性胰岛素并治疗糖尿病。",
+      "common_trap": "误以为他直接研磨新鲜胰腺即成功，直接研磨会被胰蛋白酶破坏，结扎萎缩排除干扰是关键。",
+      "focus": [
+        "胰管结扎提取活性胰岛素",
+        "血糖平衡调节与糖尿病治疗"
+      ],
+      "core_method": [
+        "腺体结扎法",
+        "活性物质提取与注射"
+      ],
+      "intersection": [
+        "内环境与稳态：生理学逻辑的闭环",
+        "贝利斯和斯他林"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/应用转化",
+      "knowledge_module": "血糖调节",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "应用性"
+      ]
+    },
+    {
+      "id": "贝利斯和斯他林",
+      "name": "贝利斯和斯他林 (Bayliss & Starling)",
+      "magnitude": 4,
+      "orbit": 3,
+      "books": [
+        "选必一"
+      ],
+      "nationality": "英国",
+      "era": "20世纪初（1902年）",
+      "identity": "激素调节的“发现者”。他们通过一个被切断神经的实验，揭示了身体内部除了神经系统外，还存在着一套精密的化学通讯网络。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "小肠黏膜磨碎离体注射实验发现人类首个激素——促胰液素。",
+      "common_trap": "误以为他们注射稀盐酸到血液促使胰液分泌，其实是稀盐酸刺激黏膜产生的化学物质起作用。",
+      "focus": [
+        "促胰液素发现的实验设计与控制",
+        "内分泌调节概念的建立"
+      ],
+      "core_method": [
+        "器官研磨液离体注射法",
+        "切除神经对照实验"
+      ],
+      "intersection": [
+        "促胰液素的发现：从神经调节到体液调节的碰撞",
+        "坎农",
+        "班廷"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/直觉突破",
+      "knowledge_module": "激素调节",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "贝尔纳",
+      "name": "贝尔纳 (Claude Bernard)",
+      "magnitude": 4,
+      "orbit": 3,
+      "books": [
+        "选必一"
+      ],
+      "nationality": "法国",
+      "era": "19世纪（1857年）",
+      "identity": "他说\"内环境的稳定是自由生命的条件\"——这句话开创了现代生理学的哲学基础。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "首次提出“内环境”概念，恒定是生命自由存活的前提。",
+      "common_trap": "误以为他主张内环境是静止的，其实他的恒定是一种不断摆动又复位的动态平衡。",
+      "focus": [
+        "内环境概念的提出",
+        "生理学实验实证方法"
+      ],
+      "core_method": [
+        "生理活体实验法"
+      ],
+      "intersection": [
+        "稳态与内环境：医学与生理学的碰撞"
+      ],
+      "tags": [],
+      "cognitive_type": "概念建构/系统哲学",
+      "knowledge_module": "内环境与稳态",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "拜尔",
+      "name": "阿尔帕德·拜尔 (Árpád Paál)",
+      "magnitude": 3,
+      "orbit": 3,
+      "books": [
+        "选必一"
+      ],
+      "nationality": "匈牙利",
+      "era": "1914年代",
+      "identity": "揭开弯曲之谜的解剖师：他排除了光照的直接干预，在黑暗中证明了生长不均的秘密。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "胚芽鞘尖端错位放置实验证明尖端产生的影响分布不均导致弯曲生长。",
+      "common_trap": "误以为该实验必须在光下，其实该实验必须在黑暗中进行以排除单侧光的干扰。",
+      "focus": [
+        "胚芽鞘尖端不均匀放置实验",
+        "向光弯曲生长的机理"
+      ],
+      "core_method": [
+        "切除与错位放置实验",
+        "避光单因素对照"
+      ],
+      "intersection": [
+        "['植物向光性与生长素发现实验']"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/逻辑推理",
+      "knowledge_module": "植物生长素的发现",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "詹纳",
+      "name": "詹纳 (Edward Jenner)",
+      "magnitude": 3,
+      "orbit": 3,
+      "books": [
+        "选必一"
+      ],
+      "nationality": "英国",
+      "era": "18世纪末（1796年）",
+      "identity": "疫苗之父。他从挤奶女工的传说中捕捉到科学的灵感，用牛痘打开了人类战胜天花的大门。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "种牛痘成功预防天花，免疫学之父，创造人类首个活体疫苗。",
+      "common_trap": "误以为他在发现病毒和免疫受体后才进行种痘，其实他纯属基于直觉和经验关系取得成功。",
+      "focus": [
+        "牛痘预防天花的接种实验",
+        "特异性免疫防病的历史演进"
+      ],
+      "core_method": [
+        "临床经验总结法",
+        "接种预防实验"
+      ],
+      "intersection": [
+        "疫苗接种史"
+      ],
+      "tags": [],
+      "cognitive_type": "经验归纳/应用转化",
+      "knowledge_module": "免疫调节",
+      "gaokao_dimension": [
+        "基础性",
+        "应用性"
+      ]
+    },
+    {
+      "id": "鲍森·詹森",
+      "name": "彼得·鲍森·詹森 (Peter Boysen-Jensen)",
+      "magnitude": 3,
+      "orbit": 3,
+      "books": [
+        "选必一"
+      ],
+      "nationality": "丹麦",
+      "era": "1910年代",
+      "identity": "第一个用琼脂证明“信号不是虚空魔法，而是可以渗透的物质”的植物学家。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "胚芽鞘插入明胶与云母片实验证明尖端产生的刺激可通过明胶透向下部。",
+      "common_trap": "误以为他使用琼脂块做插片，明胶与云母的对比才是此实验证明物质透性的核心。",
+      "focus": [
+        "明胶与云母插片对比实验",
+        "向光性化学物质传导的初步验证"
+      ],
+      "core_method": [
+        "透性材料插片对照法"
+      ],
+      "intersection": [
+        "['植物向光性与生长素发现实验']"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/逻辑推断",
+      "knowledge_module": "植物生长素的发现",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "林德曼",
+      "name": "林德曼 (Raymond Lindeman)",
+      "magnitude": 5,
+      "orbit": 4,
+      "books": [
+        "选必二"
+      ],
+      "nationality": "美国",
+      "era": "20世纪40年代（1942年）",
+      "identity": "他只活了27岁，却留下了生态学最重要的数字：10%—20%。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "提出能量流动传递效率定律，使生态系统研究从定性走向定量。",
+      "common_trap": "把10%-20%当成固定值；混淆同化量、摄入量与粪便量的关系。",
+      "focus": [
+        "能量流动传递效率（10%-20%）",
+        "能量流动单向性",
+        "能量金字塔"
+      ],
+      "core_method": [
+        "统计学分析法",
+        "物理与数学建模"
+      ],
+      "intersection": [
+        "生态能量金字塔：从数学到整体观"
+      ],
+      "tags": [],
+      "cognitive_type": "定量分析/数学建模",
+      "knowledge_module": "生态系统的能量流动",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "奥德姆",
+      "name": "奥德姆 (Eugene Odum)",
+      "magnitude": 4,
+      "orbit": 4,
+      "books": [
+        "选必二"
+      ],
+      "nationality": "美国",
+      "era": "20世纪中叶",
+      "identity": "现代生态学之父，他将零散的自然观察整合成了系统的“整体论”科学。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "现代生态学之父，构建了以生态系统为核心的生态学理论框架。",
+      "common_trap": "误以为生态学只关注环境保护，其实生态学是研究生物与环境系统性互动的学科。",
+      "focus": [
+        "生态学系统方法",
+        "能流与物循的理论整合"
+      ],
+      "core_method": [
+        "系统动力学建模",
+        "定量生态分析法"
+      ],
+      "intersection": [
+        "['生态系统的整体观：从种群到全球']"
+      ],
+      "tags": [],
+      "cognitive_type": "系统思维/跨界整合",
+      "knowledge_module": "种群和群落、生态系统的结构与功能",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "高斯",
+      "name": "高斯 (G. F. Gause)",
+      "magnitude": 4,
+      "orbit": 4,
+      "books": [
+        "选必二"
+      ],
+      "nationality": "苏联",
+      "era": "20世纪30年代（1934年）",
+      "identity": "生态位的\"实验室裁判\"，他用一管管草履虫，量出了物种间竞争的残酷红线。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "草履虫竞争实验提出竞争排斥原理，描述了生态位的基本规律。",
+      "common_trap": "误以为所有重叠生态位的物种在自然界都无法共存，其实可通过空间/时间发生生态位分化而共存。",
+      "focus": [
+        "草履虫混合培养的种间竞争曲线",
+        "生态位与竞争排斥原理"
+      ],
+      "core_method": [
+        "种群混合培养对照",
+        "数学模型模拟分析"
+      ],
+      "intersection": [
+        "生态系统的整体观：从种群到全球"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/数学建模",
+      "knowledge_module": "种群与群落",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "坦斯利",
+      "name": "坦斯利 (Arthur Tansley)",
+      "magnitude": 2,
+      "orbit": 4,
+      "books": [],
+      "nationality": "英国",
+      "era": "20世纪30年代（1935年）",
+      "identity": "生态学的\"系统架构师\"，他用\"生态系统\"一词，把生物与环境第一次绑在了一起作为整体来研究。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "生态系统（ecosystem）概念的首次提出者。",
+      "common_trap": "误以为生态系统是由群落和无机环境物理混合，其实是生态系统的能量和物质流相互交织的统一体。",
+      "focus": [
+        "生态系统概念的提出",
+        "生物与环境的统一性"
+      ],
+      "core_method": [
+        "系统分析法",
+        "概念建模法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "系统思维/概念建构",
+      "knowledge_module": "生态系统",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性"
+      ]
+    },
+    {
+      "id": "科赫",
+      "name": "罗伯特·科赫 (Robert Koch)",
+      "magnitude": 5,
+      "orbit": 5,
+      "books": [
+        "选必三"
+      ],
+      "nationality": "德国",
+      "era": "19世纪末（1843-1910年）",
+      "identity": "细菌学之父，他确立了病原体鉴定的“黄金标准”，将医学从迷信和猜测中拯救出来，变成了真正的实验科学。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "确立病原体鉴定黄金标准（科赫法则），将医学变为实验科学。",
+      "common_trap": "混淆巴氏消毒法与科赫法则；不理解固体培养基对“纯化”的意义。",
+      "focus": [
+        "科赫法则",
+        "固体培养基技术",
+        "病原体鉴定"
+      ],
+      "core_method": [
+        "科赫法则",
+        "微生物培养技术",
+        "显微观察与示踪技术"
+      ],
+      "intersection": [
+        "细菌学双雄：巴斯德与科赫的法德大碰撞",
+        "科赫法则"
+      ],
+      "tags": [],
+      "cognitive_type": "逻辑归纳/实验实证",
+      "knowledge_module": "微生物培养与应用",
+      "gaokao_dimension": [
+        "基础性",
+        "应用性"
+      ]
+    },
+    {
+      "id": "穆利斯",
+      "name": "凯利·穆利斯 (Kary Mullis)",
+      "magnitude": 5,
+      "orbit": 5,
+      "books": [
+        "选必三"
+      ],
+      "nationality": "美国",
+      "era": "20世纪80年代（1944-2019年）",
+      "identity": "生命科学领域的“打印机工程师”，他发明的PCR技术，让基因研究从“大海捞针”变成了“一键复印”。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "发明PCR技术，实现体外基因“一键复印”，基因研究的里程碑。",
+      "common_trap": "误认为PCR是在活细胞内进行；不理解Taq酶（耐热）的必要性。",
+      "focus": [
+        "PCR原理（变性、退火、延伸）",
+        "体外DNA扩增",
+        "引物作用"
+      ],
+      "core_method": [
+        "PCR技术",
+        "模型构建法"
+      ],
+      "intersection": [
+        "生命可编程：克隆与PCR的逻辑轨道",
+        "博耶"
+      ],
+      "tags": [],
+      "cognitive_type": "技术创新/体外模拟",
+      "knowledge_module": "PCR技术",
+      "gaokao_dimension": [
+        "基础性",
+        "应用性"
+      ]
+    },
+    {
+      "id": "米尔斯坦和柯勒",
+      "name": "米尔斯坦和柯勒 (Milstein & Köhler)",
+      "magnitude": 5,
+      "orbit": 5,
+      "books": [
+        "选必三"
+      ],
+      "nationality": "阿根廷/德国",
+      "era": "1975年",
+      "identity": "“魔法子弹”的锻造师，他们让原本只能在体内短暂存活的抗体工厂，获得了试管中的永生。",
+      "priority": "🔴核心必考",
+      "priority_level": 3,
+      "quick_recall": "发明杂交瘤技术制备单克隆抗体，“魔法子弹”的锻造师。",
+      "common_trap": "记错流程顺序（先融合还是先筛选）；误以为单抗只能体内提取。",
+      "focus": [
+        "杂交瘤技术",
+        "单克隆抗体制备流程",
+        "筛选目的"
+      ],
+      "core_method": [
+        "单克隆抗体制备实验"
+      ],
+      "intersection": [
+        "['魔法子弹的诞生：单克隆抗体技术']"
+      ],
+      "tags": [],
+      "cognitive_type": "细胞融合/生物制药",
+      "knowledge_module": "单克隆抗体技术",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "应用性"
+      ]
+    },
+    {
+      "id": "桑格",
+      "name": "桑格 (Frederick Sanger)",
+      "magnitude": 4,
+      "orbit": 5,
+      "books": [
+        "选必三"
+      ],
+      "nationality": "英国",
+      "era": "20世纪中叶（1918-2013年）",
+      "identity": "唯一两次获得诺贝尔化学奖的人。他先读懂了蛋白质，再读懂了DNA，把生命的密码本翻开给了全人类。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "发明双脱氧核苷酸链终止测序法，首测牛胰岛素及DNA序列，两获诺贝尔奖。",
+      "common_trap": "误以为Sanger测序法需要用到RNA聚合酶，其利用的是DNA聚合酶以及终止用ddNTP。",
+      "focus": [
+        "Sanger双脱氧链终止法原理",
+        "DNA测序在基因工程中应用"
+      ],
+      "core_method": [
+        "双脱氧核苷酸链终止测序法"
+      ],
+      "intersection": [
+        "重组DNA的奇迹：基因工程的诞生之旅"
+      ],
+      "tags": [],
+      "cognitive_type": "技术开发/结构解析",
+      "knowledge_module": "生物技术与工程",
+      "gaokao_dimension": [
+        "综合性",
+        "应用性"
+      ]
+    },
+    {
+      "id": "科恩",
+      "name": "斯坦利·科恩 (Stanley Cohen)",
+      "magnitude": 4,
+      "orbit": 5,
+      "books": [
+        "选必三"
+      ],
+      "nationality": "美国",
+      "era": "20世纪70年代",
+      "identity": "分子生物学的“手术刀”，他与博耶共同发明了重组DNA技术，将人类带入了能够直接编辑生命代码的时代。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "与博耶合作将外源基因拼入质粒载体，构建重组质粒，发明DNA重组技术。",
+      "common_trap": "误以为他独立制备了限制酶，他主要是将质粒的复制和酶切重组整合，开发了转化系统。",
+      "focus": [
+        "质粒作为载体的发现与改造",
+        "DNA重组与转化技术"
+      ],
+      "core_method": [
+        "重组质粒转化法",
+        "质粒构建工程"
+      ],
+      "intersection": [
+        "重组DNA的奇迹：基因工程的诞生之旅",
+        "博耶",
+        "生命可编程：克隆与PCR的逻辑轨道"
+      ],
+      "tags": [],
+      "cognitive_type": "技术集成/工程构建",
+      "knowledge_module": "基因工程",
+      "gaokao_dimension": [
+        "综合性",
+        "应用性"
+      ]
+    },
+    {
+      "id": "弗莱明",
+      "name": "亚历山大·弗莱明 (Alexander Fleming)",
+      "magnitude": 3,
+      "orbit": 5,
+      "books": [
+        "选必三"
+      ],
+      "nationality": "英国",
+      "era": "20世纪初",
+      "identity": "青霉素的发现者，他的发现是“上帝赠予人类最伟大的礼物”，拉开了人类与致病菌抗争的“抗生素时代”大幕。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "偶然发现青霉菌能产生抑菌物质青霉素，开启抗生素新纪元。",
+      "common_trap": "误以为是他发明了抗生素的工业化提纯，他只发现了现象，提纯由弗洛里和钱恩完成。",
+      "focus": [
+        "青霉素的发现",
+        "微生物间的拮抗与竞争关系"
+      ],
+      "core_method": [
+        "平板划线观察法"
+      ],
+      "intersection": [
+        "细菌学双雄：巴斯德与科赫的法德大碰撞",
+        "发酵工程诞生的前夕"
+      ],
+      "tags": [],
+      "cognitive_type": "直觉观察/巧合转化",
+      "knowledge_module": "微生物培养、发酵工程、稳态调节",
+      "gaokao_dimension": [
+        "基础性",
+        "综合性",
+        "应用性"
+      ]
+    },
+    {
+      "id": "斯图尔特",
+      "name": "弗雷德里克·斯图尔特 (F.C. Steward)",
+      "magnitude": 3,
+      "orbit": 5,
+      "books": [
+        "选必三"
+      ],
+      "nationality": "英国/美国",
+      "era": "20世纪50年代（1904-1993年）",
+      "identity": "细胞全能性的实证大师。他用一截胡萝卜证明了：即便是一个高度分化的成熟细胞，其内心依然深藏着长成一整棵植株的“宏大理想”。",
+      "priority": "🟡高频考点",
+      "priority_level": 1,
+      "quick_recall": "培养胡萝卜韧皮部单细胞发育成完整植株，首次实证植物细胞全能性。",
+      "common_trap": "误以为用成熟分化的细胞直接发芽，其必须通过脱分化形成愈伤组织，再分化发育成植株。",
+      "focus": [
+        "胡萝卜组织单细胞培养",
+        "植物细胞全能性的实证与过程"
+      ],
+      "core_method": [
+        "植物组织培养技术",
+        "植物激素配比调节"
+      ],
+      "intersection": [
+        "生命可编程：克隆与PCR的逻辑轨道",
+        "施莱登"
+      ],
+      "tags": [],
+      "cognitive_type": "实验实证/细胞工程",
+      "knowledge_module": "植物细胞工程",
+      "gaokao_dimension": [
+        "基础性",
+        "应用性"
+      ]
+    },
+    {
+      "id": "博耶",
+      "name": "博耶 (Herbert Boyer)",
+      "magnitude": 2,
+      "orbit": 5,
+      "books": [],
+      "nationality": "美国",
+      "era": "20世纪70年代",
+      "identity": "基因工程的开拓者，他与科恩合作开启了重组DNA技术的大门，将生物学带入了“可编程”时代。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "与科恩合作完成基因工程的首次重组DNA实验，开创基因工程时代。",
+      "common_trap": "误以为他独立完成了基因工程的全部工作，其实是博耶精通限制酶，科恩精通质粒。",
+      "focus": [
+        "限制性核酸内切酶的应用",
+        "重组DNA分子的构建"
+      ],
+      "core_method": [
+        "重组DNA技术",
+        "酶切与连接法"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "技术集成/跨界工程",
+      "knowledge_module": "基因工程",
+      "gaokao_dimension": [
+        "应用性",
+        "创新性"
+      ]
+    },
+    {
+      "id": "威尔穆特",
+      "name": "威尔穆特 (Ian Wilmut)",
+      "magnitude": 2,
+      "orbit": 5,
+      "books": [],
+      "nationality": "英国",
+      "era": "20世纪90年代（1996年）",
+      "identity": "克隆羊“多莉”之父。他用一个乳腺细胞的核证明了：即便是哺乳动物高度分化的细胞核，也依然保留着重新孕育完整生命的全部遗传密码。",
+      "priority": "🔵了解识记",
+      "priority_level": 1,
+      "quick_recall": "成功培育出克隆羊多莉，证明了动物体细胞核具有全能性。",
+      "common_trap": "误以为多莉羊的遗传物质完全来自于提供乳腺细胞核的母羊，其实其细胞质DNA来自去核卵母细胞的母羊。",
+      "focus": [
+        "动物体细胞核移植技术",
+        "动物细胞核的全能性"
+      ],
+      "core_method": [
+        "核移植技术",
+        "胚胎移植技术"
+      ],
+      "intersection": [],
+      "tags": [],
+      "cognitive_type": "技术整合/工程实践",
+      "knowledge_module": "细胞工程",
+      "gaokao_dimension": [
+        "综合性",
+        "创新性"
+      ]
+    }
+  ]
+}

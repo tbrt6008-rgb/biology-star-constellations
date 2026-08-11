@@ -1,0 +1,268 @@
+/* ── 详情面板 ── */
+
+/* ── 海报模态框 ── */
+
+#poster-overlay {
+
+  position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+
+  z-index: 300; background: rgba(2, 4, 10, 0.85); backdrop-filter: blur(20px);
+
+  opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
+
+}
+
+#poster-overlay.open {
+
+  opacity: 1; pointer-events: auto;
+
+}
+
+/* ── 横屏海报卡片 (Awwwards Landscape Layout) ── */
+#poster-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 4, 10, 0.97);
+  border: none;
+  border-radius: 0;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  box-shadow: none;
+  transform: scale(0.98);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#poster-overlay.open #poster-card {
+  transform: scale(1);
+}
+
+#poster-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.6);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#poster-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+/* Sidebar styles - Wider for widescreen */
+.poster-sidebar {
+  width: 84px;
+  background: rgba(2, 4, 10, 0.85);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.poster-sidebar-header {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 9px;
+  color: var(--orbit-color, var(--c2));
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.poster-sidebar-list {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 4px;
+  scrollbar-width: none;
+}
+
+.poster-sidebar-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Main content pane - Full Width */
+.poster-main-content {
+  flex: 1;
+  width: calc(100% - 84px);
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.poster-col-left {
+  flex: 0 0 52%;
+  width: 52%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 40px 40px 48px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.poster-col-right {
+  flex: 0 0 48%;
+  width: 48%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Header styling - Widescreen typography */
+.poster-hdr-brand {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 9px;
+  color: var(--orbit-color, var(--c2));
+  letter-spacing: 0.25em;
+  margin-bottom: 8px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.poster-hdr-retro {
+  margin-bottom: 24px;
+}
+
+.poster-hdr-retro h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  line-height: 1.1;
+}
+
+.poster-hdr-retro h1 {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.poster-divider-top {
+  height: 1px;
+  background: linear-gradient(90deg, var(--orbit-color, var(--c2)) 0%, rgba(255,255,255,0.06) 100%);
+  margin-top: 6px;
+}
+
+/* Scroll area */
+.poster-info-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 12px;
+  margin-bottom: 24px;
+}
+
+.poster-info-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.poster-info-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+.poster-info-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Retro table rules */
+.poster-table-wrap {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 12px 18px;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+/* Right Planet showcase - Larger for widescreen takeover */
+.poster-planet-container {
+  position: relative;
+  width: 460px;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster-planet-container canvas {
+  width: 420px;
+  height: 420px;
+  display: block;
+}
+
+.poster-meta-item {
+  position: absolute;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.poster-meta-item .meta-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 9px;
+  color: var(--dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.poster-meta-item .meta-value {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.poster-meta-item.tl { top: 38px; left: -25px; text-align: left; }
+
+.poster-meta-item.tr { top: 38px; right: -25px; text-align: right; }
+
+.poster-meta-item.tr .meta-label { justify-content: flex-end; }
+
+.poster-meta-item.bl { bottom: 38px; left: -25px; text-align: left; }
+
+.poster-meta-item.br { bottom: 38px; right: -25px; text-align: right; }
+
+.poster-meta-item.br .meta-label { justify-content: flex-end; }
+

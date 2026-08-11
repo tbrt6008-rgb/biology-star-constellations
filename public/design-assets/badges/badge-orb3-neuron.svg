@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="金牛座 · 稳态与调节 · 神经元">
+  <circle cx="256" cy="256" r="240" fill="#060814"/>
+  <!-- 外环 -->
+  <circle cx="256" cy="256" r="236" fill="none" stroke="#c070f0" stroke-width="26" opacity="0.9"/>
+  <circle cx="256" cy="256" r="196" fill="none" stroke="#c070f0" stroke-width="3" opacity="0.35"/>
+  <!-- 虚线内环 -->
+  <circle cx="256" cy="256" r="164" fill="none" stroke="#c070f0" stroke-width="3" stroke-dasharray="8 14" opacity="0.4"/>
+  <!-- 树突（左侧分支） -->
+  <path d="M196 236 C 140 216, 110 180, 92 148" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.85"/>
+  <path d="M196 214 C 148 192, 108 186, 84 196" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+  <path d="M200 246 C 140 258, 108 246, 88 218" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+  <path d="M204 270 C 160 288, 132 300, 108 312" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+  <!-- 树突末端突触圆点 -->
+  <circle cx="92" cy="148" r="9" fill="none" stroke="#c070f0" stroke-width="5" opacity="0.9"/>
+  <circle cx="84" cy="196" r="8" fill="none" stroke="#c070f0" stroke-width="5" opacity="0.9"/>
+  <circle cx="108" cy="312" r="8" fill="none" stroke="#c070f0" stroke-width="5" opacity="0.9"/>
+  <!-- 细胞体 -->
+  <circle cx="240" cy="250" r="70" fill="none" stroke="#ffffff" stroke-width="20" opacity="0.95"/>
+  <circle cx="240" cy="250" r="34" fill="none" stroke="#ffffff" stroke-width="6" opacity="0.6"/>
+  <circle cx="240" cy="250" r="12" fill="#c070f0"/>
+  <!-- 轴突（右侧长轴） -->
+  <path d="M310 250 C 360 250, 372 268, 356 300 C 344 324, 356 344, 380 340"
+        fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" opacity="0.9"/>
+  <!-- 轴突末端分支 -->
+  <path d="M380 340 C 400 330, 420 334, 428 356" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
+  <path d="M380 340 C 398 352, 412 352, 424 370" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
+  <!-- 突触小泡 -->
+  <circle cx="428" cy="356" r="7" fill="#c070f0"/>
+  <circle cx="424" cy="370" r="7" fill="#c070f0"/>
+</svg>

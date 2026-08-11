@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="双子座 · 生物与环境 · 生态叶片">
+  <circle cx="256" cy="256" r="240" fill="#060814"/>
+  <!-- 外环 -->
+  <circle cx="256" cy="256" r="236" fill="none" stroke="#50d080" stroke-width="26" opacity="0.9"/>
+  <circle cx="256" cy="256" r="196" fill="none" stroke="#50d080" stroke-width="3" opacity="0.35"/>
+  <!-- 虚线内环 -->
+  <circle cx="256" cy="256" r="164" fill="none" stroke="#50d080" stroke-width="3" stroke-dasharray="8 14" opacity="0.4"/>
+  <!-- 叶片主体 -->
+  <path d="M256 108 C 330 170, 336 300, 256 404 C 176 300, 182 170, 256 108 Z"
+        fill="none" stroke="#ffffff" stroke-width="20" stroke-linejoin="round" opacity="0.95"/>
+  <!-- 中脉 -->
+  <line x1="256" y1="128" x2="256" y2="384" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.75"/>
+  <!-- 侧脉（左右） -->
+  <line x1="256" y1="180" x2="222" y2="232" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <line x1="256" y1="180" x2="290" y2="232" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <line x1="256" y1="250" x2="214" y2="300" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <line x1="256" y1="250" x2="298" y2="300" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <!-- 叶片尖端高亮 -->
+  <circle cx="256" cy="124" r="8" fill="#50d080"/>
+  <!-- 顶部生态连接点（食物链暗示） -->
+  <circle cx="256" cy="80" r="4" fill="#ffffff" opacity="0.7"/>
+  <circle cx="156" cy="150" r="4" fill="#ffffff" opacity="0.5"/>
+  <circle cx="356" cy="150" r="4" fill="#ffffff" opacity="0.5"/>
+  <!-- 底部土壤线 -->
+  <line x1="176" y1="420" x2="336" y2="420" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+</svg>

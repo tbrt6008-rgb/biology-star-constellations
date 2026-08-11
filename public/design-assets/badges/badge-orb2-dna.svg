@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="巨蟹座 · 遗传与进化 · DNA 双螺旋">
+  <circle cx="256" cy="256" r="240" fill="#060814"/>
+  <!-- 外环 -->
+  <circle cx="256" cy="256" r="236" fill="none" stroke="#f0b030" stroke-width="26" opacity="0.9"/>
+  <circle cx="256" cy="256" r="196" fill="none" stroke="#f0b030" stroke-width="3" opacity="0.35"/>
+  <!-- 虚线内环 -->
+  <circle cx="256" cy="256" r="164" fill="none" stroke="#f0b030" stroke-width="3" stroke-dasharray="8 14" opacity="0.4"/>
+  <!-- DNA 螺旋骨架（两条曲线） -->
+  <path d="M150 110 C 236 168, 236 232, 150 292 C 84 338, 84 392, 150 430"
+        fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" opacity="0.95"/>
+  <path d="M362 110 C 276 168, 276 232, 362 292 C 428 338, 428 392, 362 430"
+        fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" opacity="0.95"/>
+  <!-- 碱基对横档 -->
+  <line x1="178" y1="132" x2="334" y2="132" stroke="#ffffff" stroke-width="8" opacity="0.7"/>
+  <line x1="232" y1="206" x2="280" y2="206" stroke="#ffffff" stroke-width="8" opacity="0.7"/>
+  <line x1="178" y1="290" x2="334" y2="290" stroke="#ffffff" stroke-width="8" opacity="0.7"/>
+  <line x1="232" y1="368" x2="280" y2="368" stroke="#ffffff" stroke-width="8" opacity="0.7"/>
+  <!-- 底部碱基横档 -->
+  <line x1="180" y1="424" x2="332" y2="424" stroke="#ffffff" stroke-width="8" opacity="0.5"/>
+  <!-- 中心碱基对高亮 -->
+  <line x1="232" y1="256" x2="280" y2="256" stroke="#f0b030" stroke-width="12" stroke-linecap="round"/>
+</svg>

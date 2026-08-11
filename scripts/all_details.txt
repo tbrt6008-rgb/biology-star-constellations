@@ -1,0 +1,79 @@
+Loaded 78 scientists.
+丹尼利和戴维森.md | Name: 丹尼利和戴维森 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+克劳德.md | Name: 阿尔伯特·克劳德 (Albert Claude) | Book: 必修一 | Nat: 比利时/美国 | Era: 20世纪40-50年代 | Identity: 
+克里克.md | Name: 弗朗西斯·克里克 (Francis Crick) | Book: 必修二 | Nat: 英国 | Era: 20世纪中叶（1916-2004年） | Identity: 分子生物学的“总设计师”，他不仅参与拼出了DNA的双螺旋，还为整个生命科学确立了“信息流”的顶层架构。
+内格里.md | Name: 内格里 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+切尔马克.md | Name: 切尔马克 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+切赫.md | Name: 切赫 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+列文虎克.md | Name: 安东尼·范·列文虎克 (Antonie van Leeuwenhoek) | Book: 必修一 | Nat: 荷兰 | Era: 17世纪中叶（1632-1723年） | Identity: 显微镜下的“第一人”，他用磨制的镜片叩开了微观世界的大门，让人类第一次看清了那群被称为“微小动物”的隐形居民。
+华莱士.md | Name: 华莱士 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+博耶.md | Name: 博耶 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+卡尔文.md | Name: 卡尔文 (Melvin Calvin) | Book: 必修一 | Nat: 美国 | Era: 20世纪50年代 | Identity: 用放射性碳-14追踪CO₂的每一步去向，绘制出暗反应的完整地图——卡尔文循环。
+卢里亚.md | Name: 萨尔瓦多·卢里亚 (Salvador Luria) | Book: 必修二 | Nat: 意大利/美国 | Era: 20世纪中叶（1912-1991年） | Identity: 细菌遗传学的拓荒者，噬菌体小组的“三巨头”之一。他用数学的严谨证明了生命的变异并非环境的奴隶，而是随机演化的杰作。
+哈伯兰特.md | Name: 哈伯兰特 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+坎农.md | Name: 沃尔特·坎农 (Walter Cannon) | Book: 选必一 | Nat: 美国 | Era: 20世纪初（1871-1945年） | Identity: 稳态学说的命名者，他用“稳态”一词概括了生命的智慧，并揭示了身体在恐惧与愤怒下的应急本能。
+坦斯利.md | Name: 坦斯利 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+奥德姆.md | Name: 奥德姆 (Eugene Odum) | Book: 选必二 | Nat: 美国 | Era: 20世纪中叶 | Identity: 
+奥特曼.md | Name: 西德尼·奥特曼 (Sidney Altman) | Book: 必修一 | Nat: 加拿大/美国 | Era: 20世纪70-80年代（1939-2022年） | Identity: 核酶研究的并蒂莲。他与切赫共同揭开了RNA作为生物催化剂的真相，为我们理解早期生命的运作模式打开了新的视野。
+威尔穆特.md | Name: 威尔穆特 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+威尔金斯.md | Name: 威尔金斯 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+孟德尔.md | Name: 孟德尔 (Gregor Mendel) | Book: 必修二 | Nat: 奥地利 | Era: 19世纪中叶（1856-1866年） | Identity: 遗传学之父，用豌豆和数学，在无人理解的时代独自点亮了遗传学的第一颗星。
+富兰克林.md | Name: 罗莎琳德·富兰克林 (Rosalind Franklin) | Book: 必修二 | Nat: 英国 | Era: 20世纪50年代 | Identity: DNA双螺旋结构背后的“暗物质”，她拍摄的“照片51号”是揭开生命密码最关键的物理证据，却在生前未获得应有的荣耀。
+尼伦伯格和马太.md | Name: 尼伦伯格和马太 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+巴斯德.md | Name: 巴斯德 (Louis Pasteur) | Book: 必修一/选必三 | Nat: 法国 | Era: 19世纪 | Identity: 微生物学之父，他用一尊鹅颈瓶否定了“无中生有”，用疫苗和消毒法守卫了人类文明。
+巴甫洛夫.md | Name: 巴甫洛夫 (Ivan Pavlov) | Book: 选必一 | Nat: 俄国 | Era: 19世纪末至20世纪初 | Identity: 一只狗、一个铃铛、一滴唾液——他用最简单的材料，揭示了大脑最深处的学习逻辑。
+希尔.md | Name: 希尔 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+康拉特.md | Name: 康拉特 | Book:  | Nat: 未知 | Era: 未知 | Identity: 
+弗莱明.md | Name: 亚历山大·弗莱明 (Alexander Fleming) | Book: 选必三 | Nat: 英国 | Era: 20世纪初 | Identity: 青霉素的发现者，他的发现是“上帝赠予人类最伟大的礼物”，拉开了人类与致病菌抗争的“抗生素时代”大幕。
+弗雷和埃迪登.md | Name: 弗雷和埃迪登 (Frye & Edidin) | Book: 必修一 | Nat: 美国 | Era: 1970年 | Identity: 
+德尔布吕克.md | Name: 马克斯·德尔布吕克 (Max Delbrück) | Book: 必修二 | Nat: 德国/美国 | Era: 20世纪中叶（1906-1981年） | Identity: 跨界而来的物理学家，分子生物学的精神领袖，他用噬菌体作为“生命的基本逻辑单元”，确立了生物学的定量分析范式。
+德弗里斯.md | Name: 雨果·德弗里斯 (Hugo de Vries) | Book: 必修二 | Nat: 荷兰 | Era: 19世纪末20世纪初 | Identity: 突变学说的提出者，孟德尔规律的“三大复活者”之首，他将进化论的关注点从渐变转向了跳跃式的突变。
+恩格尔曼.md | Name: 恩格尔曼 (Theodor Wilhelm Engelmann) | Book: 必修一 | Nat: 德国 | Era: 19世纪中叶 | Identity: 发现光合作用“光谱图”的实验大师，他用一条丝状绿藻和一群好氧细菌，精巧地勾画出了光合作用的能量地图。
+戈特和格伦德尔.md | Name: 戈特和格伦德尔 (Gorter & Grendel) | Book: 必修一 | Nat: 荷兰 | Era: 1925年 | Identity: 
+拉马克.md | Name: 让-巴蒂斯特·拉马克 (Jean-Baptiste Lamarck) | Book: 必修二 | Nat: 法国 | Era: 18世纪末19世纪初（1744-1829年） | Identity: 生物进化学说的先驱，他首次将“进化”作为科学命题提出。尽管他的机制被证明是错误的，但他为生物学从固定论转向演化论踢出了第一脚。
+拜尔.md | Name: 阿尔帕德·拜尔 (Árpád Paál) | Book: 选必一 | Nat: 匈牙利 | Era: 1914年代 | Identity: 
+摩尔根.md | Name: 摩尔根 (Thomas Hunt Morgan) | Book: 必修二 | Nat: 美国 | Era: 20世纪初（1908-1920年代） | Identity: 从嘲笑孟德尔到亲手证明基因在染色体上——科学史上最华丽的"打脸"转身。
+斯图尔特.md | Name: 弗雷德里克·斯图尔特 (F.C. Steward) | Book: 选必三 | Nat: 英国/美国 | Era: 20世纪50年代（1904-1993年） | Identity: 细胞全能性的实证大师。他用一截胡萝卜证明了：即便是一个高度分化的成熟细胞，其内心依然深藏着长成一整棵植株的“宏大理想”。
+斯帕兰扎尼.md | Name: 斯帕兰扎尼 (Lazzaro Spallanzani) | Book: 必修一 | Nat: 意大利 | Era: 18世纪（1729-1799年） | Identity: 
+施旺.md | Name: 泰奥多尔·施旺 (Theodor Schwann) | Book: 必修一 | Nat: 德国 | Era: 19世纪中叶（1810-1882年） | Identity: 细胞学说的共同创始人。他跨越了动植物的边界，宣告了：无论飞鸟游鱼还是繁花茂草，在微观上都遵循同一套生命蓝图。
+施莱登.md | Name: 詹姆斯·施莱登 (Matthias Schleiden) | Book: 必修一 | Nat: 德国 | Era: 19世纪中叶（1804-1881年） | Identity: 细胞学说的共同创始人。他通过对植物组织的微观普查，大胆断言：植物的一生都是细胞的集合体。
+林德曼.md | Name: 林德曼 (Raymond Lindeman) | Book: 选必二 | Nat: 美国 | Era: 20世纪40年代（1942年） | Identity: 他只活了27岁，却留下了生态学最重要的数字：10%—20%。
+查哥夫.md | Name: 埃尔文·查哥夫 (Erwin Chargaff) | Book: 必修二 | Nat: 奥地利/美国 | Era: 20世纪中叶（1905-2002年） | Identity: 发现DNA碱基比例规律的化学家，他为双螺旋模型提供了最关键的化学证据，却成了分子生物学史上最失意的旁观者。
+格里菲思.md | Name: 弗雷德里克·格里菲思 (Frederick Griffith) | Book: 必修二 | Nat: 英国 | Era: 1928年 | Identity: 
+桑格.md | Name: 桑格 (Frederick Sanger) | Book: 选必三 | Nat: 英国 | Era: 20世纪中叶（1918-2013年） | Identity: 唯一两次获得诺贝尔化学奖的人。他先读懂了蛋白质，再读懂了DNA，把生命的密码本翻开给了全人类。
+梅塞尔森和斯塔尔.md | Name: 梅塞尔森和斯塔尔 (Meselson & Stahl) | Book: 必修二 | Nat: 美国 | Era: 20世纪50年代 | Identity: 被誉为"生物学史上最美丽的实验"——用密度梯度离心，让DNA亲眼"展示"了自己的复制方式。
+欧文顿.md | Name: 欧文顿 (Ernest Overton) | Book: 必修一 | Nat: 英国 | Era: 19世纪末（1895-1899年） | Identity: 细胞膜的“脂质发现者”，他通过五百多次跨膜实验，用化学的逻辑推断出了那层肉眼看不见的细胞边界究竟由何物构成。
+比夏.md | Name: 比夏 (Marie François Xavier Bichat) | Book: 必修一 | Nat: 法国 | Era: 18世纪末 | Identity: 
+沃森和克里克.md | Name: 沃森和克里克 (Watson & Crick) | Book: 必修二 | Nat: 美国/英国 | Era: 20世纪50年代 | Identity: 1953年，他们用别人的数据、查哥夫的规则和一堆金属模型，拼出了生命的密码。
+沃泰默.md | Name: 沃泰默 (E. Wertheimer) | Book: 选择性必修一 | Nat: 法国 | Era: 19世纪末 | Identity: 
+洛伊.md | Name: 奥托·洛伊 (Otto Loewi) | Book: 选必一 | Nat: 德国/美国 | Era: 1921年 | Identity: 
+温特.md | Name: 弗里茨·温特 (Frits Warmolt Went) | Book: 选必一 | Nat: 荷兰 | Era: 1928年代 | Identity: 
+班廷.md | Name: 弗雷德里克·班廷 (Frederick Banting) | Book: 选必一 | Nat: 加拿大 | Era: 20世纪20年代 | Identity: 胰岛素的发现者，他从枯燥的临床观察中捕捉到了生命的“糖分密码”，将糖尿病从绝症名单中永久划去。
+科伦斯.md | Name: 卡尔·科伦斯 (Carl Correns) | Book: 必修二 | Nat: 德国 | Era: 19世纪末20世纪初 | Identity: 孟德尔规律的“复活者”与“超越者”，他不仅重新发现了遗传定律，还揭示了隐藏在细胞质中的生命蓝图。
+科恩.md | Name: 斯坦利·科恩 (Stanley Cohen) | Book: 选必三 | Nat: 美国 | Era: 20世纪70年代 | Identity: 分子生物学的“手术刀”，他与博耶共同发明了重组DNA技术，将人类带入了能够直接编辑生命代码的时代。
+科赫.md | Name: 罗伯特·科赫 (Robert Koch) | Book: 选必三 | Nat: 德国 | Era: 19世纪末（1843-1910年） | Identity: 细菌学之父，他确立了病原体鉴定的“黄金标准”，将医学从迷信和猜测中拯救出来，变成了真正的实验科学。
+穆利斯.md | Name: 凯利·穆利斯 (Kary Mullis) | Book: 选必三 | Nat: 美国 | Era: 20世纪80年代（1944-2019年） | Identity: 生命科学领域的“打印机工程师”，他发明的PCR技术，让基因研究从“大海捞针”变成了“一键复印”。
+米尔斯坦和柯勒.md | Name: 米尔斯坦和柯勒 (Milstein & Köhler) | Book: 选必三 | Nat: 阿根廷/德国 | Era: 1975年 | Identity: 
+米歇尔.md | Name: 彼得·米歇尔 (Peter Mitchell) | Book: 必修一 | Nat: 英国 | Era: 20世纪60-70年代（1920-1992年） | Identity: 细胞内的“电厂架构师”，他提出的“化学渗透假说”揭开了生命如何利用跨膜质子浓度差制造能量货币（ATP）的奥秘。
+约翰逊.md | Name: 威廉·约翰逊 (Wilhelm Johannsen) | Book: 必修二 | Nat: 丹麦 | Era: 20世纪初 (1909年) | Identity: 
+维萨里.md | Name: 安德烈·维萨里 (Andreas Vesalius) | Book: 必修一 | Nat: 比利时 | Era: 16世纪 | Identity: 
+罗伯特·胡克.md | Name: 罗伯特·胡克 (Robert Hooke) | Book: 必修一 | Nat: 英国 | Era: 17世纪中叶（1635-1703年） | Identity: 细胞的“命名者”，他透过自制的显微镜，在一片薄薄的木栓中发现了生命的“蜂窝状结构”，并留下了“Cell”这个流传至今的伟大术语。
+罗伯特森.md | Name: 罗伯特森 (J. David Robertson) | Book: 必修一 | Nat: 美国 | Era: 20世纪50年代（1924-1995年） | Identity: 细胞膜的“三明治”架构师，他利用电子显微镜揭示了生物膜普遍存在的“单位膜”结构，为人类理解细胞边界提供了第一张高清蓝图。
+艾弗里.md | Name: 奥斯瓦尔德·艾弗里 (Oswald Avery) | Book: 必修二 | Nat: 美国 | Era: 20世纪40年代（1877-1955年） | Identity: 遗传物质真相的“揭幕者”。他用严谨的生化提纯实验，在蛋白质统治的时代，顶住压力宣告了DNA才是生命的“指挥官”。
+苏姆纳.md | Name: 詹姆斯·苏姆纳 (James B. Sumner) | Book: 必修一 | Nat: 美国 | Era: 20世纪初（1887-1955年） | Identity: 酶的“真身”发现者。他在所有人都认为酶是神秘物质的年代，用一罐结晶的刀豆脲酶证明了：酶，本质上就是蛋白质。
+茨维特.md | Name: 米哈伊尔·茨维特 (Mikhail Tswett) | Book: 必修一 | Nat: 俄罗斯 | Era: 1900年代（1872-1919年） | Identity: 
+萨克斯.md | Name: 尤利乌斯·冯·萨克斯 (Julius von Sachs) | Book: 必修一 | Nat: 德国 | Era: 19世纪中叶（1832-1897年） | Identity: 现代植物生理学之父，他用一片叶子和一瓶碘液，精巧地证明了光合作用的产物——淀粉，并揭示了叶绿体作为“生命工厂”的地位。
+萨顿.md | Name: 萨顿 (Walter Sutton) | Book: 必修二 | Nat: 美国 | Era: 20世纪初（1902年） | Identity: 一个观察蝗虫减数分裂的年轻人，用一次直觉的飞跃，把孟德尔的因子"放"到了染色体上。
+薛定谔.md | Name: 埃尔温·薛定谔 (Erwin Schrödinger) | Book: 必修二 | Nat: 奥地利 | Era: 20世纪中叶（1887-1961年） | Identity: 物理学界的“特使”。他用一本名为《生命是什么？》的小书，在物理学与生物学之间架起了一座桥梁，点燃了分子生物学革命的圣火。
+詹纳.md | Name: 詹纳 (Edward Jenner) | Book: 选必一 | Nat: 英国 | Era: 18世纪末（1796年） | Identity: 疫苗之父。他从挤奶女工的传说中捕捉到科学的灵感，用牛痘打开了人类战胜天花的大门。
+贝利斯和斯他林.md | Name: 贝利斯和斯他林 (Bayliss & Starling) | Book: 选必一 | Nat: 英国 | Era: 20世纪初（1902年） | Identity: 激素调节的“发现者”。他们通过一个被切断神经的实验，揭示了身体内部除了神经系统外，还存在着一套精密的化学通讯网络。
+贝尔纳.md | Name: 贝尔纳 (Claude Bernard) | Book: 选必一 | Nat: 法国 | Era: 19世纪（1857年） | Identity: 他说"内环境的稳定是自由生命的条件"——这句话开创了现代生理学的哲学基础。
+赫尔希和蔡斯.md | Name: 赫尔希和蔡斯 (Hershey & Chase) | Book: 必修二 | Nat: 美国 | Era: 20世纪50年代 | Identity: 用两种放射性同位素标记噬菌体，让DNA和蛋白质"各回各家"，彻底终结了遗传物质之争。
+辛格和尼科尔森.md | Name: 辛格和尼科尔森 (Singer & Nicolson) | Book: 必修一 | Nat: 美国 | Era: 20世纪70年代（1972年） | Identity: 细胞膜的“现代绘图师”。他们提出的“流动镶嵌模型”，让死板的细胞边界变成了灵动的、具有生命活力的“流体海洋”。
+达尔文.md | Name: 达尔文 (Charles Darwin) | Book: 必修二/选必一 | Nat: 英国 | Era: 19世纪（1831-1882年） | Identity: 用20年时间把一个危险的想法打磨成铁证，同时还在晚年敏锐地捕捉到了植物“向阳而生”的秘密。
+阿尔农.md | Name: 阿尔农 (Daniel Arnon) | Book: 必修一 | Nat: 美国 | Era: 1954年 | Identity: 
+高斯.md | Name: 高斯 (G. F. Gause) | Book: 选必二 | Nat: 苏联 | Era: 20世纪30年代（1934年） | Identity: 生态位的"实验室裁判"，他用一管管草履虫，量出了物种间竞争的残酷红线。
+魏尔肖.md | Name: 鲁道夫·魏尔肖 (Rudolf Virchow) | Book: 必修一 | Nat: 德国 | Era: 19世纪中叶（1821-1902年） | Identity: 细胞学说的“完善者”，现代病理学之父。他用一句话终结了生命的起源之争，确立了生命延续的永恒逻辑。
+鲁宾和卡门.md | Name: 鲁宾和卡门 (Ruben & Kamen) | Book: 必修一 | Nat: 美国 | Era: 20世纪40年代 | Identity: 用两种同位素氧，让水和CO₂"认领"了各自的氧原子，终结了光合作用O₂来源之争。
+鲍林.md | Name: 莱纳斯·鲍林 (Linus Pauling) | Book: 必修二 | Nat: 美国 | Era: 20世纪50年代（1901-1994年） | Identity: 化学键的大师，蛋白质二级结构的揭秘者。他是科学史上唯一一位两次独立获得诺贝尔奖的奇才。
+鲍森·詹森.md | Name: 彼得·鲍森·詹森 (Peter Boysen-Jensen) | Book: 选必一 | Nat: 丹麦 | Era: 1910年代 | Identity: 

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高中生物科学家星空轨道 · STARRY VAULT</title>
+  <meta name="description" content="STARRY VAULT · 高中生物科学家星空轨道。把 90+ 位科学家、30+ 项重大发现、5 本教材知识点点亮在深空星图上，投屏可用、桌面可玩、移动可学。Mission Control for Biology.">
+  <meta name="keywords" content="高中生物,科学家,星空,星图,生物科学史,星空轨道,STARRY VAULT,生物教学,投屏,可视化">
+  <meta name="author" content="Biology Starry Vault Project">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="/">
+  <meta name="theme-color" content="#060814">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="高中生物科学家星空轨道 · STARRY VAULT">
+  <meta property="og:description" content="把 90+ 位生物科学家的发现、方法和教材知识点点亮在深空星图上。Mission Control for Biology.">
+  <meta property="og:image" content="/design-assets/badges/badge-orb2-dna.png">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="STARRY VAULT">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="高中生物科学家星空轨道 · STARRY VAULT">
+  <meta name="twitter:description" content="把 90+ 位生物科学家的发现、方法和教材知识点点亮在深空星图上。">
+  <meta name="twitter:image" content="/design-assets/badges/badge-orb2-dna.png">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/design-assets/badges/badge-orb2-dna.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="system-boot">
+  <div class="boot-container">
+    <div id="boot-status-text">SYSTEM STANDBY...</div>
+    <button id="btn-init-system" style="display: none;">[ PRESS TO INITIALIZE ARCHIVE ]</button>
+    <div id="boot-terminal">
+      <span id="boot-typer"></span><span class="boot-cursor">_</span>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="canvas-section">
+  <!-- 赛博 HUD 全局噪点扫描线与暗角（借鉴自宇航员太空舱） -->
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <!-- home-intro removed for cinematic boot sequence -->
+
+  <button id="sound-toggle" title="切换宇宙声场">
+    <div class="sound-wave">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <span class="sound-text">静音</span>
+  </button>
+
+  <canvas id="c"></canvas>
+
+  <!-- 返回太空概览按钮 -->
+
+  <button id="back-btn">◀ 返回浩瀚星空</button>
+
+  <!-- 赛博遥测数据面板 -->
+  <div id="hud-telemetry" class="hud-panel">
+    <div class="hud-header">COSMIC TELEMETRY SYSTEM // V3.0</div>
+    <div class="hud-row"><span class="hud-label">COSMIC TIME</span><span class="hud-val" id="hud-time">00:00:00:00</span></div>
+    <div class="hud-row"><span class="hud-label">RA / DEC</span><span class="hud-val" id="hud-radar-coords">-- // --</span></div>
+    <div class="hud-row"><span class="hud-label">NOISE RATIO</span><span class="hud-val" id="hud-noise">0.021 dB</span></div>
+    <div class="hud-row"><span class="hud-label">TELEMETRY</span><span class="hud-val text-green" id="hud-status">SYS_ACTIVE // NORMAL</span></div>
+    <div class="hud-scanner-bar"><div class="hud-scanner-progress"></div></div>
+  </div>
+
+</div>
+
+<!-- 详情海报模态框 -->
+
+<div id="poster-overlay" style="display: none;">
+
+  <button id="poster-prev-btn" class="poster-nav-btn" title="Previous Scientist">◀</button>
+
+  <div id="poster-card">
+
+    <button id="poster-close">✕</button>
+
+    <!-- ── 赛博 HUD 角标（4 角 L 形装饰） ── -->
+
+    <span class="hud-corner tl"></span>
+
+    <span class="hud-corner tr"></span>
+
+    <span class="hud-corner bl"></span>
+
+    <span class="hud-corner br"></span>
+
+    <!-- ── 顶部扫描线 ── -->
+
+    <div class="poster-scanline"></div>
+
+    <!-- Left Sidebar: vertical planet nodes of scientists in current orbit -->
+
+    <div class="poster-sidebar">
+
+      <div class="poster-sidebar-header">关联</div>
+
+      <div class="poster-sidebar-list" id="sidebar-scientist-list">
+
+        <!-- Dyn nodes -->
+
+      </div>
+
+    </div>
+
+    <!-- Main Content Area split into Info and Planet columns -->
+
+    <div class="poster-main-content">
+
+      <!-- Left Column: Details & Parameters -->
+
+      <div class="poster-col-left">
+
+        <div class="poster-hdr-retro">
+
+          <div class="poster-hdr-brand">STELLAR SCIENTIST FILE</div>
+
+          <h2 id="poster-name-en">MENDEL</h2>
+
+          <h1 id="poster-name-cn">孟德尔</h1>
+
+          <div class="poster-divider-top"></div>
+
+        </div>
+
+        <!-- Info Scrollable content -->
+
+        <div class="poster-info-scroll">
+
+          <div id="poster-info-body"></div>
+
+        </div>
+
+        <!-- Parameters Table -->
+
+        <div class="poster-table-wrap">
+
+          <table class="retro-table">
+
+            <tr>
+
+              <td class="td-label">学术星等 (MAG)</td>
+
+              <td class="td-val" id="val-magnitude">5 / 5</td>
+
+              <td class="td-icon">✦</td>
+
+              <td class="td-label">影响权重 (WT)</td>
+
+              <td class="td-val" id="val-stars">★★★★★</td>
+
+              <td class="td-icon">⚝</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-label">认知维度 (COG)</td>
+
+              <td class="td-val">
+
+                <span id="val-cognitive-cn">逻辑推演</span> / <span id="val-cognitive-en" style="font-size: 8px; color: var(--dim)">DEDUCTION</span>
+
+              </td>
+
+              <td class="td-icon" id="table-center-icon">🧬</td>
+
+              <td class="td-label">主攻星云 (MOD)</td>
+
+              <td class="td-val" id="val-module">孟德尔规律</td>
+
+              <td class="td-icon">🌐</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-label">所属星宿 (CST)</td>
+
+              <td class="td-val" id="val-books">巨蟹座</td>
+
+              <td class="td-icon">🌌</td>
+
+              <td class="td-label">系统状态 (SYS)</td>
+
+              <td class="td-val" style="color: var(--c4)">ACTIVE // TELEMETRY</td>
+
+              <td class="td-icon">📡</td>
+
+            </tr>
+
+          </table>
+
+        </div>
+
+      </div>
+
+      <!-- Right Column: Planet Showcase & Concentric orbits -->
+
+      <div class="poster-col-right">
+
+        <div class="poster-planet-container">
+
+          <!-- ── 同心轨道环（CSS 绘制 + 旋转动画） ── -->
+
+          <div class="orbit-ring orbit-ring-1"></div>
+
+          <div class="orbit-ring orbit-ring-2"></div>
+
+          <div class="orbit-ring orbit-ring-3"></div>
+
+          <!-- 轨道上的微型卫星点 -->
+
+          <span class="orbit-satellite sat-1"></span>
+
+          <span class="orbit-satellite sat-2"></span>
+
+          <span class="orbit-satellite sat-3"></span>
+
+          <!-- Top Left -->
+
+          <div class="poster-meta-item tl">
+
+            <span class="meta-label">ERA</span>
+
+            <span class="meta-value" id="meta-era">19世纪中叶</span>
+
+          </div>
+
+          <!-- Top Right -->
+
+          <div class="poster-meta-item tr">
+
+            <span class="meta-label">ORIGIN</span>
+
+            <span class="meta-value" id="meta-nationality">奥地利</span>
+
+          </div>
+
+          <!-- Large spinning planet canvas -->
+
+          <!-- Large spinning planet canvas wrapper -->
+          <div class="poster-planet-wrapper" style="position: relative; width: 420px; height: 420px;">
+            <canvas id="poster-canvas" width="420" height="420" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: none; outline: none; background: transparent;"></canvas>
+          </div>
+
+          <!-- Bottom Left -->
+
+          <div class="poster-meta-item bl">
+
+            <span class="meta-label">PRIORITY</span>
+
+            <span class="meta-value" id="meta-priority">核心必考</span>
+
+          </div>
+
+          <!-- Bottom Right -->
+
+          <div class="poster-meta-item br">
+
+            <span class="meta-label">SECTOR</span>
+
+            <span class="meta-value" id="meta-sector">巨蟹座 · 遗传与进化</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <button id="poster-next-btn" class="poster-nav-btn" title="Next Scientist">▶</button>
+
+</div>
+
+<!-- Tooltip -->
+
+<div id="tooltip">
+
+  <div id="tt-header">
+
+    <span id="tt-sector">SECTOR: --</span>
+
+    <span id="tt-coords">RA/DEC: --</span>
+
+  </div>
+
+  <div id="tt-name"></div>
+
+  <div id="tt-recall"></div>
+
+  <div id="tt-footer">
+
+    <span>STATUS: ACTIVE</span>
+
+    <span>SYS_TELEMETRY</span>
+
+  </div>
+
+</div>
+
+<!-- 科学方法详情模态框 -->
+
+<div id="method-overlay" style="display: none;">
+
+  <div id="method-card">
+
+    <button id="method-close">✕</button>
+
+    <!-- ── 赛博 HUD 角标 + 扫描线（与 poster-card 一致） ── -->
+
+    <span class="hud-corner tl"></span>
+
+    <span class="hud-corner tr"></span>
+
+    <span class="hud-corner bl"></span>
+
+    <span class="hud-corner br"></span>
+
+    <div class="poster-scanline"></div>
+
+    <div class="method-hdr-retro">
+
+      <h2 id="method-type">SCIENTIFIC METHOD // 科学方法</h2>
+
+      <h1 id="method-title">---</h1>
+
+      <div class="method-quote" id="method-quote">---</div>
+
+    </div>
+
+    <div class="method-meta-row">
+
+      <span>IMPORTANCE / 重要性: <span id="method-magnitude-val">3 / 5</span></span>
+
+      <span id="method-stars-val">★★★☆☆</span>
+
+    </div>
+
+    <div class="method-body-scroll">
+
+      <div id="method-info-body"></div>
+
+    </div>
+
+  </div>
+
+</div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

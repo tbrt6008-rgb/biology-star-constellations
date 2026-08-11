@@ -1,0 +1,5 @@
+# ── Git LFS · 大文件管理（2026-08-11）──
+# 星球纹理（运行时必需 · ~252MB）
+public/Images/** filter=lfs diff=lfs merge=lfs -text
+# 设计媒体
+public/design-assets/**/*.mp4 filter=lfs diff=lfs merge=lfs -text

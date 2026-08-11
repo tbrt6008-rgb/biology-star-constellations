@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="狮子座 · 生物技术与工程 · 试管与DNA">
+  <circle cx="256" cy="256" r="240" fill="#060814"/>
+  <!-- 外环 -->
+  <circle cx="256" cy="256" r="236" fill="none" stroke="#4090ff" stroke-width="26" opacity="0.9"/>
+  <circle cx="256" cy="256" r="196" fill="none" stroke="#4090ff" stroke-width="3" opacity="0.35"/>
+  <!-- 虚线内环 -->
+  <circle cx="256" cy="256" r="164" fill="none" stroke="#4090ff" stroke-width="3" stroke-dasharray="8 14" opacity="0.4"/>
+  <!-- 试管主体 -->
+  <path d="M214 128 L214 300 C 214 342, 298 342, 298 300 L298 128"
+        fill="none" stroke="#ffffff" stroke-width="18" stroke-linejoin="round" opacity="0.95"/>
+  <!-- 管口横线 -->
+  <line x1="210" y1="128" x2="302" y2="128" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+  <!-- 管内液面线 -->
+  <line x1="220" y1="262" x2="292" y2="262" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+  <!-- 管内 DNA 螺旋片段 -->
+  <path d="M240 152 C 262 166, 262 180, 240 192 C 220 204, 220 218, 240 230"
+        fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+  <path d="M272 152 C 250 166, 250 180, 272 192 C 292 204, 292 218, 272 230"
+        fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+  <line x1="242" y1="166" x2="270" y2="166" stroke="#ffffff" stroke-width="4" opacity="0.6"/>
+  <line x1="242" y1="200" x2="270" y2="200" stroke="#ffffff" stroke-width="4" opacity="0.6"/>
+  <!-- 气泡 -->
+  <circle cx="258" cy="300" r="10" fill="none" stroke="#ffffff" stroke-width="5" opacity="0.55"/>
+  <circle cx="246" cy="326" r="6" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.45"/>
+  <!-- 左下/右下辅助刻度 -->
+  <circle cx="150" cy="150" r="4" fill="#4090ff"/>
+  <circle cx="362" cy="150" r="4" fill="#4090ff"/>
+</svg>
