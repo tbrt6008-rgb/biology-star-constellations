@@ -987,9 +987,9 @@ function initBootVideoLoop() {
     if (lastX === null) { lastX = e.clientX; return; }
     const dx = e.clientX - lastX;
     lastX = e.clientX;
-    // 左移 → 正放（+）；右移 → 倒放（-）；速度随位移量变化（上限 3x，灵敏响应）
+    // 左移 → 正放（+）；右移 → 倒放（-）；速度随位移量变化（上限 6x，灵敏响应）
     const dir = dx < 0 ? 1 : (dx > 0 ? -1 : 0);
-    targetVel = dir * Math.min(Math.abs(dx) * 0.03, 3.0);
+    targetVel = dir * Math.min(Math.abs(dx) * 0.06, 6.0);
   }, { passive: true });
 
   document.addEventListener('mouseleave', () => {
