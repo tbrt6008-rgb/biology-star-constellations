@@ -980,11 +980,11 @@ function bootSystemSequence() {
   if (!isAudioEnabled) toggleAudio();
   playBootSound(); // Play the ambient startup sound
 
-  // 打字序列：英文快、中文慢，行间停顿配视频节奏
+  // 文字点亮序列：每字如一颗星被点亮（blur→focus），节奏配视频推近
   const lines = [
-    { id: 'boot-line-1', text: '> BIOSPHERE ARCHIVE // INITIALIZING', charMs: 55, startAfter: 400 },
-    { id: 'boot-line-2', text: '> 在深空中，一颗蓝色的星球升起',  charMs: 220, startAfter: 2700 },
-    { id: 'boot-line-3', text: '> 90+ 位科学家在星轨上等待',      charMs: 220, startAfter: 5800 },
+    { id: 'boot-line-1', text: 'BIOSPHERE ARCHIVE // INITIALIZING', gapMs: 42,  startAfter: 400 },
+    { id: 'boot-line-2', text: '在深空中，一颗蓝色的星球升起',       gapMs: 95,  startAfter: 2400 },
+    { id: 'boot-line-3', text: '90+ 位科学家在星轨上等待',           gapMs: 95,  startAfter: 5200 },
   ];
 
   // All stars start with alpha = 0 (hidden)
@@ -993,28 +993,37 @@ function bootSystemSequence() {
     s.a = 0;
   });
 
-  function typeLine(lineEl, text, charMs, onDone) {
-    lineEl.classList.add('active');
+  // 星光点亮：把每个字符包成 <span class="ch">，依次加 .lit（CSS 负责 blur→聚焦 + 光晕）
+  function lightUpLine(lineEl, text, gapMs, onDone) {
+    lineEl.innerHTML = '';
+    const spans = Array.from(text).map((ch) => {
+      const s = document.createElement('span');
+      s.className = 'ch';
+      s.textContent = (ch === ' ') ? '\u00A0' : ch;
+      lineEl.appendChild(s);
+      return s;
+    });
+
     let i = 0;
-    function step() {
-      if (i < text.length) {
-        lineEl.textContent += text.charAt(i);
-        const ch = text.charAt(i);
-        // 标点和空格不触发键盘音；中文 200ms 左右可保留短促 tick
-        if (ch !== ' ' && ch !== '\u3000' && ch !== '，' && ch !== '、') playTick();
-        i++;
-        setTimeout(step, charMs);
-      } else {
-        lineEl.classList.remove('active');
+    function lightNext() {
+      if (i >= spans.length) {
+        lineEl.classList.add('complete');
         if (onDone) onDone();
+        return;
       }
+      const s = spans[i];
+      s.classList.add('lit');
+      if (s.textContent !== '\u00A0') playTick(); // 点亮声（非空格）
+      i++;
+      // 星星不规律亮起：随机间隔（0.45–1.35 倍基准）
+      setTimeout(lightNext, gapMs * (0.45 + Math.random() * 0.9));
     }
-    step();
+    setTimeout(lightNext, 150);
   }
 
   function scheduleLine(idx) {
     if (idx >= lines.length) {
-      // 全部打完 → 显示「PRESS TO INITIALIZE」按钮
+      // 全部点亮 → 显示「PRESS TO INITIALIZE」按钮
       setTimeout(() => {
         if (bootBtn) {
           bootBtn.style.display = 'block';
@@ -1027,7 +1036,7 @@ function bootSystemSequence() {
     setTimeout(() => {
       const el = document.getElementById(l.id);
       if (!el) { scheduleLine(idx + 1); return; }
-      typeLine(el, l.text, l.charMs, () => scheduleLine(idx + 1));
+      lightUpLine(el, l.text, l.gapMs, () => scheduleLine(idx + 1));
     }, l.startAfter);
   }
 
