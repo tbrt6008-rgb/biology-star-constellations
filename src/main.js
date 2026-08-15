@@ -987,9 +987,9 @@ function initBootVideoLoop() {
     if (lastX === null) { lastX = e.clientX; return; }
     const dx = e.clientX - lastX;
     lastX = e.clientX;
-    // 左移 → 正放（+）；右移 → 倒放（-）；速度随位移量变化（上限 1.2x）
+    // 左移 → 正放（+）；右移 → 倒放（-）；速度随位移量变化（上限 3x，灵敏响应）
     const dir = dx < 0 ? 1 : (dx > 0 ? -1 : 0);
-    targetVel = dir * Math.min(Math.abs(dx) * 0.012, 1.2);
+    targetVel = dir * Math.min(Math.abs(dx) * 0.03, 3.0);
   }, { passive: true });
 
   document.addEventListener('mouseleave', () => {
@@ -998,7 +998,7 @@ function initBootVideoLoop() {
   });
 
   function tick() {
-    vel += (targetVel - vel) * 0.16; // 速度平滑（手感柔和）
+    vel += (targetVel - vel) * 0.25; // 速度平滑（响应更灵敏）
     if (Math.abs(vel) < 0.002 && Math.abs(targetVel) < 0.002) vel = 0;
 
     if (Math.abs(vel) < 0.002) {
