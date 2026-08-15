@@ -800,6 +800,22 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   text-shadow: 0 0 8px var(--c1);
 }
 
+#scrub-hint {
+  margin-top: 20px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.38);
+  letter-spacing: 0.16em;
+  text-shadow: 0 0 8px rgba(140, 200, 255, 0.3);
+  user-select: none;
+  pointer-events: none;
+  animation: scrub-hint-fade 1.6s var(--ease-premium);
+}
+
+@keyframes scrub-hint-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 /* ── 返回空间概览按钮 ── */
 
 #back-btn {

@@ -947,15 +947,83 @@ async function loadData() {
 
 }
 
-// 地球升起视频背景：视频本身已是 ping-pong 无缝循环（正放+倒放、首尾同帧），
-// 原生 loop 即可平滑循环，无需交叉淡化
+// 地球升起视频背景：鼠标方向驱动播放（scrub）
+// 鼠标左移 → 正放（地球推近）；右移 → 倒放（地球退远）；停 → 暂停；到边界 clamp
+// 无循环跳变问题——播放方向完全由用户控制
 function initBootVideoLoop() {
-  const vA = document.getElementById('boot-video');
-  if (!vA) return;
+  const v = document.getElementById('boot-video');
+  if (!v) return;
+
   const SRC = import.meta.env.BASE_URL + 'design-assets/hero-earth-rise.mp4';
-  vA.src = SRC;
-  vA.loop = true;
-  vA.play().catch(() => {});
+  const DUR = 12.0; // 视频总时长（s）
+
+  // 触屏/无鼠标：回退到原生自动循环播放
+  const hasMouse = window.matchMedia('(hover: hover)').matches;
+  if (!hasMouse) {
+    v.src = SRC;
+    v.loop = true;
+    v.play().catch(() => {});
+    return;
+  }
+
+  // 检测负 playbackRate（Chrome/Edge 支持倒放；Safari 不支持 → 用逐帧 seek）
+  let supportsReverse = false;
+  try {
+    v.playbackRate = -1;
+    supportsReverse = v.playbackRate < 0;
+    v.playbackRate = 1;
+  } catch (_) { supportsReverse = false; }
+
+  v.src = SRC;
+  v.muted = true;
+  v.currentTime = 0;
+
+  let lastX = null;
+  let targetVel = 0; // 目标视频速度（秒/秒，负=倒放）
+  let vel = 0;       // 平滑后的速度
+  let pos = 0;       // 逐帧 seek 模式下的逻辑位置
+
+  window.addEventListener('mousemove', (e) => {
+    if (lastX === null) { lastX = e.clientX; return; }
+    const dx = e.clientX - lastX;
+    lastX = e.clientX;
+    // 左移 → 正放（+）；右移 → 倒放（-）；速度随位移量变化（上限 1.2x）
+    const dir = dx < 0 ? 1 : (dx > 0 ? -1 : 0);
+    targetVel = dir * Math.min(Math.abs(dx) * 0.012, 1.2);
+  }, { passive: true });
+
+  document.addEventListener('mouseleave', () => {
+    targetVel = 0;
+    lastX = null;
+  });
+
+  function tick() {
+    vel += (targetVel - vel) * 0.16; // 速度平滑（手感柔和）
+    if (Math.abs(vel) < 0.002 && Math.abs(targetVel) < 0.002) vel = 0;
+
+    if (Math.abs(vel) < 0.002) {
+      // 鼠标静止 → 暂停（仅当本就在播放/倒放时）
+      if (!v.paused) v.pause();
+    } else if (supportsReverse) {
+      // 原生方向播放：playbackRate 正负即方向
+      if (vel > 0 && v.currentTime >= DUR - 0.05) { vel = 0; targetVel = 0; v.pause(); }
+      else if (vel < 0 && v.currentTime <= 0.01)  { vel = 0; targetVel = 0; v.pause(); v.currentTime = 0; }
+      else {
+        v.playbackRate = vel;
+        if (v.paused) v.play().catch(() => {});
+      }
+    } else {
+      // fallback：逐帧 seek（Chrome/Firefox 不支持负 playbackRate）
+      if (Math.abs(v.currentTime - pos) > 0.5) pos = v.currentTime; // 外部 seek 时同步
+      pos += vel / 60;
+      pos = Math.min(Math.max(pos, 0), DUR - 0.05);
+      if (Math.abs(v.currentTime - pos) > 0.001) v.currentTime = pos;
+      if (pos <= 0.001 || pos >= DUR - 0.05) { vel = 0; targetVel = 0; v.pause(); }
+    }
+
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
 }
 
 // 「PRESS TO INITIALIZE」点击后：淡出开机层 + 星空 fade in
