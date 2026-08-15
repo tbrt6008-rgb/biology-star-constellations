@@ -387,10 +387,7 @@ function applyRelationshipConstellationLayout() {
 async function loadData() {
 
   const loadingText = document.querySelector('#boot-status-text');
-
-  // 1. 加载科学家数据
-
-  loadingText.textContent = '正在加载科学家数据...';
+  if (loadingText) loadingText.textContent = '正在加载科学家数据...';
 
   const res = await fetch('scientists.json');
 
@@ -428,7 +425,7 @@ async function loadData() {
 
   try {
 
-    loadingText.textContent = '正在加载科学方法数据库...';
+    if (loadingText) loadingText.textContent = '正在加载科学方法数据库...';
 
     const resM = await fetch('methods.json');
 
@@ -478,7 +475,7 @@ async function loadData() {
 
   // 2. 加载3D星球表面纹理贴图列表
 
-  loadingText.textContent = '正在检索3D星球表面纹理...';
+  if (loadingText) loadingText.textContent = '正在检索3D星球表面纹理...';
 
   let imageFiles = [];
 
@@ -522,7 +519,7 @@ async function loadData() {
 
           loadedImages++;
 
-          loadingText.textContent = `正在预加载星球表面纹理 (${loadedImages}/${totalToLoad})...`;
+          if (loadingText) loadingText.textContent = `正在预加载星球表面纹理 (${loadedImages}/${totalToLoad})...`;
 
           resolve();
 
@@ -927,25 +924,17 @@ async function loadData() {
 
   constellationLinks = [];
 
-  const bootStatusText = document.getElementById('boot-status-text');
+  // ── 视频背景无缝循环 + 进入按钮 ──
+  initBootVideoLoop();
+
   const bootBtn = document.getElementById('btn-init-system');
-  
-  if (bootStatusText) bootStatusText.style.display = 'none';
   if (bootBtn) {
     bootBtn.style.display = 'block';
-    bootBtn.addEventListener('click', () => {
-      // 第一次点击：进入打字序列；之后点击：淡出进入星空
-      if (bootBtn.dataset.state === 'ready') {
-        exitBootSequence();
-        bootBtn.dataset.state = 'done';
-      } else if (!bootBtn.dataset.state) {
-        bootSystemSequence();
-      }
-    });
+    bootBtn.addEventListener('click', () => exitBootSequence());
 
-    // ── 无缝入口：若从 VOYAGER 落地页带 ?autoboot=1 进入，自动触发开机序列 ──
+    // ── 无缝入口：从 VOYAGER 落地页带 ?autoboot=1 进入，直接进入星空 ──
     if (new URLSearchParams(location.search).get('autoboot') === '1') {
-      bootBtn.click();
+      exitBootSequence();
     }
   }
 
@@ -958,106 +947,58 @@ async function loadData() {
 
 }
 
-function bootSystemSequence() {
-  const bootBtn = document.getElementById('btn-init-system');
-  const bootTerminal = document.getElementById('boot-terminal');
-  const bootVideo = document.getElementById('boot-video');
-  const systemBootContainer = document.getElementById('system-boot');
+// 地球升起视频背景：双 <video> 交叉淡化实现无缝循环
+// 用一个在播放、另一个在结尾前 0.7s 从 0 开始并交叉淡化，掩盖首尾画面跳变 + 消除 loop 卡顿
+function initBootVideoLoop() {
+  const vA = document.getElementById('boot-video');
+  const vB = document.getElementById('boot-video-b');
+  if (!vA) return;
 
-  if (bootBtn) bootBtn.style.display = 'none';
-  if (bootTerminal) bootTerminal.style.display = 'block';
+  const SRC = import.meta.env.BASE_URL + 'design-assets/hero-earth-rise.mp4';
+  const CROSS = 0.7; // 交叉淡化时长（s）
+  let cur = vA, nxt = vB, swapping = false;
 
-  // 视频：循环播放、重置到起点、低音量提示用户存在
-  if (bootVideo) {
-    try {
-      bootVideo.currentTime = 0;
-      const p = bootVideo.play();
-      if (p && p.catch) p.catch(() => {});
-    } catch (_) {}
-  }
+  vA.src = SRC; vB.src = SRC;
+  vA.style.opacity = '1'; vB.style.opacity = '0';
+  vA.play().catch(() => {});
 
-  // Enable audio context
-  if (!isAudioEnabled) toggleAudio();
-  playBootSound(); // Play the ambient startup sound
-
-  // 文字点亮序列：每字如一颗星被点亮（blur→focus），节奏配视频推近
-  const lines = [
-    { id: 'boot-line-1', text: 'BIOSPHERE ARCHIVE // INITIALIZING', gapMs: 42,  startAfter: 400 },
-    { id: 'boot-line-2', text: '在深空中，一颗蓝色的星球升起',       gapMs: 95,  startAfter: 2400 },
-    { id: 'boot-line-3', text: '90+ 位科学家在星轨上等待',           gapMs: 95,  startAfter: 5200 },
-  ];
-
-  // All stars start with alpha = 0 (hidden)
-  STARS.forEach(s => {
-    s._targetA = s.a;
-    s.a = 0;
-  });
-
-  // 星光点亮：把每个字符包成 <span class="ch">，依次加 .lit（CSS 负责 blur→聚焦 + 光晕）
-  function lightUpLine(lineEl, text, gapMs, onDone) {
-    lineEl.innerHTML = '';
-    const spans = Array.from(text).map((ch) => {
-      const s = document.createElement('span');
-      s.className = 'ch';
-      s.textContent = (ch === ' ') ? '\u00A0' : ch;
-      lineEl.appendChild(s);
-      return s;
-    });
-
-    let i = 0;
-    function lightNext() {
-      if (i >= spans.length) {
-        lineEl.classList.add('complete');
-        if (onDone) onDone();
-        return;
-      }
-      const s = spans[i];
-      s.classList.add('lit');
-      if (s.textContent !== '\u00A0') playTick(); // 点亮声（非空格）
-      i++;
-      // 星星不规律亮起：随机间隔（0.45–1.35 倍基准）
-      setTimeout(lightNext, gapMs * (0.45 + Math.random() * 0.9));
+  function trySwap(v) {
+    if (swapping || !v.duration || v.ended) return;
+    if (v.currentTime >= v.duration - CROSS) {
+      swapping = true;
+      nxt.currentTime = 0;
+      nxt.play().catch(() => {});
+      gsap.to(cur, { opacity: 0, duration: CROSS, ease: 'power1.inOut' });
+      gsap.to(nxt, { opacity: 1, duration: CROSS, ease: 'power1.inOut', onComplete: () => {
+        cur.pause();
+        cur.currentTime = 0;
+        const t = cur; cur = nxt; nxt = t;
+        swapping = false;
+      } });
     }
-    setTimeout(lightNext, 150);
   }
 
-  function scheduleLine(idx) {
-    if (idx >= lines.length) {
-      // 全部点亮 → 显示「PRESS TO INITIALIZE」按钮
-      setTimeout(() => {
-        if (bootBtn) {
-          bootBtn.style.display = 'block';
-          bootBtn.dataset.state = 'ready';
-        }
-      }, 700);
-      return;
-    }
-    const l = lines[idx];
-    setTimeout(() => {
-      const el = document.getElementById(l.id);
-      if (!el) { scheduleLine(idx + 1); return; }
-      lightUpLine(el, l.text, l.gapMs, () => scheduleLine(idx + 1));
-    }, l.startAfter);
-  }
-
-  scheduleLine(0);
+  vA.addEventListener('timeupdate', () => trySwap(vA));
+  vB.addEventListener('timeupdate', () => trySwap(vB));
 }
 
 // 「PRESS TO INITIALIZE」点击后：淡出开机层 + 星空 fade in
 function exitBootSequence() {
   const systemBootContainer = document.getElementById('system-boot');
   const bootBtn = document.getElementById('btn-init-system');
-  const bootVideo = document.getElementById('boot-video');
   if (bootBtn) bootBtn.style.display = 'none';
 
-  // 视频随容器一起淡出，然后暂停释放资源
+  // 视频随容器一起淡出，然后暂停释放资源（两个交叉循环的 video 都停）
   gsap.to(systemBootContainer, {
     opacity: 0,
     duration: 1.5,
     ease: "power2.inOut",
     onComplete: () => {
       systemBootContainer.style.display = 'none';
-      if (bootVideo) { try { bootVideo.pause(); } catch (_) {} }
+      ['boot-video', 'boot-video-b'].forEach((id) => {
+        const v = document.getElementById(id);
+        if (v) { try { v.pause(); v.removeAttribute('src'); v.load(); } catch (_) {} }
+      });
     }
   });
 
@@ -5010,36 +4951,6 @@ function playTick() {
 
   } catch (e) {}
 
-}
-
-function playBootSound() {
-  if (!isAudioEnabled || !audioCtx) return;
-  try {
-    const time = audioCtx.currentTime;
-    // Deep drone/chord
-    const osc1 = audioCtx.createOscillator();
-    const osc2 = audioCtx.createOscillator();
-    const gainNode = audioCtx.createGain();
-    
-    osc1.type = 'sine';
-    osc1.frequency.setValueAtTime(55, time); // Low A
-    
-    osc2.type = 'triangle';
-    osc2.frequency.setValueAtTime(110, time); // A one octave up
-    
-    gainNode.gain.setValueAtTime(0, time);
-    gainNode.gain.linearRampToValueAtTime(0.15, time + 2.0); // slow attack
-    gainNode.gain.linearRampToValueAtTime(0, time + 12.0); // very slow release
-    
-    osc1.connect(gainNode);
-    osc2.connect(gainNode);
-    gainNode.connect(audioCtx.destination);
-    
-    osc1.start(time);
-    osc2.start(time);
-    osc1.stop(time + 12.0);
-    osc2.stop(time + 12.0);
-  } catch(e) {}
 }
 
 function playPing(freq = 880, type = 'triangle', duration = 0.4, maxGain = 0.08) {

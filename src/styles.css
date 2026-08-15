@@ -777,17 +777,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   min-height: 120px;
 }
 
-#boot-status-text {
-  font-size: 11px;
-  color: var(--dim);
-  letter-spacing: 0.14em;
-  margin-bottom: 28px;
-  opacity: 0.55;
-  text-shadow: 0 0 8px rgba(140, 200, 255, 0.35);
-}
-
 #btn-init-system {
-  margin-top: 26px;
   background: rgba(2, 8, 20, 0.45);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -808,48 +798,6 @@ html { scrollbar-width: thin; scrollbar-color: rgba(240, 176, 48, 0.25) transpar
   border-color: var(--c1);
   box-shadow: 0 0 20px rgba(45, 212, 232, 0.2) inset, 0 0 20px rgba(45, 212, 232, 0.2);
   text-shadow: 0 0 8px var(--c1);
-}
-
-#boot-terminal {
-  font-size: clamp(15px, 2vw, 22px);
-  line-height: 1.95;
-  color: #eaf4ff;
-  letter-spacing: 0.05em;
-  text-align: center;
-  display: none;
-}
-
-.boot-line {
-  min-height: 1.95em;
-  margin: 3px 0;
-  white-space: pre-wrap;
-}
-
-/* ── 星光点亮：每字初始为暗星（模糊·下沉·微缩），加 .lit 后聚焦发光 ── */
-.boot-line .ch {
-  display: inline-block;
-  white-space: pre;
-  opacity: 0;
-  transform: translateY(12px) scale(0.86);
-  filter: blur(9px);
-  transition:
-    opacity 0.7s var(--ease-premium),
-    transform 0.7s var(--ease-premium),
-    filter 0.7s var(--ease-premium);
-  will-change: opacity, transform, filter;
-}
-
-.boot-line .ch.lit {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
-  animation: char-glow 1s ease-out;
-}
-
-@keyframes char-glow {
-  0%   { text-shadow: 0 0 0 transparent; }
-  35%  { text-shadow: 0 0 16px rgba(150, 210, 255, 0.95), 0 0 38px rgba(45, 212, 232, 0.60); }
-  100% { text-shadow: 0 0 9px rgba(140, 200, 255, 0.32), 0 0 22px rgba(45, 130, 220, 0.22); }
 }
 
 /* ── 返回空间概览按钮 ── */

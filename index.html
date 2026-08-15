@@ -33,21 +33,14 @@
 </head>
 <body>
 <div id="system-boot">
-  <!-- 地球升起全屏视频背景（与首页打字节奏同步） -->
-  <video id="boot-video" class="boot-video" autoplay loop muted playsinline preload="auto"
-         src="/design-assets/hero-earth-rise.mp4"
-         poster=""
-         aria-hidden="true"></video>
+  <!-- 地球升起全屏视频背景：双 <video> 交叉淡化实现无缝循环 -->
+  <video id="boot-video" class="boot-video" autoplay muted playsinline preload="auto"
+         src="/design-assets/hero-earth-rise.mp4" aria-hidden="true"></video>
+  <video id="boot-video-b" class="boot-video" muted playsinline preload="auto" aria-hidden="true"></video>
   <div class="boot-overlay" aria-hidden="true"></div>
 
   <div class="boot-container">
-    <div id="boot-status-text">SYSTEM STANDBY...</div>
-    <button id="btn-init-system" style="display: none;">[ PRESS TO INITIALIZE ARCHIVE ]</button>
-    <div id="boot-terminal">
-      <div class="boot-line" id="boot-line-1"></div>
-      <div class="boot-line" id="boot-line-2"></div>
-      <div class="boot-line" id="boot-line-3"></div>
-    </div>
+    <button id="btn-init-system">[ PRESS TO INITIALIZE ARCHIVE ]</button>
   </div>
 </div>
 
