@@ -947,39 +947,15 @@ async function loadData() {
 
 }
 
-// 地球升起视频背景：双 <video> 交叉淡化实现无缝循环
-// 用一个在播放、另一个在结尾前 0.7s 从 0 开始并交叉淡化，掩盖首尾画面跳变 + 消除 loop 卡顿
+// 地球升起视频背景：视频本身已是 ping-pong 无缝循环（正放+倒放、首尾同帧），
+// 原生 loop 即可平滑循环，无需交叉淡化
 function initBootVideoLoop() {
   const vA = document.getElementById('boot-video');
-  const vB = document.getElementById('boot-video-b');
   if (!vA) return;
-
   const SRC = import.meta.env.BASE_URL + 'design-assets/hero-earth-rise.mp4';
-  const CROSS = 0.7; // 交叉淡化时长（s）
-  let cur = vA, nxt = vB, swapping = false;
-
-  vA.src = SRC; vB.src = SRC;
-  vA.style.opacity = '1'; vB.style.opacity = '0';
+  vA.src = SRC;
+  vA.loop = true;
   vA.play().catch(() => {});
-
-  function trySwap(v) {
-    if (swapping || !v.duration || v.ended) return;
-    if (v.currentTime >= v.duration - CROSS) {
-      swapping = true;
-      nxt.currentTime = 0;
-      nxt.play().catch(() => {});
-      gsap.to(cur, { opacity: 0, duration: CROSS, ease: 'power1.inOut' });
-      gsap.to(nxt, { opacity: 1, duration: CROSS, ease: 'power1.inOut', onComplete: () => {
-        cur.pause();
-        cur.currentTime = 0;
-        const t = cur; cur = nxt; nxt = t;
-        swapping = false;
-      } });
-    }
-  }
-
-  vA.addEventListener('timeupdate', () => trySwap(vA));
-  vB.addEventListener('timeupdate', () => trySwap(vB));
 }
 
 // 「PRESS TO INITIALIZE」点击后：淡出开机层 + 星空 fade in
@@ -988,17 +964,15 @@ function exitBootSequence() {
   const bootBtn = document.getElementById('btn-init-system');
   if (bootBtn) bootBtn.style.display = 'none';
 
-  // 视频随容器一起淡出，然后暂停释放资源（两个交叉循环的 video 都停）
+  // 视频随容器一起淡出，然后暂停释放资源
   gsap.to(systemBootContainer, {
     opacity: 0,
     duration: 1.5,
     ease: "power2.inOut",
     onComplete: () => {
       systemBootContainer.style.display = 'none';
-      ['boot-video', 'boot-video-b'].forEach((id) => {
-        const v = document.getElementById(id);
-        if (v) { try { v.pause(); v.removeAttribute('src'); v.load(); } catch (_) {} }
-      });
+      const v = document.getElementById('boot-video');
+      if (v) { try { v.pause(); v.removeAttribute('src'); v.load(); } catch (_) {} }
     }
   });
 
