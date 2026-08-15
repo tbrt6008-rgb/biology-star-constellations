@@ -970,8 +970,7 @@ function initBootVideoLoop() {
   }
 
   v.src = SRC;
-  v.muted = true; // 初始静音（保证自动播放呼吸不受浏览器限制）
-  v.volume = 0.6;
+  v.muted = true; // 视频无音轨，保持静音（首页静音，星图声场由 sound-toggle 控制）
   v.currentTime = 0;
 
   const IDLE_VEL = 0.3;         // 空闲自动播放速度（秒/秒，慢速呼吸）
@@ -986,20 +985,8 @@ function initBootVideoLoop() {
   let inIdle = true;         // 是否空闲自动模式
   let pendingSeek = 0;
   let idleTimer = null;
-  let soundEnabled = false; // 首次用户交互后开启视频声音
-
-  function enableVideoSound() {
-    if (soundEnabled) return;
-    soundEnabled = true;
-    try {
-      v.muted = false;
-      v.volume = 0.6;
-      if (v.paused) v.play().catch(() => {});
-    } catch (_) {}
-  }
 
   window.addEventListener('mousemove', (e) => {
-    enableVideoSound(); // 第一次移动鼠标即有声音
     if (lastX === null) { lastX = e.clientX; return; }
     const dx = e.clientX - lastX;
     lastX = e.clientX;
@@ -1015,8 +1002,6 @@ function initBootVideoLoop() {
       targetVel = IDLE_VEL * idleDir;
     }, IDLE_RETURN_MS);
   }, { passive: true });
-
-  document.addEventListener('click', enableVideoSound);
 
   document.addEventListener('mouseleave', () => {
     lastX = null;
