@@ -934,8 +934,14 @@ async function loadData() {
   if (bootBtn) {
     bootBtn.style.display = 'block';
     bootBtn.addEventListener('click', () => {
-      bootSystemSequence();
-    }, { once: true });
+      // 第一次点击：进入打字序列；之后点击：淡出进入星空
+      if (bootBtn.dataset.state === 'ready') {
+        exitBootSequence();
+        bootBtn.dataset.state = 'done';
+      } else if (!bootBtn.dataset.state) {
+        bootSystemSequence();
+      }
+    });
 
     // ── 无缝入口：若从 VOYAGER 落地页带 ?autoboot=1 进入，自动触发开机序列 ──
     if (new URLSearchParams(location.search).get('autoboot') === '1') {
@@ -955,64 +961,111 @@ async function loadData() {
 function bootSystemSequence() {
   const bootBtn = document.getElementById('btn-init-system');
   const bootTerminal = document.getElementById('boot-terminal');
-  const bootTyper = document.getElementById('boot-typer');
+  const bootVideo = document.getElementById('boot-video');
   const systemBootContainer = document.getElementById('system-boot');
-  
+
   if (bootBtn) bootBtn.style.display = 'none';
   if (bootTerminal) bootTerminal.style.display = 'block';
-  
+
+  // 视频：循环播放、重置到起点、低音量提示用户存在
+  if (bootVideo) {
+    try {
+      bootVideo.currentTime = 0;
+      const p = bootVideo.play();
+      if (p && p.catch) p.catch(() => {});
+    } catch (_) {}
+  }
+
   // Enable audio context
   if (!isAudioEnabled) toggleAudio();
   playBootSound(); // Play the ambient startup sound
 
-  const textToType = "> WAKING UP BIOSPHERE ARCHIVE... SYSTEM ONLINE";
-  let i = 0;
-  
+  // 打字序列：英文快、中文慢，行间停顿配视频节奏
+  const lines = [
+    { id: 'boot-line-1', text: '> BIOSPHERE ARCHIVE // INITIALIZING', charMs: 55, startAfter: 400 },
+    { id: 'boot-line-2', text: '> 在深空中，一颗蓝色的星球升起',  charMs: 220, startAfter: 2700 },
+    { id: 'boot-line-3', text: '> 90+ 位科学家在星轨上等待',      charMs: 220, startAfter: 5800 },
+  ];
+
   // All stars start with alpha = 0 (hidden)
   STARS.forEach(s => {
     s._targetA = s.a;
-    s.a = 0; 
+    s.a = 0;
   });
-  
-  function typeChar() {
-    if (i < textToType.length) {
-      bootTyper.textContent += textToType.charAt(i);
-      if (textToType.charAt(i) !== ' ') playTick(); // small typing sound
-      i++;
-      setTimeout(typeChar, 30 + Math.random() * 60);
-    } else {
-      // Done typing
-      setTimeout(() => {
-        // Fade out boot screen
-        gsap.to(systemBootContainer, {
-          opacity: 0,
-          duration: 1.5,
-          ease: "power2.inOut",
-          onComplete: () => {
-            systemBootContainer.style.display = 'none';
-          }
-        });
-        
-        // Fade in effects and UI
-        gsap.to(['.scanlines', '.vignette'], { opacity: 1, duration: 2.0, ease: "power2.inOut", stagger: 0.2 });
-        gsap.to('#c', { opacity: 1, duration: 2.5, ease: "power2.inOut", delay: 0.5 });
-        gsap.to('#hud-telemetry', { opacity: 1, duration: 1.5, ease: "power2.out", delay: 1.2 });
-        
-        // Fade in stars (fireflies effect)
-        STARS.forEach(s => {
-          gsap.to(s, {
-            a: s._targetA,
-            duration: 2.0 + Math.random() * 3.0,
-            delay: 1.0 + Math.random() * 2.0,
-            ease: "power1.inOut"
-          });
-        });
-        
-      }, 1200);
+
+  function typeLine(lineEl, text, charMs, onDone) {
+    lineEl.classList.add('active');
+    let i = 0;
+    function step() {
+      if (i < text.length) {
+        lineEl.textContent += text.charAt(i);
+        const ch = text.charAt(i);
+        // 标点和空格不触发键盘音；中文 200ms 左右可保留短促 tick
+        if (ch !== ' ' && ch !== '\u3000' && ch !== '，' && ch !== '、') playTick();
+        i++;
+        setTimeout(step, charMs);
+      } else {
+        lineEl.classList.remove('active');
+        if (onDone) onDone();
+      }
     }
+    step();
   }
-  
-  setTimeout(typeChar, 800); // initial delay before typing
+
+  function scheduleLine(idx) {
+    if (idx >= lines.length) {
+      // 全部打完 → 显示「PRESS TO INITIALIZE」按钮
+      setTimeout(() => {
+        if (bootBtn) {
+          bootBtn.style.display = 'block';
+          bootBtn.dataset.state = 'ready';
+        }
+      }, 700);
+      return;
+    }
+    const l = lines[idx];
+    setTimeout(() => {
+      const el = document.getElementById(l.id);
+      if (!el) { scheduleLine(idx + 1); return; }
+      typeLine(el, l.text, l.charMs, () => scheduleLine(idx + 1));
+    }, l.startAfter);
+  }
+
+  scheduleLine(0);
+}
+
+// 「PRESS TO INITIALIZE」点击后：淡出开机层 + 星空 fade in
+function exitBootSequence() {
+  const systemBootContainer = document.getElementById('system-boot');
+  const bootBtn = document.getElementById('btn-init-system');
+  const bootVideo = document.getElementById('boot-video');
+  if (bootBtn) bootBtn.style.display = 'none';
+
+  // 视频随容器一起淡出，然后暂停释放资源
+  gsap.to(systemBootContainer, {
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.inOut",
+    onComplete: () => {
+      systemBootContainer.style.display = 'none';
+      if (bootVideo) { try { bootVideo.pause(); } catch (_) {} }
+    }
+  });
+
+  // Fade in effects and UI
+  gsap.to(['.scanlines', '.vignette'], { opacity: 1, duration: 2.0, ease: "power2.inOut", stagger: 0.2 });
+  gsap.to('#c', { opacity: 1, duration: 2.5, ease: "power2.inOut", delay: 0.5 });
+  gsap.to('#hud-telemetry', { opacity: 1, duration: 1.5, ease: "power2.out", delay: 1.2 });
+
+  // Fade in stars (fireflies effect)
+  STARS.forEach(s => {
+    gsap.to(s, {
+      a: s._targetA,
+      duration: 2.0 + Math.random() * 3.0,
+      delay: 1.0 + Math.random() * 2.0,
+      ease: "power1.inOut"
+    });
+  });
 }
 
 // ═══════════════════════════════════════════════════════════════
