@@ -949,7 +949,10 @@ async function loadData() {
 
 // 地球升起视频背景：鼠标方向驱动播放（scrub）
 // 鼠标左移 → 正放（地球推近）；右移 → 倒放（地球退远）；停 → 暂停；到边界 clamp
-// 无循环跳变问题——播放方向完全由用户控制
+// 地球升起视频背景：
+// - 空闲时自动「呼吸」播放（慢速正放 ↔ 倒放循环），首页不静止
+// - 鼠标左移 → 正放（地球推近）；右移 → 倒放（地球退远）；停止 1.4s 恢复呼吸
+// - 手动到边界 clamp；呼吸模式到边界自动反向
 function initBootVideoLoop() {
   const v = document.getElementById('boot-video');
   if (!v) return;
@@ -970,53 +973,90 @@ function initBootVideoLoop() {
   v.muted = true;
   v.currentTime = 0;
 
+  const IDLE_VEL = 0.3;         // 空闲自动播放速度（秒/秒，慢速呼吸）
+  const IDLE_RETURN_MS = 1400;  // 停止移动多久后恢复空闲呼吸
+  const SEEK_THRESHOLD = 1 / 24; // 倒放 seek 节流阈值（1 帧）
+  const MAX_VEL = 6.0;
+
   let lastX = null;
-  let targetVel = 0; // 目标视频速度（秒/秒，负=倒放）
-  let vel = 0;       // 平滑后的速度
+  let targetVel = IDLE_VEL;  // 目标速度（负=倒放）
+  let vel = 0;               // 平滑后的速度
+  let idleDir = 1;           // 空闲呼吸方向（1 正放 / -1 倒放）
+  let inIdle = true;         // 是否空闲自动模式
+  let pendingSeek = 0;
+  let idleTimer = null;
 
   window.addEventListener('mousemove', (e) => {
     if (lastX === null) { lastX = e.clientX; return; }
     const dx = e.clientX - lastX;
     lastX = e.clientX;
-    // 左移 → 正放（+）；右移 → 倒放（-）；速度随位移量变化（上限 6x，灵敏响应）
+    // 左移 → 正放（+）；右移 → 倒放（-）；速度随位移量变化（上限 6x）
     const dir = dx < 0 ? 1 : (dx > 0 ? -1 : 0);
-    targetVel = dir * Math.min(Math.abs(dx) * 0.06, 6.0);
+    inIdle = false;
+    targetVel = dir * Math.min(Math.abs(dx) * 0.06, MAX_VEL);
+    // 停止移动一段时间后，恢复空闲呼吸
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => {
+      inIdle = true;
+      idleDir = 1;
+      targetVel = IDLE_VEL * idleDir;
+    }, IDLE_RETURN_MS);
   }, { passive: true });
 
   document.addEventListener('mouseleave', () => {
-    targetVel = 0;
     lastX = null;
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => {
+      inIdle = true;
+      idleDir = 1;
+      targetVel = IDLE_VEL;
+    }, 300);
   });
 
-  // seek 节流：倒放也只在位移累计 ≥1 帧（~42ms 视频）时才真正 seek
-  const SEEK_THRESHOLD = 1 / 24; // 1 帧视频时间
-  let pendingSeek = 0;           // 待执行的倒放位移
-
   function tick() {
-    vel += (targetVel - vel) * 0.25; // 速度平滑（响应更灵敏）
-    if (Math.abs(vel) < 0.002 && Math.abs(targetVel) < 0.002) vel = 0;
+    vel += (targetVel - vel) * 0.25; // 速度平滑（响应灵敏）
 
     if (Math.abs(vel) < 0.002) {
-      // 鼠标静止 → 暂停
+      // 速度为 0 → 暂停
       if (!v.paused) v.pause();
       pendingSeek = 0;
     } else if (vel > 0) {
       // 正放：原生 play（流畅，无逐帧 seek）
       pendingSeek = 0;
-      if (v.currentTime >= DUR - 0.05) { vel = 0; targetVel = 0; v.pause(); v.currentTime = DUR - 0.05; }
-      else {
-        if (v.playbackRate !== vel) v.playbackRate = vel;
+      if (v.currentTime >= DUR - 0.05) {
+        if (inIdle) {
+          // 空闲呼吸：到结尾自动反向倒放
+          idleDir = -1;
+          targetVel = IDLE_VEL * idleDir;
+          vel = targetVel;
+        } else {
+          // 手动：clamp 停住
+          vel = 0; targetVel = 0; v.pause(); v.currentTime = DUR - 0.05;
+        }
+      } else {
+        // Chromium playbackRate 支持范围 [0.0625, 16]，clamp 后设置
+        const rate = Math.max(0.0625, Math.min(vel, 16));
+        if (v.playbackRate !== rate) v.playbackRate = rate;
         if (v.paused) v.play().catch(() => {});
       }
     } else {
       // 倒放：暂停 + 节流 seek（Chromium/Firefox 无负 playbackRate）
       v.pause();
-      if (v.currentTime <= 0.01) { vel = 0; targetVel = 0; v.currentTime = 0; }
-      else {
+      if (v.currentTime <= 0.01) {
+        if (inIdle) {
+          // 空闲呼吸：到开头自动反向正放
+          idleDir = 1;
+          targetVel = IDLE_VEL * idleDir;
+          vel = targetVel;
+          v.currentTime = 0;
+        } else {
+          vel = 0; targetVel = 0; v.currentTime = 0;
+        }
+      } else {
         pendingSeek += vel / 60; // vel<0
         if (pendingSeek <= -SEEK_THRESHOLD) {
-          const target = Math.max(0, v.currentTime + pendingSeek);
-          v.currentTime = target;
+          const t = Math.max(0, v.currentTime + pendingSeek);
+          v.currentTime = t;
           pendingSeek = 0;
         }
       }
