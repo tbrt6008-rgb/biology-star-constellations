@@ -966,14 +966,6 @@ function initBootVideoLoop() {
     return;
   }
 
-  // 检测负 playbackRate（Chrome/Edge 支持倒放；Safari 不支持 → 用逐帧 seek）
-  let supportsReverse = false;
-  try {
-    v.playbackRate = -1;
-    supportsReverse = v.playbackRate < 0;
-    v.playbackRate = 1;
-  } catch (_) { supportsReverse = false; }
-
   v.src = SRC;
   v.muted = true;
   v.currentTime = 0;
@@ -981,7 +973,6 @@ function initBootVideoLoop() {
   let lastX = null;
   let targetVel = 0; // 目标视频速度（秒/秒，负=倒放）
   let vel = 0;       // 平滑后的速度
-  let pos = 0;       // 逐帧 seek 模式下的逻辑位置
 
   window.addEventListener('mousemove', (e) => {
     if (lastX === null) { lastX = e.clientX; return; }
@@ -997,28 +988,38 @@ function initBootVideoLoop() {
     lastX = null;
   });
 
+  // seek 节流：倒放也只在位移累计 ≥1 帧（~42ms 视频）时才真正 seek
+  const SEEK_THRESHOLD = 1 / 24; // 1 帧视频时间
+  let pendingSeek = 0;           // 待执行的倒放位移
+
   function tick() {
     vel += (targetVel - vel) * 0.25; // 速度平滑（响应更灵敏）
     if (Math.abs(vel) < 0.002 && Math.abs(targetVel) < 0.002) vel = 0;
 
     if (Math.abs(vel) < 0.002) {
-      // 鼠标静止 → 暂停（仅当本就在播放/倒放时）
+      // 鼠标静止 → 暂停
       if (!v.paused) v.pause();
-    } else if (supportsReverse) {
-      // 原生方向播放：playbackRate 正负即方向
-      if (vel > 0 && v.currentTime >= DUR - 0.05) { vel = 0; targetVel = 0; v.pause(); }
-      else if (vel < 0 && v.currentTime <= 0.01)  { vel = 0; targetVel = 0; v.pause(); v.currentTime = 0; }
+      pendingSeek = 0;
+    } else if (vel > 0) {
+      // 正放：原生 play（流畅，无逐帧 seek）
+      pendingSeek = 0;
+      if (v.currentTime >= DUR - 0.05) { vel = 0; targetVel = 0; v.pause(); v.currentTime = DUR - 0.05; }
       else {
-        v.playbackRate = vel;
+        if (v.playbackRate !== vel) v.playbackRate = vel;
         if (v.paused) v.play().catch(() => {});
       }
     } else {
-      // fallback：逐帧 seek（Chrome/Firefox 不支持负 playbackRate）
-      if (Math.abs(v.currentTime - pos) > 0.5) pos = v.currentTime; // 外部 seek 时同步
-      pos += vel / 60;
-      pos = Math.min(Math.max(pos, 0), DUR - 0.05);
-      if (Math.abs(v.currentTime - pos) > 0.001) v.currentTime = pos;
-      if (pos <= 0.001 || pos >= DUR - 0.05) { vel = 0; targetVel = 0; v.pause(); }
+      // 倒放：暂停 + 节流 seek（Chromium/Firefox 无负 playbackRate）
+      v.pause();
+      if (v.currentTime <= 0.01) { vel = 0; targetVel = 0; v.currentTime = 0; }
+      else {
+        pendingSeek += vel / 60; // vel<0
+        if (pendingSeek <= -SEEK_THRESHOLD) {
+          const target = Math.max(0, v.currentTime + pendingSeek);
+          v.currentTime = target;
+          pendingSeek = 0;
+        }
+      }
     }
 
     requestAnimationFrame(tick);
